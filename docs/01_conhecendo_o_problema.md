@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 13/08/2026
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,15 +59,15 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Laura de Souza Parente | 22.123.033-7 | laaurap |
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+Sistema de Detecção de Violência Psicológica em Conversas
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Prof. Dr. Victor Perrone de Lima Varela
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
@@ -75,8 +75,8 @@ Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
 - [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
-- [ ] biblioteca/API/framework;
+- [X] modelo de IA/ML/LLM;
+- [X] biblioteca/API/framework;
 - [ ] análise de dataset;
 - [ ] estudo/benchmark/avaliação experimental;
 - [ ] infraestrutura/backend;
@@ -105,7 +105,7 @@ Marque e descreva:
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+Vitimas que sofrem algum tipo de abuso psicológico e não conseguem perceber e nem sair da situação
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -247,7 +247,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}}
+{{[F/H/?] ...}} SIM
 
 ---
 
