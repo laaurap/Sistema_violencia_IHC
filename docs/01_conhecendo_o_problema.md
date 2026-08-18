@@ -88,7 +88,7 @@ Marque e descreva:
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
 - [ ] Sim, a interface já faz parte do TCC.
-- [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
+- [X] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
 **Explique o que está formalmente previsto no TCC:** {{...}}
@@ -101,7 +101,7 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+O TCC analisa conversas para identificar possíveis indícios de violência psicológica, explicando o motivo da identificação com base em critérios legais e acadêmicos reconhecidos, e orientando a pessoa sobre como buscar apoio.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
@@ -135,7 +135,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{[F/H/?] ...}}
+[F] Hoje, o único ponto de interação existente é o próprio WhatsApp: a pessoa envia uma mensagem de texto ou um áudio para o número do bot (Twilio) e recebe de volta uma mensagem automática com o resultado da análise. Não há tela, app ou painel — a "interface" atual é a conversa de WhatsApp em si.
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -181,7 +181,7 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[H] A03 (buscar apoio) é a mais crítica. Se o sistema falha em alertar corretamente (falso negativo) numa situação real de risco, a pessoa pode permanecer na situação de abuso por mais tempo, reforçada pela falsa sensação de que "não é nada demais". Se o sistema gera um alarme falso (falso positivo) repetidamente, corre o risco de minar a confiança na ferramenta como um todo.
 
 ---
 
@@ -195,7 +195,7 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[H] O mais difícil é justamente o reconhecimento do próprio abuso — as táticas mais citadas na literatura (gaslighting, normalização gradual, chantagem emocional) têm como efeito direto dificultar que a vítima nomeie o que está vivendo. Além disso, buscar informação sozinha é um processo disperso (múltiplas fontes, sem fundamentação clara) e emocionalmente custoso.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
@@ -209,7 +209,7 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
 
-{{[F/H/?] narrativa...}}
+[H] — Uma jovem de 24 anos troca mensagens diárias com o parceiro. Ao longo dos meses, ele passa a questionar suas saídas, dizer que ela "inventa coisas" quando discordam sobre o que foi dito antes, e chamá-la de "dramática" quando ela expressa desconforto com esse padrão. Isoladamente, cada conversa parece só mais uma discussão de casal — ela nunca ouviu falar em "gaslighting" e não tem certeza se o que sente é exagero seu ou algo mais sério. Ela não conversa sobre isso com ninguém, por vergonha de estar "fazendo tempestade em copo d'água".
 
 ## 4.6 Que evidência existe hoje?
 
@@ -239,7 +239,7 @@ Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartil
 
 Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
 
-{{[F/H/?] ...}}
+[H] Não há hierarquia profissional envolvida diretamente no uso pela vítima, mas existe uma "rede de apoio" que pode ser acionada a partir do resultado (CVV, psicólogos, delegacias especializadas) — o sistema atua como uma ponte para esses processos institucionais já existentes.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
@@ -247,7 +247,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}} SIM
+[F/H] Sim. Um falso negativo pode significar não alertar uma pessoa realmente em risco; um falso positivo pode gerar alarme desnecessário e reduzir a confiança na ferramenta. Dado o domínio sensível (violência psicológica), ambos os tipos de erro têm consequência potencialmente grave — não é um domínio "de baixo risco" como recomendação de produtos, por exemplo.
 
 ---
 
@@ -304,23 +304,23 @@ Faça o exercício de transferência de uso:
 Responda:
 
 1. quem poderia contratar/adotar a solução? {{...}}
-2. quem seria o usuário direto? {{...}}
+2. quem seria o usuário direto? A vítima.
 3. quem administraria/configuraria? {{...}}
-4. quem interpretaria resultados? {{...}}
+4. quem interpretaria resultados? Primariamente a própria vítima (uso self-service); secundariamente, um profissional de apoio, caso ela compartilhe o resultado.
 5. quem tomaria decisões? {{...}}
-6. quais dados/entradas seriam necessários? {{...}}
-7. quais resultados deveriam ser compreendidos? {{...}}
-8. que erros/rupturas seriam possíveis? {{...}}
+6. quais dados/entradas seriam necessários? Texto digitado ou áudio de uma conversa.
+7. quais resultados deveriam ser compreendidos? Veredicto, nível de risco, categorias identificadas, fundamentação (fontes) e recomendação de próximo passo.
+8. que erros/rupturas seriam possíveis? Falso negativo, falso positivo, falha de transcrição de áudio, exposição indevida do histórico a terceiros (risco de segurança física real, não só incômodo).
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-{{...}}
+A vítima — a pessoa que efetivamente recebe a notificação/resultado da análise pelo WhatsApp.
 
 **Por que esse perfil foi escolhido?** {{...}}
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-{{...}}
+Reconhecer, de forma clara, acolhedora e sem jargão técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
 
 ## 7.4 Que interface será explorada na disciplina?
 
@@ -334,7 +334,7 @@ Complete:
 
 - [ ] Já fazia parte do TCC.
 - [ ] É um aprofundamento de algo parcialmente previsto.
-- [ ] É uma extensão conceitual criada para a disciplina.
+- [X] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
@@ -409,10 +409,10 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
+| Qual é a contribuição central do TCC? | Classificar indícios de violência psicológica em conversas, com fundamentação legal/acadêmica via RAG |
+| O TCC já previa interface? | Parcialmente — existe interação via WhatsApp, mas nada formalmente desenhado |
+| Quem é o usuário prioritário de IHC? | A vítima, que recebe a notificação diretamente |
+| O que ele precisa alcançar? | Reconhecer indícios de abuso na própria relação e saber o que fazer a seguir |
 | Qual problema/atividade será estudado? | {{...}} |
 | Como isso acontece hoje? | {{...}} |
 | Qual é o contexto de uso? | {{...}} |
