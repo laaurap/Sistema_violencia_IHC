@@ -83,7 +83,7 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** O TCC produz um pipeline de processamento de linguagem natural que classifica indícios de violência psicológica em texto (digitado ou transcrito de áudio), combinando pré-processamento com spaCy, classificação zero-shot com um modelo BERT multilíngue (xlm-roberta-large-xnli via HuggingFace Transformers), e um módulo de RAG (Retrieval-Augmented Generation) que recupera, por similaridade semântica, trechos de uma base de referência jurídica/acadêmica para fundamentar tecnicamente o resultado. O pipeline é exposto como uma API HTTP (FastAPI), consumida por um fluxo de orquestração no n8n que integra o canal de entrada/saída via Twilio (WhatsApp), decidindo automaticamente a ação de resposta conforme o nível de risco identificado.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
@@ -91,7 +91,7 @@ Marque e descreva:
 - [X] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** O TCC prevê, no mínimo, um ponto de entrada por onde a pessoa envia uma conversa (texto ou áudio) e recebe de volta o resultado da análise — hoje isso é feito de forma mínima via bot de WhatsApp (mensagens automáticas de texto). Não existe ainda uma interface gráfica dedicada, tela de histórico, ou qualquer artefato de UI formalmente desenhado. [H] A equipe entende que uma interface será necessária para o TCC ser efetivamente utilizável fora de um ambiente de teste, mas o formato dela ainda não foi decidido/formalizado com o orientador.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -105,13 +105,13 @@ O TCC analisa conversas para identificar possíveis indícios de violência psic
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-Vitimas que sofrem algum tipo de abuso psicológico e não conseguem perceber e nem sair da situação
+[H] Vitimas que sofrem algum tipo de abuso psicológico e não conseguem perceber e nem sair da situação
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
 Complete, se ajudar:
 
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
+> “Nosso TCC produz, melhora, analisa ou permite `classificar automaticamente a presença e o tipo de violência psicológica em um texto de conversa, e fundamentar essa classificação com referências legais/acadêmicas recuperadas por similaridade semântica."`.”
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
@@ -119,7 +119,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+[H] H01 — Pessoas em relacionamentos abusivos teriam acesso a um mecanismo externo, imediato e de baixa fricção (dentro de um app que já usam, o WhatsApp) para obter uma primeira leitura sobre se o que estão vivendo configura violência psicológica — algo que hoje depende quase inteiramente de autopercepção, que costuma estar comprometida justamente pelas próprias táticas do abuso (normalização gradual, gaslighting). Essa hipótese ainda não foi validada com usuárias reais.
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -144,18 +144,19 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
 | {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| Vítima (usuária final) | Usuária direta que envia a conversa suspeita e recebe o veredicto | Envia texto/áudio, lê o resultado, decide se busca ajuda | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| CVV / rede de apoio a vítimas | Recebe encaminhamento indireto (a pessoa liga após o alerta) | Não | H |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-{{[F/H/?] ...}}
+[H] A vítima pode estar em estado emocional vulnerável (medo, vergonha, dúvida sobre a própria percepção); pode ter necessidade forte de discrição/privacidade (medo de o agressor ver o histórico ou as notificações no celular); pode estar usando um dispositivo compartilhado ou monitorado; tem urgência variável (de simples curiosidade até uma situação de crise); e não deve ser assumida como tendo qualquer vocabulário técnico sobre violência psicológica (termos como "gaslighting" podem não ser reconhecidos, mesmo que o comportamento seja).
 
 ---
 
@@ -165,19 +166,19 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-{{[F/H/?] ...}}
+[H] Entender se o que está vivendo configura violência psicológica, para poder tomar uma decisão informada sobre buscar ajuda, se proteger, ou conversar sobre o assunto com alguém de confiança.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A01 | Enviar uma conversa (texto ou áudio) suspeita para análise | Vítima | Provavelmente pontual, mas alta criticidade | H |
+| A02 | Ler e interpretar o resultado (veredicto, nível de risco, fundamentação) | Vítima | Ocorre junto com A01 | H |
+| A03 | Buscar apoio (CVV, psicólogo) após um alerta de risco | Vítima | Rara, mas a mais crítica de todas | H |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-{{[F/H/?] ...}}
+[?] Não sabemos ainda — não há dados de uso real. A hipótese é que A01 e A02 ocorrem sempre juntas (a pessoa manda a mensagem e imediatamente lê a resposta), mas a frequência com que alguém repete esse envio ao longo do tempo é uma lacuna de conhecimento relevante.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
@@ -191,7 +192,7 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-{{[F/H/?] ...}}
+[H] Hoje, sem essa ferramenta, o reconhecimento de violência psicológica depende quase inteiramente de: autopercepção da própria vítima; conversas informais com amigos e família; atendimento psicológico (quando já existe iniciativa de buscar ajuda); e conteúdo educativo genérico em redes sociais sobre "sinais de relacionamento abusivo". Não existe hoje, até onde a equipe levantou, uma ferramenta popular e automatizada de fácil acesso para essa análise específica em conversas reais.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
@@ -199,11 +200,11 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-{{[F/H/?] ...}}
+[F] Com base na saída atual do analisador: o veredicto (SIM/POSSÍVEL/NÃO), o nível de risco (NENHUM/BAIXO/MÉDIO/ALTO), as categorias específicas identificadas (ex: gaslighting, controle), a justificativa fundamentada com fonte, e uma recomendação de próximo passo (ex: ligar para o CVV).
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[H] Um falso negativo pode reforçar a sensação de que "não é nada demais", atrasando a busca por ajuda numa situação real. Um falso positivo pode gerar alarme desnecessário, confusão, ou fazer a pessoa duvidar da credibilidade da ferramenta em usos futuros.
 
 ## 4.5 Conte uma situação concreta.
 
@@ -223,17 +224,17 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-{{[F/H/?] ...}}
+[H] No próprio celular da pessoa, dentro do WhatsApp, provavelmente em momentos privados — sozinha, longe do parceiro/agressor, possivelmente à noite ou logo após um episódio de conflito.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-{{[F/H/?] ...}}
+[F] Smartphone — o canal escolhido (WhatsApp) é majoritariamente mobile no Brasil.
 
 ## 5.3 Existem condições físicas relevantes?
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-{{[F/H/?] ...}}
+[H] Privacidade é a condição mais crítica: a pessoa pode não querer que o agressor veja a conversa, uma notificação na tela de bloqueio, ou o histórico de mensagens. Pode haver situações de urgência emocional, e a pessoa pode ter acesso limitado ou monitorado ao próprio celular.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
@@ -259,7 +260,8 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Atendimento psicológico | Pessoas que já suspeitam de abuso e têm acesso a esse recurso | Diagnóstico e acompanhamento profissional | H |
+| Linha CVV | Pessoas em crise emocional | Suporte emocional imediato | F (CVV é um serviço real e conhecido, já referenciado no próprio sistema) |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
@@ -320,13 +322,14 @@ A vítima — a pessoa que efetivamente recebe a notificação/resultado da aná
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Reconhecer, de forma clara, acolhedora e sem jargão técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
+Reconhecer, de forma clara, acolhedora e sem linguajar técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
 
 ## 7.4 Que interface será explorada na disciplina?
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `vítima de violência psicológica` utilizar `a análise automatizada de conversas (texto ou áudio)` para `reconhecer indícios de abuso na própria relação`, no contexto de `uso privado, muitas vezes urgente e emocionalmente sensível, pelo celular.`.**
+>
 
 {{...}}
 
@@ -338,7 +341,7 @@ Complete:
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
-> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
+> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for decidido pela equipe e pelo orientador.
 
 ---
 
@@ -352,18 +355,18 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 |---|---|---|---|
 | Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
 | Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
+| Entrada/upload/seleção de dados | sim | Enviar o texto ou áudio da conversa a ser analisada | F (já é o fluxo atual via WhatsApp) |
 | Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
 | Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
 | Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
 | Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
+| Explicabilidade/detalhamento | sim | 	Mostrar de forma acessível por que aquele veredicto foi dado (a fundamentação do RAG) | F (já existe tecnicamente, precisa virar UI acessível) |
 | Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
 | Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
 | CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
 | Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Alertas/ocorrências | sim |	É o núcleo do produto — o alerta de risco é a razão de existir da interação | F |
+| Ajuda/documentação | sim | Explicar o que é o CVV, o que o resultado significa, e deixar claro que não substitui diagnóstico profissional | H |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -375,13 +378,15 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Reconhecer, sem depender só de terceiros, se uma conversa parece configurar violência psicológica | Dificuldade de autopercepção do abuso, agravada pelas próprias táticas do agressor (gaslighting, normalização) | Vítima | H |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Enviar uma conversa (texto ou áudio) para análise | Obter uma avaliação inicial de risco | alta |
+| F02 | Entender o resultado, mesmo sem vocabulário técnico sobre o tema | Tomar uma decisão informada sobre o que fazer | alta |
+| F03 | {{ação}} | {{objetivo}} | alta/média/baixa |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -389,6 +394,8 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
+| Twilio/WhatsApp como canal de entrega | canal de entrega	Já era o canal usado nos testes do sistema, é popular e familiar ao público-alvo| {{...}} |
+| {{...}} | {{...}} | {{...}} |
 | {{...}} | {{...}} | {{...}} |
 
 ---
@@ -414,8 +421,8 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Quem é o usuário prioritário de IHC? | A vítima, que recebe a notificação diretamente |
 | O que ele precisa alcançar? | Reconhecer indícios de abuso na própria relação e saber o que fazer a seguir |
 | Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
+| Como isso acontece hoje? | De forma dispersa e não fundamentada: autopercepção, conversas informais, conteúdo educativo genérico |
+| Qual é o contexto de uso? | Celular pessoal, provavelmente em momento privado, com forte necessidade de discrição |
 | Que interface/recorte será explorado? | {{...}} |
 | Como a interface se relaciona ao TCC? | {{...}} |
 | Quais pontos ainda são hipóteses? | {{H01...}} |
@@ -449,8 +456,8 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
+1. **Problema/atividade humana:** Vítimas de violência psicológica frequentemente não conseguem reconhecer sozinhas o abuso que estão vivendo, por causa das próprias táticas usadas pelo agressor.
+2. **Contribuição técnica do TCC:** Um sistema que analisa conversas de texto ou áudio e classifica indícios de violência psicológica, explicando o resultado com base em critérios legais e acadêmicos reais.
 3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
