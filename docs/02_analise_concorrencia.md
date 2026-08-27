@@ -36,7 +36,7 @@ Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, 
 
 ## 1. Público-alvo desta análise
 
-{{descrever e ligar à Entrega 1}}
+Conforme definido na Entrega 1 (seção 7.2–7.4): o usuário principal priorizado é a vítima — a pessoa que efetivamente recebe a notificação/resultado da análise pelo WhatsApp. O objetivo é reconhecer, de forma clara, acolhedora e sem linguajar técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
 
 ## 2. Concorrentes diretos/indiretos
 
