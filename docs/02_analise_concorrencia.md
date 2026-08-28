@@ -44,8 +44,8 @@ Conforme definido na Entrega 1 (seção 7.2–7.4): o usuário principal prioriz
 
 **Autor(a):** Laura de Souza Parente — 22.123.033-7 
 **Tipo:** análogo  (protocolo metodológico, não é software autônomo)
-**Link oficial:** {{URL}}  
-**Data de acesso:** {{dd/mm/aaaa}}
+**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Data de acesso:** 27/08/2026
 
 #### Contexto e proposta
 
