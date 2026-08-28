@@ -102,7 +102,7 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 | C02 | C03 | Oportunidade para o projeto |
+| Critério | C01 (IAVP) | C02 (Lumira) | C03 | Oportunidade para o projeto |
 |---|---|---|---|---|
 | Navegação |  |  |  |  |
 | Feedback/estado |  |  |  |  |
