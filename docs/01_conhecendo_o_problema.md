@@ -73,7 +73,7 @@ Prof. Dr. Victor Perrone de Lima Varela
 
 Marque e descreva:
 
-- [ ] sistema/aplicação interativa;
+- [X] sistema/aplicação interativa;
 - [ ] algoritmo;
 - [X] modelo de IA/ML/LLM;
 - [X] biblioteca/API/framework;
@@ -83,7 +83,8 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** O TCC produz um pipeline de processamento de linguagem natural que classifica indícios de violência psicológica em texto (digitado ou transcrito de áudio), combinando pré-processamento com spaCy, classificação zero-shot com um modelo BERT multilíngue (xlm-roberta-large-xnli via HuggingFace Transformers), e um módulo de RAG (Retrieval-Augmented Generation) que recupera, por similaridade semântica, trechos de uma base de referência jurídica/acadêmica para fundamentar tecnicamente o resultado. O pipeline é exposto como uma API HTTP (FastAPI), consumida por um fluxo de orquestração no n8n que integra o canal de entrada/saída via Twilio (WhatsApp), decidindo automaticamente a ação de resposta conforme o nível de risco identificado.
+**Descrição:** O TCC produz um pipeline de processamento de linguagem natural que classifica indícios de violência psicológica em texto (digitado ou transcrito de áudio), A vítima encaminha ao chatbot, via WhatsApp, uma mensagem ou trecho de conversa recebido do possível agressor; o sistema processa o conteúdo, classifica os indícios encontrados, fundamenta o resultado com referências legais/acadêmicas e devolve uma resposta individual à vítima. O projeto também passa a prever uma interface web administrativa, destinada a administradores/analistas autorizados, para consultar o histórico de análises, revisar conversas e acompanhar indicadores agregados.
+Tecnicamente, o pipeline combina pré-processamento com spaCy, classificação zero-shot com modelo BERT multilíngue, RAG para recuperação de referências, API HTTP em FastAPI e integração por n8n/Twilio para o WhatsApp. O painel administrativo será uma camada adicional de interação sobre os dados gerados pelo sistema.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
@@ -91,7 +92,9 @@ Marque e descreva:
 - [X] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** O TCC prevê, no mínimo, um ponto de entrada por onde a pessoa envia uma conversa (texto ou áudio) e recebe de volta o resultado da análise — hoje isso é feito de forma mínima via bot de WhatsApp (mensagens automáticas de texto). Não existe ainda uma interface gráfica dedicada, tela de histórico, ou qualquer artefato de UI formalmente desenhado. [H] A equipe entende que uma interface será necessária para o TCC ser efetivamente utilizável fora de um ambiente de teste, mas o formato dela ainda não foi decidido/formalizado com o orientador.
+**Explique o que está formalmente previsto no TCC:**  O sistema possui dois pontos principais de interação. O primeiro é o chatbot no WhatsApp, usado pela vítima: ela envia uma mensagem ou conversa suspeita recebida do possível agressor e recebe a análise individual do conteúdo. O segundo é uma interface web administrativa, alinhada com o orientador, destinada a administradores/analistas autorizados. Nesse painel será possível visualizar um dashboard com indicadores, consultar o histórico de análises, filtrar registros, abrir conversas para análise detalhada e observar padrões agregados.
+
+Para a disciplina de IHC, o recorte principal será a interface administrativa, porque concentra maior variedade de tarefas de interação, visualização, busca, filtragem, comparação e interpretação de dados. O fluxo da vítima pelo WhatsApp continua fazendo parte do sistema e deve permanecer coerente com o painel administrativo.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -101,7 +104,7 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-O TCC analisa conversas para identificar possíveis indícios de violência psicológica, explicando o motivo da identificação com base em critérios legais e acadêmicos reconhecidos, e orientando a pessoa sobre como buscar apoio.
+O TCC analisa mensagens e conversas para identificar possíveis indícios de violência psicológica, devolve uma orientação individual à vítima e organiza os resultados em uma interface administrativa para acompanhamento e análise de padrões.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
@@ -119,7 +122,10 @@ Classificar automaticamente a presença e o tipo de indício de violência psico
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[H] H01 — Pessoas em relacionamentos abusivos teriam acesso a um mecanismo externo, imediato e de baixa fricção (dentro de um app que já usam, o WhatsApp) para obter uma primeira leitura sobre se o que estão vivendo configura violência psicológica — algo que hoje depende quase inteiramente de autopercepção, que costuma estar comprometida justamente pelas próprias táticas do abuso (normalização gradual, gaslighting). Essa hipótese ainda não foi validada com usuárias reais.
+[F/H] H01 — A vítima teria acesso a um mecanismo externo e de baixa fricção para encaminhar ao chatbot uma mensagem ou conversa suspeita e obter uma primeira leitura fundamentada sobre possíveis indícios de violência psicológica.
+
+[F] Após alinhamento com o orientador, o sistema também deverá permitir que administradores/analistas autorizados acompanhem os dados produzidos pelas análises em uma interface própria. Isso poderá transformar registros individuais em informação útil para acompanhamento do sistema, identificação de padrões e análise histórica.
+
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -128,6 +134,7 @@ Classificar automaticamente a presença e o tipo de indício de violência psico
 | Classificação automática de indícios e categorias de violência psicológica em texto/transcrição | Oferecer à vítima uma avaliação inicial sobre uma conversa suspeita |
 | Fundamentação do resultado por meio de RAG com referências legais/acadêmicas| Tornar o resultado mais explicável e menos dependente de uma resposta sem justificativa |
 | Exposição do pipeline por API e integração com WhatsApp | Permitir que a capacidade técnica seja acessada por um canal já familiar ao usuário |
+|Consolidação e visualização de dados agregados | Permitir ao administrador acompanhar indicadores, categorias recorrentes e evolução temporal |
 
 ---
 
@@ -160,7 +167,9 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-[H] A vítima pode estar em estado emocional vulnerável (medo, vergonha, dúvida sobre a própria percepção); pode ter necessidade forte de discrição/privacidade (medo de o agressor ver o histórico ou as notificações no celular); pode estar usando um dispositivo compartilhado ou monitorado; tem urgência variável (de simples curiosidade até uma situação de crise); e não deve ser assumida como tendo qualquer vocabulário técnico sobre violência psicológica (termos como "gaslighting" podem não ser reconhecidos, mesmo que o comportamento seja).
+[H] Vítima: pode estar emocionalmente vulnerável, com medo, vergonha ou dúvida sobre a própria percepção; pode precisar de discrição e privacidade; e não deve ser assumida como conhecedora de vocabulário técnico sobre violência psicológica.
+
+[F/H] Administrador/analista: precisará lidar com uma quantidade maior de registros e tomar decisões de navegação e interpretação a partir de dados agregados. A interface deve favorecer leitura rápida de indicadores, filtros claros, busca eficiente ev comparação temporal. Como os dados tratados são sensíveis, também são relevantes controle de acesso, minimização da exposição de dados pessoais, rastreabilidade das consultas e diferenciação entre informação agregada e conteúdo detalhado das conversas.
 
 ---
 
@@ -170,7 +179,7 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-[H] Entender se o que está vivendo configura violência psicológica, para poder tomar uma decisão informada sobre buscar ajuda, se proteger, ou conversar sobre o assunto com alguém de confiança.
+[H] - Vitima: Entender se o que está vivendo configura violência psicológica, para poder tomar uma decisão informada sobre buscar ajuda, se proteger, ou conversar sobre o assunto com alguém de confiança.
 
 ## 3.2 Quais são as atividades mais importantes?
 
@@ -196,9 +205,13 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-[H] Hoje, sem essa ferramenta, o reconhecimento de violência psicológica depende quase inteiramente de: autopercepção da própria vítima; conversas informais com amigos e família; atendimento psicológico (quando já existe iniciativa de buscar ajuda); e conteúdo educativo genérico em redes sociais sobre "sinais de relacionamento abusivo". Não existe hoje, até onde a equipe levantou, uma ferramenta popular e automatizada de fácil acesso para essa análise específica em conversas reais.
+[H] Para a vítima, o reconhecimento de violência psicológica ainda costuma depender de autopercepção, conversas com pessoas de confiança, acompanhamento profissional ou conteúdos educativos dispersos.
+
+[H] 
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
+
+[H] Para a vítima, a principal dificuldade é reconhecer e nomear o possível abuso.
 
 [H] O mais difícil é justamente o reconhecimento do próprio abuso — as táticas mais citadas na literatura (gaslighting, normalização gradual, chantagem emocional) têm como efeito direto dificultar que a vítima nomeie o que está vivendo. Além disso, buscar informação sozinha é um processo disperso (múltiplas fontes, sem fundamentação clara) e emocionalmente custoso.
 
