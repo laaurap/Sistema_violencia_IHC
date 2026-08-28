@@ -105,7 +105,7 @@ O TCC analisa conversas para identificar possíveis indícios de violência psic
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[H] Vitimas que sofrem algum tipo de abuso psicológico e não conseguem perceber e nem sair da situação
+[H] Vítimas que sofrem violência psicológica podem ter dificuldade de reconhecer que determinados comportamentos configuram abuso e, consequentemente, de decidir quando buscar ajuda ou se afastar da situação.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,7 +115,7 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{...}}
+Classificar automaticamente a presença e o tipo de indício de violência psicológica em uma conversa e apresentar uma justificativa fundamentada em referências legais e acadêmicas recuperadas pelo sistema.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
@@ -125,7 +125,9 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
-| {{...}} | {{...}} |
+| Classificação automática de indícios e categorias de violência psicológica em texto/transcrição | Oferecer à vítima uma avaliação inicial sobre uma conversa suspeita |
+| Fundamentação do resultado por meio de RAG com referências legais/acadêmicas| Tornar o resultado mais explicável e menos dependente de uma resposta sem justificativa |
+| Exposição do pipeline por API e integração com WhatsApp | Permitir que a capacidade técnica seja acessada por um canal já familiar ao usuário |
 
 ---
 
@@ -145,6 +147,8 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 |---|---|---|---|
 | {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
 | Vítima (usuária final) | Usuária direta que envia a conversa suspeita e recebe o veredicto | Envia texto/áudio, lê o resultado, decide se busca ajuda | H |
+| Profissional/rede de apoio | Pode receber o resultado caso a vítima decida compartilhá-lo | Auxilia na interpretação da situação e nos próximos passos | H |
+| Responsável técnico pelo sistema | Mantém e configura a solução técnica | Atualiza integrações, modelos, base de referência e monitora falhas técnicas | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
@@ -217,6 +221,8 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
 | {{...}} | {{...}} | {{...}} |
+| IAVP dos Ministérios Públicos | Há um instrumento institucional de triagem relacionado à mesma base legal (Art. 147-B), preenchido por profissional humano | Não realiza a mesma análise automatizada de conversas proposta pelo TCC |
+| Lumira, Be Safe Mulher, Rede Mulher e Instituto Glória | {{...}} | {{...}} |
 
 ---
 
@@ -244,7 +250,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-{{[F/H/?] ...}}
+[H] Pode haver necessidade de histórico para a própria vítima acompanhar análises anteriores, mas esse recurso também cria um risco relevante de privacidade caso o aparelho seja compartilhado ou monitorado. Por isso, a necessidade real de histórico, sua persistência e formas de proteção ainda precisam ser investigadas antes de tratá-lo como requisito.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
@@ -265,7 +271,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-{{[F/H/?] ...}}
+[F] A Entrega 2 identificou, como alternativas e produtos análogos do domínio, Lumira, Be Safe Mulher, Rede Mulher e Instituto Glória. Também foi identificado o IAVP dos Ministérios Públicos como análogo institucional, por utilizar a mesma base legal de referência (Art. 147-B do Código Penal) em uma triagem preenchida por profissional humano. Essas soluções não são equivalentes ao TCC, mas atuam em necessidades próximas, como autoavaliação, orientação, emergência e triagem.
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
@@ -295,7 +301,7 @@ Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, 
 
 Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
 
-{{...}}
+O projeto se enquadra melhor no Caminho A, pois já existe uma interação mínima prevista e implementada por WhatsApp. O recorte da disciplina será aprofundar o fluxo em que a vítima envia uma conversa em texto ou áudio, recebe o resultado da análise, compreende o nível de risco e a justificativa e encontra uma orientação segura sobre o que fazer a seguir. Esse fluxo é relevante porque concentra as atividades A01, A02 e A03 e ocorre em um contexto emocionalmente sensível, no qual clareza, discrição e prevenção de interpretações equivocadas são essenciais.
 
 ### Caminho B — TCC não possui interface prevista
 
@@ -318,7 +324,7 @@ Responda:
 
 A vítima — a pessoa que efetivamente recebe a notificação/resultado da análise pelo WhatsApp.
 
-**Por que esse perfil foi escolhido?** {{...}}
+**Por que esse perfil foi escolhido?** Porque é quem recebe diretamente o resultado e precisa transformá-lo em entendimento e ação. Além disso, é o perfil mais afetado pelas consequências de uma comunicação inadequada.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
