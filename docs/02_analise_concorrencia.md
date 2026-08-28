@@ -40,22 +40,22 @@ Conforme definido na Entrega 1 (seção 7.2–7.4): o usuário principal prioriz
 
 ## 2. Concorrentes diretos/indiretos
 
-### Análise C01 — {{produto}}
+### Análise C01 — IAVP (Instrumento de Avaliação de Violência Psicológica, Grupo de Trabalho Pandora / Ministérios Públicos estaduais)
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** direto / indireto / análogo  
+**Autor(a):** Laura de Souza Parente — 22.123.033-7 
+**Tipo:** análogo  (protocolo metodológico, não é software autônomo)
 **Link oficial:** {{URL}}  
 **Data de acesso:** {{dd/mm/aaaa}}
 
 #### Contexto e proposta
 
-{{...}}
+Instrumento criado por um grupo interdisciplinar de nove profissionais (Direito, Psicologia e Psiquiatria), lançado pelo Núcleo de Gênero do MPSP e depois replicado por Ministérios Públicos de outros estados (RJ, MG, ES, PR). O objetivo declarado é identificar condutas de violência psicológica tipificadas no artigo 147-B do Código Penal e dimensionar o dano emocional sofrido pela vítima, para uso por promotores, peritos e profissionais de saúde/assistência social.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| {{...}} | {{...}} | `../assets/02_concorrencia/...` | {{...}} |
+| Formulário estruturado de triagem | Preenchido pela propria vitima, mas é recomendado quando possivel se preenchido por profissional habilitado, buscando identificar constrangimento, humilhação, manipulação, isolamento, ameaças, violência digital, entre outras categorias | `../assets/02_concorrencia/...` | {{...}} |
 
 #### Experiência do usuário e opiniões
 
@@ -73,7 +73,8 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial por Ministérios Públicos de múltiplos estados | {{...}} | {{...}} |
+| É preenchido por profissional especializado, não por IA | Manual do IAVP exige "expertise para atuar em casos de violência psicológica" | {{...}} |
 
 > Repita a subseção para C02, C03... até atender à quantidade da equipe.
 
@@ -83,7 +84,7 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{link local}} | {{...}} |
+| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
