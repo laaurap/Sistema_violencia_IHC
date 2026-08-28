@@ -342,12 +342,12 @@ Complete:
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
 - [ ] Já fazia parte do TCC.
-- [ ] É um aprofundamento de algo parcialmente previsto.
-- [X] É uma extensão conceitual criada para a disciplina.
+- [X] É um aprofundamento de algo parcialmente previsto.
+- [ ] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
-> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for decidido pela equipe e pelo orientador.
+> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC.
 
 ---
 
