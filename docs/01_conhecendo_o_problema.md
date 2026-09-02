@@ -88,7 +88,7 @@ Tecnicamente, o pipeline combina pré-processamento com spaCy, classificação z
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
-- [ ] Sim, a interface já faz parte do TCC.
+- [X] Sim, a interface já faz parte do TCC.
 - [X] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
@@ -153,9 +153,11 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
 | {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
-| Vítima (usuária final) | Usuária direta que envia a conversa suspeita e recebe o veredicto | Envia texto/áudio, lê o resultado, decide se busca ajuda | H |
+| Vítima (usuária final) | Usuária direta do chatbot | Envia texto/áudio, lê o resultado, decide se busca ajuda | F/H |
 | Profissional/rede de apoio | Pode receber o resultado caso a vítima decida compartilhá-lo | Auxilia na interpretação da situação e nos próximos passos | H |
 | Responsável técnico pelo sistema | Mantém e configura a solução técnica | Atualiza integrações, modelos, base de referência e monitora falhas técnicas | H |
+|Administrador | Usuário direto da interface web e perfil priorizado em IHC | Consulta dashboard, histórico e conversas; aplica filtros; acompanha indicadores; | F |
+
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
@@ -181,21 +183,26 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 [H] - Vitima: Entender se o que está vivendo configura violência psicológica, para poder tomar uma decisão informada sobre buscar ajuda, se proteger, ou conversar sobre o assunto com alguém de confiança.
 
+Administrador/analista: compreender o que está acontecendo no conjunto de análises realizadas pelo sistema, localizar casos específicos quando necessário e identificar padrões relevantes por período, categoria e nível de risco.
+
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Enviar uma conversa (texto ou áudio) suspeita para análise | Vítima | Provavelmente pontual, mas alta criticidade | H |
-| A02 | Ler e interpretar o resultado (veredicto, nível de risco, fundamentação) | Vítima | Ocorre junto com A01 | H |
-| A03 | Buscar apoio (CVV, psicólogo) após um alerta de risco | Vítima | Rara, mas a mais crítica de todas | H |
+| A01 | Enviar ao chatbot uma mensagem ou conversa suspeita para análise | Vítima | Pontual/alta criticidade | F/H |
+| A02 | Ler e interpretar o resultado individual | Vítima | Ocorre junto com A01 | F/H |
+| A03 | Visualizar indicadores gerais do sistema | Administrador | Frequente | F |
+| A04 | Consultar e filtrar histórico de análises | Administrador | Frequente | F |
+| A05 | Abrir e analisar o detalhe de uma conversa/resultado | Administrador | Conforme necessidade/alta criticidade | F |
+| A06 | Identificar tendências por período, categoria ou nível de risco | Administrador | Periódica | H |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[?] Não sabemos ainda — não há dados de uso real. A hipótese é que A01 e A02 ocorrem sempre juntas (a pessoa manda a mensagem e imediatamente lê a resposta), mas a frequência com que alguém repete esse envio ao longo do tempo é uma lacuna de conhecimento relevante.
+[H] Para o usuário priorizado em IHC, as atividades mais frequentes tendem a ser A03 e A04: consultar uma visão geral e navegar pelo histórico usando filtros. Elas funcionam como ponto de entrada para decidir quando aprofundar uma análise em A05 ou explorar padrões específicos em A06. A frequência real deverá ser validada em etapas posteriores.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] A03 (buscar apoio) é a mais crítica. Se o sistema falha em alertar corretamente (falso negativo) numa situação real de risco, a pessoa pode permanecer na situação de abuso por mais tempo, reforçada pela falsa sensação de que "não é nada demais". Se o sistema gera um alarme falso (falso positivo) repetidamente, corre o risco de minar a confiança na ferramenta como um todo.
+[H] A05 — analisar o detalhe de uma conversa/resultado é uma das atividades administrativas mais críticas, porque uma interpretação incorreta pode levar a conclusões equivocadas sobre um registro. A06 também exigem cuidado: visualizações agregadas ou mapas mal apresentados podem sugerir relações que os dados não sustentam. Para a vítima, A02 continua altamente crítica, pois a comunicação do resultado não pode gerar falsa sensação de segurança nem alarme indevido.
 
 ---
 
@@ -207,17 +214,19 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 [H] Para a vítima, o reconhecimento de violência psicológica ainda costuma depender de autopercepção, conversas com pessoas de confiança, acompanhamento profissional ou conteúdos educativos dispersos.
 
-[H] 
+[F/H] Para o administrador/analista, antes do painel proposto, os resultados produzidos pelo pipeline não contam com uma interface consolidada para exploração. Consultar registros isolados, logs ou dados brutos dificulta ter uma visão do conjunto, localizar casos, comparar períodos, identificar categorias recorrentes ou perceber concentração geográfica das análises.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
 [H] Para a vítima, a principal dificuldade é reconhecer e nomear o possível abuso.
 
-[H] O mais difícil é justamente o reconhecimento do próprio abuso — as táticas mais citadas na literatura (gaslighting, normalização gradual, chantagem emocional) têm como efeito direto dificultar que a vítima nomeie o que está vivendo. Além disso, buscar informação sozinha é um processo disperso (múltiplas fontes, sem fundamentação clara) e emocionalmente custoso.
+[H] Para o administrador/analista, os principais problemas são transformar muitos registros individuais em informação compreensível, localizar rapidamente um caso relevante, interpretar métricas sem perder o contexto e evitar conclusões erradas a partir de dados agregados. Sem filtros, histórico organizado e visualizações adequadas, a análise tende a ser mais lenta e dependente de consultas manuais.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-[F] Com base na saída atual do analisador: o veredicto (SIM/POSSÍVEL/NÃO), o nível de risco (NENHUM/BAIXO/MÉDIO/ALTO), as categorias específicas identificadas (ex: gaslighting, controle), a justificativa fundamentada com fonte, e uma recomendação de próximo passo (ex: ligar para o CVV).
+[F] No nível individual, o administrador poderá interpretar o veredicto (SIM/POSSÍVEL/NÃO), o nível de risco (NENHUM/BAIXO/MÉDIO/ALTO), categorias identificadas, justificativa e referências associadas à análise.
+
+[F/H] No nível agregado, o painel deverá permitir interpretar quantidade de análises, distribuição por nível de risco e categoria, evolução temporal e distribuição geográfica por região/localidade disponível. Esses indicadores deverão ser apresentados de forma que não confundam volume de análises realizadas com prevalência real de violência psicológica na população.
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
@@ -235,7 +244,8 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 |---|---|---|
 | {{...}} | {{...}} | {{...}} |
 | IAVP dos Ministérios Públicos | Há um instrumento institucional de triagem relacionado à mesma base legal (Art. 147-B), preenchido por profissional humano | Não realiza a mesma análise automatizada de conversas proposta pelo TCC |
-| Lumira, Be Safe Mulher, Rede Mulher e Instituto Glória | {{...}} | {{...}} |
+| Lumira, Be Safe Mulher, Rede Mulher e Instituto Glória | Existem soluções/análogos que atuam em necessidades próximas do domínio | A análise detalhada das interfaces ainda está em andamento |
+| Protótipo atual do TCC | Já existe entrada por texto/áudio e saída com veredicto, risco, categorias, fundamentação e recomendação | Ainda não valida compreensão ou utilidade com usuários reais |
 
 ---
 
@@ -243,27 +253,34 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-[H] No próprio celular da pessoa, dentro do WhatsApp, provavelmente em momentos privados — sozinha, longe do parceiro/agressor, possivelmente à noite ou logo após um episódio de conflito.
+[F/H] Vítima: no próprio celular, dentro do WhatsApp, possivelmente em momento privado e emocionalmente sensível, após receber uma mensagem ou participar de uma conversa suspeita.
+
+[F/H] Administrador/analista: em ambiente de trabalho ou estudo, utilizando a interface web para acompanhar o funcionamento do sistema, consultar registros e analisar padrões ao longo do tempo.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-[F] Smartphone — o canal escolhido (WhatsApp) é majoritariamente mobile no Brasil.
+[F] A vítima utiliza principalmente smartphone via WhatsApp.
+[H] O painel administrativo será prioritariamente utilizado em computador/notebook, por exigir leitura de tabelas, gráficos, filtros, mapas e detalhes de registros.
 
 ## 5.3 Existem condições físicas relevantes?
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-[H] Privacidade é a condição mais crítica: a pessoa pode não querer que o agressor veja a conversa, uma notificação na tela de bloqueio, ou o histórico de mensagens. Pode haver situações de urgência emocional, e a pessoa pode ter acesso limitado ou monitorado ao próprio celular.
+Para a vítima, privacidade e discrição são críticas, pois o agressor pode ter acesso ao aparelho ou às notificações.
+
+Para o administrador, são importantes legibilidade em telas maiores, densidade de informação controlada e capacidade de alternar entre visão agregada e detalhe sem perder contexto. Como pode haver conteúdo sensível, a interface deve evitar exposição desnecessária de conversas em ambientes compartilhados.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
 Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
 
-[H] Não há hierarquia profissional envolvida diretamente no uso pela vítima, mas existe uma "rede de apoio" que pode ser acionada a partir do resultado (CVV, psicólogos, delegacias especializadas) — o sistema atua como uma ponte para esses processos institucionais já existentes.
+[F/H] O painel administrativo pressupõe perfis autorizados. Portanto, permissões, responsabilidade sobre dados sensíveis, rastreabilidade de acesso e definição de quem pode visualizar conversas completas são fatores organizacionais relevantes. A vítima não precisa fazer parte dessa estrutura administrativa para utilizar o chatbot.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-[H] Pode haver necessidade de histórico para a própria vítima acompanhar análises anteriores, mas esse recurso também cria um risco relevante de privacidade caso o aparelho seja compartilhado ou monitorado. Por isso, a necessidade real de histórico, sua persistência e formas de proteção ainda precisam ser investigadas antes de tratá-lo como requisito.
+[F] Sim. O histórico passa a ser uma necessidade explícita do painel administrativo: o usuário autorizado deverá consultar análises anteriores, localizar registros, aplicar filtros e abrir detalhes.
+
+[H] Também pode ser necessário registrar ações de acesso ou revisão realizadas por administradores, devido à sensibilidade dos dados. Para a vítima, a persistência do histórico no WhatsApp continua sendo uma questão de privacidade distinta e não deve ser confundida com o histórico administrativo.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
@@ -290,19 +307,19 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
-{{[F/H/?] ...}}
+[H] Para o novo usuário priorizado, interfaces de dashboards analíticos, sistemas administrativos, ferramentas de BI, históricos com filtros, tabelas de registros e telas de detalhamento passam a ser referências relevantes de interação. A Entrega 2 deverá investigar interfaces representativas desse tipo para identificar convenções familiares ao administrador.
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-{{[F/H/?] ...}}
+[H] Interfaces profissionais de análise tendem a organizar grande volume de informação em níveis: visão geral, filtros, lista/histórico e detalhamento. Esse padrão é especialmente relevante para o painel proposto, pois o administrador precisa primeiro perceber tendências e depois aprofundar casos específicos.
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-{{[F/H/?] ...}}
+[H] Dashboards podem se tornar visualmente carregados, apresentar métricas sem contexto ou exigir conhecimento técnico excessivo. Para este projeto, também existe um risco adicional: expor conteúdo sensível demais na visão geral ou induzir o usuário a interpretar número de análises como número real de casos existentes na população.
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-{{[F/H/?] ...}}
+[?] Padrões a investigar na Entrega 2
 
 ---
 
@@ -314,7 +331,7 @@ Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, 
 
 Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
 
-O projeto se enquadra melhor no Caminho A, pois já existe uma interação mínima prevista e implementada por WhatsApp. O recorte da disciplina será aprofundar o fluxo em que a vítima envia uma conversa em texto ou áudio, recebe o resultado da análise, compreende o nível de risco e a justificativa e encontra uma orientação segura sobre o que fazer a seguir. Esse fluxo é relevante porque concentra as atividades A01, A02 e A03 e ocorre em um contexto emocionalmente sensível, no qual clareza, discrição e prevenção de interpretações equivocadas são essenciais.
+O projeto se enquadra melhor no Caminho A, pois já existe uma interação mínima prevista e implementada por WhatsApp. O recorte da disciplina será aprofundar o painel administrativo, pois ele exige projetar tarefas de maior complexidade de interação: compreender indicadores, aplicar filtros, navegar por histórico, localizar registros, abrir detalhes de conversas e explorar padrões geográficos. O chatbot da vítima continuará sendo considerado como parte do ecossistema do produto, principalmente para entender a origem dos dados exibidos no painel.
 
 ### Caminho B — TCC não possui interface prevista
 
@@ -335,32 +352,34 @@ Responda:
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-A vítima — a pessoa que efetivamente recebe a notificação/resultado da análise pelo WhatsApp.
+Administrador/analista autorizado do sistema.
 
-**Por que esse perfil foi escolhido?** Porque é quem recebe diretamente o resultado e precisa transformá-lo em entendimento e ação. Além disso, é o perfil mais afetado pelas consequências de uma comunicação inadequada.
+**Por que esse perfil foi escolhido?** Porque será o usuário direto da nova interface web e executará tarefas que dependem fortemente de decisões de IHC: compreender informação agregada, navegar entre diferentes níveis de detalhe, aplicar filtros, interpretar visualizações, localizar conversas e analisar padrões sem perder o contexto ou a segurança dos dados.
+
+A vítima continua sendo usuária direta do chatbot, mas não será o perfil principal para o desenvolvimento da interface administrativa na disciplina.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Reconhecer, de forma clara, acolhedora e sem linguajar técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
+Acompanhar e compreender os dados gerados pelas análises de conversas, identificando padrões relevantes e conseguindo localizar e revisar registros específicos com clareza, eficiência e segurança.
 
 ## 7.4 Que interface será explorada na disciplina?
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `vítima de violência psicológica` utilizar `a análise automatizada de conversas (texto ou áudio)` para `reconhecer indícios de abuso na própria relação`, no contexto de `uso privado, muitas vezes urgente e emocionalmente sensível, pelo celular.`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `administrador/analista autorizado` utilizar `os resultados produzidos pelo sistema de detecção de violência psicológica` para `acompanhar indicadores, consultar o histórico, analisar conversas e identificar padrões temporais, categóricos e geográficos`, no contexto de `uso administrativo com dados sensíveis e necessidade de navegação entre visão geral e detalhes.`.**
 >
 
 {{...}}
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
-- [ ] Já fazia parte do TCC.
+- [X] Já fazia parte do TCC.
 - [X] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
 - [ ] Outra: {{...}}.
 
-> **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC.
+> **Declaração:** o painel administrativo explorado na disciplina está alinhado com o novo escopo discutido com o orientador. A disciplina de IHC servirá para estruturar e avaliar essa interação antes ou durante sua implementação.
 
 ---
 
@@ -372,19 +391,19 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim | Enviar o texto ou áudio da conversa a ser analisada | F (já é o fluxo atual via WhatsApp) |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim | 	Mostrar de forma acessível por que aquele veredicto foi dado (a fundamentação do RAG) | F (já existe tecnicamente, precisa virar UI acessível) |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim |	É o núcleo do produto — o alerta de risco é a razão de existir da interação | F |
+| Dashboard/visão geral | sim | Acompanhar rapidamente volume de análises, riscos, categorias e tendências | F — alinhado com o orientador |
+| Configuração/parametrização | talvez | Ajustar parâmetros administrativos do painel, filtros padrão ou preferências | H |
+| Entrada/upload/seleção de dados | sim (ChatBot) | Permitir que a vítima encaminhe mensagem/conversa suspeita | F (já é o fluxo atual via WhatsApp) |
+| Acompanhamento de processamento | sim (ChatBot)  | Informar à vítima que o conteúdo está sendo analisado | H |
+| Relatório/resultados | sim | Exibir resultados individuais e indicadores agregados | F |
+| Histórico com busca/filtros | sim | Localizar análises anteriores por critérios relevantes | F — alinhado com o orientador |
+| Comparação de resultados | sim/talvez | Comparar períodos, categorias ou níveis de risco | H |
+| Explicabilidade/detalhamento | sim | 	Mostrar de forma acessível por que aquele veredicto foi dado (a fundamentação do RAG) | F |
+| Administração/configurações globais | talvez | Gerenciar aspectos operacionais do painel | H |
+| Usuários/perfis/permissões | sim | Restringir acesso a dados sensíveis conforme o perfil autorizado | H |
+| CRUD de entidade do domínio | talvez | Gerenciar cadastros administrativos se surgirem necessidades específicas | H |
+| Auditoria/logs | sim/talvez | Rastrear acesso/revisão de dados sensíveis | H |
+| Alertas/ocorrências | sim/talvez |	Destacar aumento de registros de alto risco ou situações que mereçam atenção | H/F |
 | Ajuda/documentação | sim | Explicar o que é o CVV, o que o resultado significa, e deixar claro que não substitui diagnóstico profissional | H |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
@@ -397,15 +416,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Reconhecer, sem depender só de terceiros, se uma conversa parece configurar violência psicológica | Dificuldade de autopercepção do abuso, agravada pelas próprias táticas do agressor (gaslighting, normalização) | Vítima | H |
+| Obter visão geral do funcionamento e dos resultados do sistema | Registros isolados dificultam perceber tendências | Administrador | F/H |
+| Localizar e revisar rapidamente análises específicas | Grande quantidade de registros pode tornar busca manual lenta | Administrador | F/H |
+| Manter o fluxo individual de análise acessível | A vítima precisa encaminhar mensagem suspeita e entender o resultado | Vítima | F/H |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Enviar uma conversa (texto ou áudio) para análise | Obter uma avaliação inicial de risco | alta |
-| F02 | Entender o resultado, mesmo sem vocabulário técnico sobre o tema | Tomar uma decisão informada sobre o que fazer | alta |
-| F03 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Visualizar indicadores gerais no dashboard | Entender rapidamente o estado dos dados analisados | alta |
+| F02 | Filtrar o conjunto de análises por período, risco, categoria | Responder perguntas específicas sem examinar todos os registros | alta |
+| F03 | Consultar histórico e pesquisar registros | Localizar uma análise específica | alta |
+| F04 | Abrir o detalhe de uma conversa/análise | Entender o contexto e a justificativa de um resultado | alta |
+| F05 | Enviar mensagem/conversa suspeita pelo ChatBot e receber resposta | Manter o fluxo principal da vítima | alta |
+
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -413,8 +437,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| Twilio/WhatsApp como canal de entrega | canal de entrega	Já era o canal usado nos testes do sistema, é popular e familiar ao público-alvo| {{...}} |
-| {{...}} | {{...}} | {{...}} |
+| Twilio/WhatsApp | Canal de entrada/saída da vítima | Deve manter fluxo simples e discreto |
+| Transcrição de áudio | Permite analisar mensagens de áudio | Erros de transcrição podem afetar a classificação |
+| RAG com referências legais/acadêmicas | Fundamenta tecnicamente o resultado | {A justificativa precisa ser compreensível no detalhe da análise |
+| Interface web administrativa | {Permitir acompanhamento e exploração dos dados | Exige arquitetura de informação, filtros, visualizações e controle de acesso |
+| Dados sensíveis de conversas | O domínio envolve conteúdo potencialmente íntimo | Requer minimização de exposição, permissões e cuidado com exportações e logs |
 | {{...}} | {{...}} | {{...}} |
 
 ---
@@ -435,22 +462,22 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Classificar indícios de violência psicológica em conversas, com fundamentação legal/acadêmica via RAG |
-| O TCC já previa interface? | Parcialmente — existe interação via WhatsApp, mas nada formalmente desenhado |
-| Quem é o usuário prioritário de IHC? | A vítima, que recebe a notificação diretamente |
-| O que ele precisa alcançar? | Reconhecer indícios de abuso na própria relação e saber o que fazer a seguir |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | De forma dispersa e não fundamentada: autopercepção, conversas informais, conteúdo educativo genérico |
-| Qual é o contexto de uso? | Celular pessoal, provavelmente em momento privado, com forte necessidade de discrição |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
+| Qual é a contribuição central do TCC? | Classificar indícios de violência psicológica em conversas, fundamentar o resultado e organizar as análises para uso individual e administrativo |
+| O TCC já previa interface? | Sim — há o chatbot da vítima e, após alinhamento com o orientador, um painel administrativo web |
+| Quem é o usuário prioritário de IHC? | Administrador/analista autorizado |
+| O que ele precisa alcançar? | Reconhecer indícios de abuso, acompanhar indicadores, localizar e revisar análises e identificar padrões sem perder contexto |
+| Qual problema/atividade será estudado? | {Transformar muitos registros individuais em informação explorável por dashboard, histórico, filtros, detalhe |
+| Como isso acontece hoje? | O pipeline gera resultados individuais, mas ainda não há uma interface administrativa consolidada para exploração |
+| Qual é o contexto de uso? | Celular pessoal, ambiente administrativo em computador/notebook, com dados sensíveis e necessidade de acesso controlado |
+| Que interface/recorte será explorado? | Painel web com dashboard, filtros, histórico, detalhamento de conversa |
+| Como a interface se relaciona ao TCC? | Faz parte do escopo atualizado após alinhamento com o orientador |
 | Quais pontos ainda são hipóteses? | {{H01...}} |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
+**Dentro do escopo de IHC:** painel administrativo; dashboard; indicadores; filtros; histórico; visualização de tendências; detalhe de análises/conversas; explicabilidade; navegação entre visão geral e detalhe; estados de sistema; privacidade e permissões na interação. 
+**Fora do escopo de IHC:** treinamento e ajuste do modelo, implementação interna do RAG, infraestrutura de backend e definição de políticas públicas a partir dos dados.  
+**Dentro do escopo formal do TCC:** pipeline de NLP, fundamentação via RAG, API, integração via WhatsApp e interface administrativa prevista no alinhamento atual.  
 **Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
 
 ---
@@ -475,9 +502,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** Vítimas de violência psicológica frequentemente não conseguem reconhecer sozinhas o abuso que estão vivendo, por causa das próprias táticas usadas pelo agressor.
-2. **Contribuição técnica do TCC:** Um sistema que analisa conversas de texto ou áudio e classifica indícios de violência psicológica, explicando o resultado com base em critérios legais e acadêmicos reais.
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** Vítimas podem ter dificuldade para reconhecer violência psicológica em mensagens e conversas, enquanto organizações ou responsáveis pelo sistema também podem ter dificuldade para compreender padrões quando os registros são vistos isoladamente.
+2. **Contribuição técnica do TCC:** Um sistema que analisa mensagens/conversas e classifica indícios de violência psicológica com fundamentação legal e acadêmica.
+3. **Como uma pessoa poderia utilizar essa contribuição:** A vítima encaminha ao chatbot uma mensagem ou conversa suspeita e recebe uma análise individual; administradores autorizados utilizam um painel web para acompanhar indicadores, consultar histórico.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
@@ -485,21 +512,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
+- [x] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
 - [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [x] Usuários diretos e stakeholders foram diferenciados.
+- [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [x] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [x] Processo/problema atual foi descrito antes da solução.
+- [x] Existe situação concreta de uso/problema.
+- [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [x] Mercado/alternativas existentes foram levantados inicialmente.
+- [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
 - [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
