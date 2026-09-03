@@ -172,7 +172,7 @@ Liste recomendações com origem explícita.
 {{fontes dos produtos, avaliações e literatura}}
 
 - GRUPO PANDORA. IAVP: Instrumento de Avaliação de Violência Psicológica. Disponível em: https://iavppandora.insightlab.ufc.br/iavp
-- 
+- INSTITUTO GLÒRIA. Disponível em: https://eusouagloria.com.br/home
 
 ## Checklist
 
