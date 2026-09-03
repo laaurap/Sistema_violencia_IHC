@@ -29,11 +29,11 @@ A pergunta é: **“que convenções esse perfil já conhece para executar taref
 Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
 | Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
 |---|---|---|---|---|
-| Lumira, Be Safe Mulher, Rede Mulher, Instituto Glória | concorrentes/análogos do domínio | Atuam em necessidades próximas, como orientação, autoavaliação, acolhimento e emergência | F | manter no levantamento e aprofundar os mais representativos |
-| IAVP (Ministérios Públicos) | análogo institucional |	Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial de triagem, porem preenchido por profissional humano | F | manter como referência institucional) |
-| Dashboards analíticos / ferramentas de BI | análogos de interface | O administrador precisa visualizar indicadores e tendências em grande volume de dados | H | analisar pelo menos uma interface representativa |
-| Sistemas administrativos com histórico, busca e filtros | análogos de interface |	O administrador precisa localizar análises anteriores e abrir registros específicos | H | analisar pelo menos uma interface representativa |
-| Sistemas de monitoramento/triagem com lista + detalhe | análogos de interface |	O administrador precisa sair de uma visão geral para o detalhe de uma análise | H | investigar convenções de navegação e priorização |
+| Lumira | concorrente/análoga do domínio | Atua em necessidade próxima de orientação e identificação de violência | F/H | analisar como C02 |
+| IAVP (Ministérios Públicos) | análogo institucional |	Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial de triagem, porem preenchido por profissional humano | F | analisar como C01 |
+| Be Safe Mulher | concorrente/análoga do domínio | Atua em contexto de proteção, orientação e apoio à mulher | F/H | analisar como C03 |
+| Rede Mulher | concorrente/análoga do domínio |	Atua em acolhimento/orientação e rede de apoio | F/H | analisar em resumo ou como C04 |
+| Instituto Glória | concorrente/análoga do domínio |	Atua em apoio, orientação e enfrentamento à violência | F/H | analisar em resumo ou como C05 |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -64,7 +64,7 @@ A vítima continua sendo usuária direta do sistema, porém do outro ponto de in
 ### Análise C01 — IAVP (Instrumento de Avaliação de Violência Psicológica, Grupo de Trabalho Pandora / Ministérios Públicos estaduais)
 
 **Autor(a):** Laura de Souza Parente — 22.123.033-7 
-**Tipo:** análogo  (protocolo metodológico, não é software autônomo)
+**Tipo:** análogo institucional / metodológico
 **Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
 **Data de acesso:** 27/08/2026
 
@@ -80,32 +80,46 @@ Para o nosso projeto, o IAVP é relevante principalmente porque demonstra uma fo
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Formulário estruturado de avaliação | Preenchido pela propria vitima, mas é recomendado quando possivel se preenchido por profissional habilitado, buscando identificar constrangimento, humilhação, manipulação, isolamento, ameaças, violência digital, entre outras categorias | ../assets/02_concorrencia/iavp_formulario.png | A divisão em etapas reduz a quantidade de informação apresentada de uma vez, mas aumenta o número de passos |
-
-| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | ../assets/02_concorrencia/iavp_condutas.png | Estrutura e terminologia podem ajudar a organizar categorias exibidas no detalhe de uma análise |
-
-| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | `../assets/02_concorrencia/...` | {{...}} |
-
-| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | `../assets/02_concorrencia/...` | {{...}} |
+| Formulário estruturado de avaliação | Preenchido pela propria vitima, mas é recomendado quando possivel se preenchido por profissional habilitado, buscando identificar constrangimento, humilhação, manipulação, isolamento, ameaças, violência digital, entre outras categorias | PRINT | A divisão em etapas reduz a quantidade de informação apresentada de uma vez, mas aumenta o número de passos |
+| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | PRINT | Estrutura e terminologia podem ajudar a organizar categorias exibidas no detalhe de uma análise |
+| Avaliação de dano emocional | Há uma parte específica voltada aos impactos emocionais associados à situação de violência | PRINT | Mostra a importância de separar comportamento identificado de consequência emocional |
+| Aviso de privacidade e tratamento de dados sensíveis | A interface informa que os dados são sensíveis e apresenta orientações antes do preenchimento | `../assets/02_concorrencia/...` | Transparência sobre dados é especialmente relevante para nosso painel administrativo |
+| Salvamento local do rascunho | A interface informa que o rascunho pode ser mantido localmente no dispositivo e permite desabilitar esse recurso | `../assets/02_concorrencia/...` | Demonstra preocupação explícita com privacidade e controle do usuário |
 
 #### Experiência do usuário e opiniões
 
 Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
 
+Nas fontes oficiais consultadas não foram encontradas avaliações públicas de usuários em quantidade suficiente para concluir que a interface é fácil ou difícil de usar. Portanto, não é adequado tratar satisfação ou usabilidade percebida como fato.
+
+Em uma análise exploratória da própria interface, entretanto, é possível observar alguns elementos objetivos: o formulário é dividido em seções, campos obrigatórios são identificados, existe aviso de coleta de dados sensíveis e a interface comunica o comportamento do salvamento local. Esses pontos ajudam a reduzir incerteza durante o preenchimento, mas a quantidade de perguntas e a extensão do instrumento podem aumentar o esforço necessário para conclusão.
+
 #### Preço/modelo de negócio
 
-{{...}}
+Não foi identificado modelo comercial ou cobrança para utilização do instrumento na página oficial consultada. O IAVP é apresentado como uma ferramenta institucional de apoio à identificação e enfrentamento da violência psicológica.
 
 #### Padrões e tendências percebidos
 
-{{...}}
+- formulário dividido em etapas;
+
+- uso de linguagem vinculada ao domínio jurídico e psicológico;
+
+- separação entre condutas do agressor e dano emocional;
+
+- indicação explícita de campos obrigatórios;
+
+- aviso de privacidade antes da coleta de dados sensíveis;
+
+- preocupação em orientar quem deve preencher e em qual contexto.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial por Ministérios Públicos de múltiplos estados | {{...}} | {{...}} |
-| É preenchido por profissional especializado, não por IA | Manual do IAVP exige "expertise para atuar em casos de violência psicológica" | {{...}} |
+| Base técnica e jurídica explícita | IAVP organizado a partir do art. 147-B e desenvolvido por equipe interdisciplinar | O painel deve deixar clara a origem/fundamentação das categorias e resultados |
+| Estrutura padronizada | Instrumento dividido em partes e perguntas organizadas | Categorias e informações do nosso sistema também devem seguir uma organização consistente |
+| Preocupação com privacidade | A interface apresenta aviso sobre dados sensíveis e armazenamento | O painel administrativo precisa comunicar e limitar o acesso a conteúdo sensível || Avaliação manual e estruturada | O preenchimento depende de respostas fornecidas pela vítima/profissional | Nosso sistema se diferencia ao analisar automaticamente mensagens/conversas |
+| Não possui foco em análise agregada de muitos casos | A interface observada é voltada ao preenchimento individual | Existe oportunidade para nosso dashboard apoiar visão geral, histórico e comparação |
 
 > Repita a subseção para C02, C03... até atender à quantidade da equipe.
 
@@ -115,11 +129,11 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| Ferramenta de BI/dashboard |  |  | {{link local}} |  |
-| WhatsApp |  |  | {{link local}} |  |
-| WhatsApp |  |  | {{link local}} |  |
-| WhatsApp |  |  | {{link local}} |  |
-| WhatsApp |  |  | {{link local}} |  |
+| Power BI | Referência profissional para acompanhamento de indicadores e exploração de dados | dashboard, cards, gráficos, filtros, tabelas | {{link local}} | Como organizar visão geral e permitir aprofundamento sem perder contexto |
+| Looker Studio | Referência de relatórios e dashboards interativos | iltros visíveis, controles, gráficos, páginas de relatório | {{link local}} | Como permitir exploração visual do conjunto de dados |
+| Excel / planilha eletrônica | Referência comum para consulta, ordenação e filtragem de registros | linhas/colunas, busca, ordenação, filtros | {{link local}} | Como tornar o histórico eficiente para localizar registros |
+| WhatsApp | Canal usado pela vítima para enviar a conversa suspeita e receber a resposta | conversa em mensagens, histórico cronológico, feedback de envio | {{link local}} | Entender a origem do conteúdo que depois aparece no painel administrativo |
+
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -157,16 +171,19 @@ Liste recomendações com origem explícita.
 
 {{fontes dos produtos, avaliações e literatura}}
 
+- GRUPO PANDORA. IAVP: Instrumento de Avaliação de Violência Psicológica. Disponível em: https://iavppandora.insightlab.ufc.br/iavp
+- 
+
 ## Checklist
 
-- [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+- [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
 - [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
 - [ ] Há pelo menos uma análise completa por integrante.
 - [ ] Cada análise contém prints legíveis da interface.
 - [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [ ] Foram analisados concorrentes e/ou interfaces representativas ao público.
+- [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [ ] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
+- [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
 - [ ] Opiniões de UX têm fonte.
 - [ ] A síntese compara critérios comuns e produz recomendações.
-- [ ] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
