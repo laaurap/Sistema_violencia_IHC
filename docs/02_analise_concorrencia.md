@@ -55,7 +55,7 @@ Seu objetivo principal é conseguir transformar um conjunto grande de registros 
 
 - observar tendências e padrões no conjunto de dados;
 
-- interpretar os resultados sem perder o contexto e sem expor informações sensíveis desnecessariamente.
+- interpretar os resultados sem perder o contexto.
 
 A vítima continua sendo usuária direta do sistema, porém do outro ponto de interação: ela recebe uma mensagem ou conversa suspeita do possível agressor, encaminha esse conteúdo ao chatbot pelo WhatsApp e recebe a análise individual. Esse fluxo é importante para entender a origem dos dados, mas não é o foco principal da interface administrativa estudada nesta entrega.
 
@@ -70,13 +70,23 @@ A vítima continua sendo usuária direta do sistema, porém do outro ponto de in
 
 #### Contexto e proposta
 
-Instrumento criado por um grupo interdisciplinar de nove profissionais (Direito, Psicologia e Psiquiatria), lançado pelo Núcleo de Gênero do MPSP e depois replicado por Ministérios Públicos de outros estados (RJ, MG, ES, PR). O objetivo declarado é identificar condutas de violência psicológica tipificadas no artigo 147-B do Código Penal e dimensionar o dano emocional sofrido pela vítima, para uso por promotores, peritos e profissionais de saúde/assistência social.
+O IAVP foi desenvolvido pelo Grupo Pandora, formado por profissionais das áreas de Direito, Psicologia e Psiquiatria. Seu objetivo é auxiliar na identificação de condutas de violência psicológica e do dano emocional associado, tomando como referência o art. 147-B do Código Penal.
+
+O instrumento pode ser preenchido diretamente pela vítima, embora o próprio material de aplicação recomende, quando possível, o acompanhamento de profissional capacitada nas áreas de saúde, assistência social, segurança pública ou jurídica.
+
+Para o nosso projeto, o IAVP é relevante principalmente porque demonstra uma forma estruturada, fundamentada e institucional de organizar a avaliação de violência psicológica, mesmo sem realizar análise automatizada de conversas.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Formulário estruturado de triagem | Preenchido pela propria vitima, mas é recomendado quando possivel se preenchido por profissional habilitado, buscando identificar constrangimento, humilhação, manipulação, isolamento, ameaças, violência digital, entre outras categorias | `../assets/02_concorrencia/...` | {{...}} |
+| Formulário estruturado de avaliação | Preenchido pela propria vitima, mas é recomendado quando possivel se preenchido por profissional habilitado, buscando identificar constrangimento, humilhação, manipulação, isolamento, ameaças, violência digital, entre outras categorias | ../assets/02_concorrencia/iavp_formulario.png | A divisão em etapas reduz a quantidade de informação apresentada de uma vez, mas aumenta o número de passos |
+
+| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | ../assets/02_concorrencia/iavp_condutas.png | Estrutura e terminologia podem ajudar a organizar categorias exibidas no detalhe de uma análise |
+
+| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | `../assets/02_concorrencia/...` | {{...}} |
+
+| Identificação de condutas de violência psicológica | O instrumento apresenta perguntas relacionadas a constrangimento, humilhação, controle, isolamento, ameaças e outras condutas | `../assets/02_concorrencia/...` | {{...}} |
 
 #### Experiência do usuário e opiniões
 
@@ -105,10 +115,11 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| Ferramenta de BI/dashboard | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
-| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
-| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
-| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
+| Ferramenta de BI/dashboard |  |  | {{link local}} |  |
+| WhatsApp |  |  | {{link local}} |  |
+| WhatsApp |  |  | {{link local}} |  |
+| WhatsApp |  |  | {{link local}} |  |
+| WhatsApp |  |  | {{link local}} |  |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
