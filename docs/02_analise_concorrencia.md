@@ -29,14 +29,35 @@ A pergunta é: **“que convenções esse perfil já conhece para executar taref
 Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
 | Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
 |---|---|---|---|---|
-| Lumira, Be Safe Mulher, Rede Mulher, Instituto Glória | concorrentes/análogos adicionais | Cobrem variações do domínio (autoavaliação, emergência, própria vitima responde) | F | 	analisados em resumo |
-| IAVP (Ministérios Públicos) | análogo institucional |	Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial de triagem, porem preenchido por profissional humano | F | analisado (C05) |
+| Lumira, Be Safe Mulher, Rede Mulher, Instituto Glória | concorrentes/análogos do domínio | Atuam em necessidades próximas, como orientação, autoavaliação, acolhimento e emergência | F | manter no levantamento e aprofundar os mais representativos |
+| IAVP (Ministérios Públicos) | análogo institucional |	Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial de triagem, porem preenchido por profissional humano | F | manter como referência institucional) |
+| Dashboards analíticos / ferramentas de BI | análogos de interface | O administrador precisa visualizar indicadores e tendências em grande volume de dados | H | analisar pelo menos uma interface representativa |
+| Sistemas administrativos com histórico, busca e filtros | análogos de interface |	O administrador precisa localizar análises anteriores e abrir registros específicos | H | analisar pelo menos uma interface representativa |
+| Sistemas de monitoramento/triagem com lista + detalhe | análogos de interface |	O administrador precisa sair de uma visão geral para o detalhe de uma análise | H | investigar convenções de navegação e priorização |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ## 1. Público-alvo desta análise
 
-Conforme definido na Entrega 1 (seção 7.2–7.4): o usuário principal priorizado é a vítima — a pessoa que efetivamente recebe a notificação/resultado da análise pelo WhatsApp. O objetivo é reconhecer, de forma clara, acolhedora e sem linguajar técnico, se uma conversa apresenta indícios de violência psicológica — e entender com segurança o que fazer a seguir.
+Conforme definido na Entrega 1, o usuário principal priorizado para IHC é o administrador/analista autorizado do sistema. Esse usuário acessará a interface web administrativa para acompanhar e compreender os dados gerados pelas análises de conversas.
+
+Seu objetivo principal é conseguir transformar um conjunto grande de registros individuais em informação útil, realizando tarefas como:
+
+- visualizar indicadores gerais no dashboard;
+
+- consultar o histórico de análises;
+
+- aplicar filtros por período, nível de risco e categoria;
+
+- pesquisar registros específicos;
+
+- abrir e analisar o detalhe de uma conversa/resultado;
+
+- observar tendências e padrões no conjunto de dados;
+
+- interpretar os resultados sem perder o contexto e sem expor informações sensíveis desnecessariamente.
+
+A vítima continua sendo usuária direta do sistema, porém do outro ponto de interação: ela recebe uma mensagem ou conversa suspeita do possível agressor, encaminha esse conteúdo ao chatbot pelo WhatsApp e recebe a análise individual. Esse fluxo é importante para entender a origem dos dados, mas não é o foco principal da interface administrativa estudada nesta entrega.
 
 ## 2. Concorrentes diretos/indiretos
 
@@ -84,6 +105,9 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
+| Ferramenta de BI/dashboard | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
+| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
+| WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
 | WhatsApp | Principal canal de comunicação pessoal no Brasil; é também o canal que o próprio Ligue 180 passou a usar oficialmente | Conversas em bolhas, indicadores de "digitando...", confirmação de leitura, notificações push | {{link local}} | O bot deve seguir as convenções de conversa do WhatsApp (mensagens curtas, tom direto) em vez de se comportar como um formulário longo |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
