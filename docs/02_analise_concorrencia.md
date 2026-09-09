@@ -162,7 +162,7 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 **Autor(a):** Laura de Souza Parente — 22.123.033-7 
 **Tipo:** concorrente indireto / análogo do domínio
-**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Link oficial:** [{{Be Safe Mulher}}](https://app.defesadamulher.com.br/)  
 **Data de acesso:** 05/09/2026
 
 #### Contexto e proposta
@@ -200,8 +200,8 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 **Autor(a):** Laura de Souza Parente — 22.123.033-7 
 **Tipo:** concorrente indireto / análogo do domínio
-**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
-**Data de acesso:** 05/09/2026
+**Link oficial:** [{{Instituto Glória}}](https://eusouagloria.com.br/home)  
+**Data de acesso:** 08/09/2026
 
 #### Contexto e proposta
 
