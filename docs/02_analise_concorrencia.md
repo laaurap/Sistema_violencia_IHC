@@ -32,8 +32,7 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 | Lumira | concorrente/análoga do domínio | Atua em necessidade próxima de orientação e identificação de violência | F/H | analisar como C02 |
 | IAVP (Ministérios Públicos) | análogo institucional |	Mesma base legal (Art. 147-B do Código Penal) usada como referência oficial de triagem, porem preenchido por profissional humano | F | analisar como C01 |
 | Be Safe Mulher | concorrente/análoga do domínio | Atua em contexto de proteção, orientação e apoio à mulher | F/H | analisar como C03 |
-| Rede Mulher | concorrente/análoga do domínio |	Atua em acolhimento/orientação e rede de apoio | F/H | analisar em resumo ou como C04 |
-| Instituto Glória | concorrente/análoga do domínio |	Atua em apoio, orientação e enfrentamento à violência | F/H | analisar em resumo ou como C05 |
+| Instituto Glória | concorrente/análoga do domínio |	Atua em apoio, orientação e enfrentamento à violência | F/H | analisar em resumo ou como C04 |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -121,6 +120,123 @@ Não foi identificado modelo comercial ou cobrança para utilização do instrum
 | Preocupação com privacidade | A interface apresenta aviso sobre dados sensíveis e armazenamento | O painel administrativo precisa comunicar e limitar o acesso a conteúdo sensível || Avaliação manual e estruturada | O preenchimento depende de respostas fornecidas pela vítima/profissional | Nosso sistema se diferencia ao analisar automaticamente mensagens/conversas |
 | Não possui foco em análise agregada de muitos casos | A interface observada é voltada ao preenchimento individual | Existe oportunidade para nosso dashboard apoiar visão geral, histórico e comparação |
 
+### Análise C02 — Lumira
+
+**Autor(a):** Laura de Souza Parente — 22.123.033-7 
+**Tipo:** concorrente indireto / análogo do domínio
+**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Data de acesso:** 05/09/2026
+
+#### Contexto e proposta
+
+...
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+...
+|  | | `../assets/02_concorrencia/...` |  |
+|  |  | `../assets/02_concorrencia/...` |  |
+
+#### Experiência do usuário e opiniões
+
+Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
+
+...
+
+#### Preço/modelo de negócio
+
+...
+
+#### Padrões e tendências percebidos
+...
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+|  |  | |
+
+### Análise C03 — Be Safe Mulher
+
+**Autor(a):** Laura de Souza Parente — 22.123.033-7 
+**Tipo:** concorrente indireto / análogo do domínio
+**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Data de acesso:** 05/09/2026
+
+#### Contexto e proposta
+
+...
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+...
+|  | | `../assets/02_concorrencia/...` |  |
+|  |  | `../assets/02_concorrencia/...` |  |
+
+#### Experiência do usuário e opiniões
+
+Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
+
+...
+
+#### Preço/modelo de negócio
+
+...
+
+#### Padrões e tendências percebidos
+...
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+|  |  | |
+
+### Análise C04 — Instituto Glória
+
+**Autor(a):** Laura de Souza Parente — 22.123.033-7 
+**Tipo:** concorrente indireto / análogo do domínio
+**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Data de acesso:** 05/09/2026
+
+#### Contexto e proposta
+
+...
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+...
+|  | | `../assets/02_concorrencia/...` |  |
+|  |  | `../assets/02_concorrencia/...` |  |
+
+#### Experiência do usuário e opiniões
+
+Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
+
+...
+
+#### Preço/modelo de negócio
+
+...
+
+#### Padrões e tendências percebidos
+...
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+|  |  | |
+
+
+
+
 > Repita a subseção para C02, C03... até atender à quantidade da equipe.
 
 ## 3. Softwares que o público-alvo usa no cotidiano
@@ -141,17 +257,17 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | {{...}} | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| dashboard | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | sim/não/talvez |
+| relatório | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | {{...}} |
+| histórico + filtros | Power BI, Looker Studio, planilhas | {{...}} | {{...}} | {{...}} | {{...}} |
+| administração/CRUD | não evidenciado como necessidade nas referências analisadas até o momento | {{...}} | {{...}} | {{...}} | {{...}} |
+| comparação de resultados | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | {{...}} |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 (IAVP) | C02 (Lumira) | C03 | Oportunidade para o projeto |
+| Critério | C01 (IAVP) | C02 (Lumira) | C03 (Be Safe Mulher) | Oportunidade para o projeto |
 |---|---|---|---|---|
 | Navegação |  |  |  |  |
 | Feedback/estado |  |  |  |  |
