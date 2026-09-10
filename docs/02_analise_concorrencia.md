@@ -64,7 +64,7 @@ A vítima continua sendo usuária direta do sistema, porém do outro ponto de in
 
 **Autor(a):** Laura de Souza Parente — 22.123.033-7 
 **Tipo:** análogo institucional / metodológico
-**Link oficial:** [{{URL}}](https://iavppandora.insightlab.ufc.br/iavp)  
+**Link oficial:** [{{IAVP}}](https://iavppandora.insightlab.ufc.br/iavp)  
 **Data de acesso:** 27/08/2026
 
 #### Contexto e proposta
