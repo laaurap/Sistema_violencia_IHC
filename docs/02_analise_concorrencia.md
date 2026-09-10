@@ -129,34 +129,38 @@ Não foi identificado modelo comercial ou cobrança para utilização do instrum
 
 #### Contexto e proposta
 
-...
+A Lumira é uma aplicação voltada ao acolhimento e orientação de mulheres em situação de vulnerabilidade ou violência doméstica. Atua principalmente por meio de uma assistente virtual/chatbot e conteúdos informativos sobre tipos de abuso.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
 ...
-|  | | `../assets/02_concorrencia/...` |  |
-|  |  | `../assets/02_concorrencia/...` |  |
+| Chatbot de orientação inicial | Respostas automatizadas em fluxo guiado por texto | `../assets/02_concorrencia/...` | Simplifica a linguagem para o usuário leigo, mas limita o envio de grandes textos. |
+| Conteúdo educativo categorizado | Cartões explicativos sobre violência psicológica, moral e física | `../assets/02_concorrencia/...` | As categorias de abuso são apresentadas com ícones e exemplos simples. |
 
 #### Experiência do usuário e opiniões
 
 Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
 
-...
+A interface prioriza tons suaves e navegação simples. No entanto, foca exclusivamente na ponta final (vítima) e não oferece transparência ou painéis de acompanhamento de dados para órgãos de apoio ou gestores.
 
 #### Preço/modelo de negócio
 
-...
+Gratuito para o usuário final / Parcerias institucionais.
 
 #### Padrões e tendências percebidos
-...
+- Comunicação empática e direta;
 
+- Organização das formas de abuso em categorias visuais legíveis.
+
+  
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-|  |  | |
+| Categorização clara de violência | Exibição visual dos tipos de violência doméstica | Inspirar a forma como as categorias são rotuladas no detalhe da análise no nosso painel |
+| Ausência de painel analítico | A ferramenta não possui visão administrativa pública/agregada | Oportunidade para o nosso TCC preencher a lacuna de acompanhamento de dados e tendências |
 
 ### Análise C03 — Be Safe Mulher
 
@@ -167,34 +171,35 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 #### Contexto e proposta
 
-...
+Plataforma com foco em segurança pessoal, acionamento de rede de emergência, geolocalização e orientações de proteção à mulher.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
 ...
-|  | | `../assets/02_concorrencia/...` |  |
-|  |  | `../assets/02_concorrencia/...` |  |
+| Botão de emergência / Alerta |  Acionamento rápido por toque único enviando localização | `../assets/02_concorrencia/...` | Alta eficiência para situações de risco iminente. |
+| Cadastro de rede de apoio | Inclusão de contatos de confiança para envio automático de mensagens | `../assets/02_concorrencia/...` | Requer passos prévios de configuração. |
 
 #### Experiência do usuário e opiniões
 
 Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
 
-...
+Focada em ação rápida mobile. Possui forte apelo de privacidade no aparelho do usuário, mas não realiza análise de inteligência artificial sobre conteúdos de texto/áudio nem consolidadores de dados analíticos.
 
 #### Preço/modelo de negócio
 
-...
+Modelo Free / Serviços corporativos e públicos.
 
 #### Padrões e tendências percebidos
-...
+Priorização absoluta da privacidade e facilidade de disfarçar/fechar a aplicação.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-|  |  | |
+| Foco em privacidade extrema | Recursos para ocultaçāo rápida de tela | Reforça a necessidade do nosso painel administrativo mascarar dados pessoais sensíveis por padrão |
+| Foco exclusivo em emergência pontual | Não analisa o conteúdo de conversas suspeitas | Nosso projeto atua na etapa anterior (identificação do padrão de abuso) |
 
 ### Análise C04 — Instituto Glória
 
@@ -205,34 +210,35 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 #### Contexto e proposta
 
-...
+Plataforma que utiliza inteligência artificial (a atendente virtual "Glória") para escuta, acolhimento e coleta de dados sobre violência contra mulheres e meninas, visando a transformação social.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
 ...
-|  | | `../assets/02_concorrencia/...` |  |
-|  |  | `../assets/02_concorrencia/...` |  |
+| Escuta estruturada via IA | Conversação via chat interativo para mapear a situação | `../assets/02_concorrencia/...` | Interface conversacional acolhedora e acessível. |
+| Mapeamento de dados de violência | Coleta interna de relatos para gerar estatísticas institucionais | `../assets/02_concorrencia/...` | Demonstra a importância de agregar dados para gerar conhecimento. |
 
 #### Experiência do usuário e opiniões
 
 Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
 
-...
+A assistente virtual é bastante reconhecida pelo acolhimento, mas as justificativas técnicas e legais de como as classificações de risco são feitas não são expostas de forma transparente para o analista no resultado final.
 
 #### Preço/modelo de negócio
 
-...
+Organização sem fins lucrativos / Parcerias governamentais e privadas.
 
 #### Padrões e tendências percebidos
-...
+Utilização de IA para processamento de linguagem natural no acolhimento de relatos.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-|  |  | |
+| Uso de IA no acolhimento | Interação natural por chat |  Valida a escolha do chatbot via WhatsApp no nosso ecossistema |
+| Pouca explicabilidade nos veredictos | Respostas diretas sem fundamentação jurídica visível | Nosso painel se diferencia ao exibir a fundamentação RAG com o Art. 147-B e referências |
 
 
 
@@ -269,19 +275,21 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Critério | C01 (IAVP) | C02 (Lumira) | C03 (Be Safe Mulher) | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação |  |  |  |  |
-| Feedback/estado |  |  |  |  |
-| Prevenção/recuperação de erro |  |  |  |  |
-| Terminologia |  |  |  |  |
-| Acessibilidade |  |  |  |  |
-| Eficiência |  |  |  |  |
+| Navegação | Formulario sequencial em etapas | Fluxo guiado por chat / menu simples |  |  |
+| Feedback/estado | Indicadores de progresso no preenchimento | Respostas diretas da assistente no chat | Menu inferior mobile / telas diretas |  |
+| Prevenção/recuperação de erro |  |  |  |
+| Terminologia | Jurídica e psicológica formal (Art. 147-B) | Conformativa, simples e acessível | Focada em segurança pessoal |  |
+| Acessibilidade | Leitura limpa e bom contraste em formulário | Interface moderna com boa legibilidade | Botões grandes de fácil acionamento | Desenvolver layout responsivo com alto contraste e densidade de informação controlada. |
+| Eficiência | Baixa para análise em lote (preenchimento manual) | Média para o usuário final | Alta para acionamentos pontuais | Alta eficiência analítica: busca instantânea, ordenação por risco e filtros combinados em tela única. |
 
 ## 5. Recomendações derivadas
 
 Liste recomendações com origem explícita.
 
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** Incorporar um aviso de confidencialidade/privacidade e implementar mascaramento automático de dados de identificação na listagem geral do painel (derivada do IAVP - C01 e Be Safe - C03).
+- **RC02:** Exibir no detalhe da análise a justificativa em formato de explicabilidade, com destaques nos trechos da conversa e citação direta da base legal (Art. 147-B) (derivada da falta de explicabilidade observada no Instituto Glória - C04).
+- **RC03:** Adicionar cards sintéticos com contadores por nível de risco (Alto, Médio, Baixo) no topo do dashboard principal (derivada dos padrões de BI observados no Power BI / Looker Studio).
+
 
 ## Referências
 
