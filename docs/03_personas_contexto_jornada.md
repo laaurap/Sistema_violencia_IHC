@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 05/08/2026  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -28,36 +28,43 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
+| Administrador/ | F | Alinhamento com orientador e escopo do painel web | incorporar / manter como hipótese / descartar / investigar |
+| Vítima (usuária do chatbot WhatsApp) | F/H | Interface atual via WhatsApp/Twilio | incorporar / manter como hipótese / descartar / investigar |
+| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
 | {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
 
 ## 1. Personas
 
-### Persona P01 — {{nome fictício}}
+### Persona P01 — Camila Rocha
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** primária / secundária  
-**Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
-**Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
+**Tipo:** Primária  
+**Base de evidências:** proto-persona a validar
+**Hipóteses da Entrega 1 relacionadas:** H01, H03
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| Faixa etária / contexto relevante | 34 anos; atua em ambiente de escritório/home office com foco em análise de dados e acompanhamento operacional. |
+| Ocupação/papel | Analista Responsável pela Interface Administrativa do Sistema. |
+| Conhecimento do domínio | Alto em análise de dados e interpretação de indicadores; médio em conceitos jurídicos (Art. 147-B). |
+| Experiência tecnológica | Avançada em sistemas web, ferramentas de BI (Power BI/Looker Studio) e dashboards operacionais. |
+| Objetivos | Acompanhar o volume de análises em tempo real, filtrar registros por nível de risco/categoria e auditá-los com agilidade. |
+| Necessidades | Visualizar tendências agregadas sem perder a capacidade de inspecionar conversas e justificativas (RAG) individuais. |
+| Dores/frustrações | Ter que abrir múltiplos registros manualmente; dashboards poluídos com métricas irrelevantes; risco de exposição de dados sensíveis. |
+| Motivadores | Garantir a acurácia do sistema e extrair relatórios/indicadores consistentes para melhoria contínua da solução. |
+| Restrições/acessibilidade | Trabalha com múltiplos monitores; necessita de alta densidade de informação com legibilidade e contraste adequados. |
+| Ambiente típico de uso | Computador de mesa ou notebook em ambiente de trabalho controlado/escritório. |
+| Comportamentos relevantes | Costuma aplicar filtros logo na entrada do sistema e alternar rapidamente entre a lista de registros e a visão detalhada. |
 
 **Decisões de design influenciadas por P01:**
 
-- {{...}}
+- Estruturação do painel em layout de duas colunas ou modal de detalhe para transição rápida entre lista e conteúdo detalhado.
+
+- Presença de filtros globais destacados no topo (período, categoria de violência, nível de risco).
+
+- Ocultação por padrão de dados pessoais identificáveis na visão em lista, priorizando a privacidade.
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
@@ -67,8 +74,8 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** {{P01}}  
-**Justificativa:** {{por que esse perfil é relevante}}
+**Persona escolhida:** Camila Rocha
+**Justificativa:** É o perfil de usuário priorizado para o recorte do projeto de interface web em IHC.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
