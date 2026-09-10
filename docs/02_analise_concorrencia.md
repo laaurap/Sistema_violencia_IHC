@@ -260,11 +260,11 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | Power BI, Looker Studio, planilhas | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | não evidenciado como necessidade nas referências analisadas até o momento | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | Power BI, Looker Studio | {{...}} | {{...}} | {{...}} | {{...}} |
+| dashboard | Power BI, Looker Studio | obter visão geral dos dados | permite perceber indicadores e tendências rapidamente | excesso de métricas pode confundir | sim |
+| relatório | Power BI, Looker Studio | reunir gráficos e informações relacionadas | centraliza informações relevantes | pode ficar visualmente carregado| sim |
+| histórico + filtros | Power BI, Looker Studio, planilhas | localizar subconjuntos e registros | reduz esforço de busca | filtros ativos podem passar despercebidos | sim |
+| administração/CRUD | não evidenciado como necessidade nas referências analisadas até o momento | alterar cadastros/configurações | pode apoiar manutenção do sistema | não existe tarefa suficientemente definida que justifique CRUD neste momento | talvez/não |
+| comparação de resultados | Power BI, Looker Studio | comparar períodos, categorias ou níveis | facilita identificação de diferenças | comparação sem contexto pode gerar interpretação errada | sim/talvez |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
@@ -272,10 +272,10 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Critério | C01 (IAVP) | C02 (Lumira) | C03 (Be Safe Mulher) | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação | Formulario sequencial em etapas | Fluxo guiado por chat / menu simples |  |  |
-| Feedback/estado | Indicadores de progresso no preenchimento | Respostas diretas da assistente no chat | Menu inferior mobile / telas diretas |  |
-| Prevenção/recuperação de erro |  |  |  |
-| Terminologia | Jurídica e psicológica formal (Art. 147-B) | Conformativa, simples e acessível | Focada em segurança pessoal |  |
+| Navegação | Formulario sequencial em etapas | Fluxo guiado por chat / menu simples | Menu inferior mobile / telas diretas | Criar navegação em níveis no painel web (Visão Geral -> Filtro -> Detalhe do Registro). |
+| Feedback/estado | Indicadores de progresso no preenchimento | Respostas diretas da assistente no chat | Confirmação visual de acionamento | Exibir claramente o status do processamento da IA e o nível de confiança do veredicto. |
+| Prevenção/recuperação de erro | Mensagens explícitas de aviso sobre dados sensíveis | Confirmação de intenção no diálogo | Confirmações em passos críticos de SOS | Adicionar avisos e modais de confirmação ao abrir conteúdos íntegros e sensíveis no painel. |
+| Terminologia | Jurídica e psicológica formal (Art. 147-B) | Conformativa, simples e acessível | Focada em segurança pessoal | Conciliar a terminologia jurídica/acadêmica no detalhe com rótulos e cards simples na visão geral. |
 | Acessibilidade | Leitura limpa e bom contraste em formulário | Interface moderna com boa legibilidade | Botões grandes de fácil acionamento | Desenvolver layout responsivo com alto contraste e densidade de informação controlada. |
 | Eficiência | Baixa para análise em lote (preenchimento manual) | Média para o usuário final | Alta para acionamentos pontuais | Alta eficiência analítica: busca instantânea, ordenação por risco e filtros combinados em tela única. |
 
@@ -294,6 +294,8 @@ Liste recomendações com origem explícita.
 
 - GRUPO PANDORA. IAVP: Instrumento de Avaliação de Violência Psicológica. Disponível em: https://iavppandora.insightlab.ufc.br/iavp
 - INSTITUTO GLÒRIA. Disponível em: https://eusouagloria.com.br/home
+- Be Safe Mulher. Disponivel em: https://app.defesadamulher.com.br/
+- Lumira.  Disponivel em:
 
 ## Checklist
 
