@@ -135,7 +135,6 @@ A Lumira é uma aplicação voltada ao acolhimento e orientação de mulheres em
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-...
 | Chatbot de orientação inicial | Respostas automatizadas em fluxo guiado por texto | `../assets/02_concorrencia/...` | Simplifica a linguagem para o usuário leigo, mas limita o envio de grandes textos. |
 | Conteúdo educativo categorizado | Cartões explicativos sobre violência psicológica, moral e física | `../assets/02_concorrencia/...` | As categorias de abuso são apresentadas com ícones e exemplos simples. |
 
@@ -177,7 +176,6 @@ Plataforma com foco em segurança pessoal, acionamento de rede de emergência, g
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-...
 | Botão de emergência / Alerta |  Acionamento rápido por toque único enviando localização | `../assets/02_concorrencia/...` | Alta eficiência para situações de risco iminente. |
 | Cadastro de rede de apoio | Inclusão de contatos de confiança para envio automático de mensagens | `../assets/02_concorrencia/...` | Requer passos prévios de configuração. |
 
@@ -216,7 +214,6 @@ Plataforma que utiliza inteligência artificial (a atendente virtual "Glória") 
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-...
 | Escuta estruturada via IA | Conversação via chat interativo para mapear a situação | `../assets/02_concorrencia/...` | Interface conversacional acolhedora e acessível. |
 | Mapeamento de dados de violência | Coleta interna de relatos para gerar estatísticas institucionais | `../assets/02_concorrencia/...` | Demonstra a importância de agregar dados para gerar conhecimento. |
 
