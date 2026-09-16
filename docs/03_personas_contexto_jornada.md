@@ -66,6 +66,34 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 - Ocultação por padrão de dados pessoais identificáveis na visão em lista, priorizando a privacidade.
 
+  ### Persona P02 — Beatriz Mendes
+
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
+**Tipo:** Primária  
+**Base de evidências:** Proto-persona baseada no cenário
+**Hipóteses da Entrega 1 relacionadas:** H01, H02
+
+![Persona P02](../assets/03_personas/persona_p01.svg)
+
+| Campo | Descrição |
+|---|---|
+| Faixa etária / contexto relevante | 24 anos; vivencia trocas de mensagens com o parceiro que geram dúvida e desgaste emocional. |
+| Ocupação/papel | Usuária direta do chatbot no WhatsApp. |
+| Conhecimento do domínio | Baixo/leigo; não reconhece termos como gaslighting ou invalidação emocional e dúvida de suas próprias percepções. |
+| Experiência tecnológica | Familiarizada com uso diário de smartphones e aplicativos de troca de mensagens (WhatsApp). |
+| Objetivos | Encaminhar uma conversa suspeita (A01) e obter uma leitura inicial rápida e fundamentada sobre indícios de violência psicológica. |
+| Necessidades | Retorno discreto, linguagem simples sem jargões excessivos, preservação de sua privacidade e indicação de redes de apoio. |
+| Dores/frustrações | Medo de estar "fazendo tempestade em copo d'água"; receio de que o parceiro acesse o celular ou as notificações. |
+| Motivadores | Entender se o que vive é exagero ou algo sério, para poder tomar uma decisão informada sobre buscar ajuda. |
+| Restrições/acessibilidade | Uso em smartphone via WhatsApp em momentos sensíveis; requer mensagens objetivas e acolhedoras. |
+| Ambiente típico de uso | Smartphone pessoal em momentos privados. |
+| Comportamentos relevantes | Copia e cola mensagens de texto ou envia transcrições de áudio do possível agressor para o número do bot. |
+
+**Decisões de design influenciadas por P02:**
+
+- As mensagens geradas pelo chatbot devem ser diretas e discretas para proteger P02 caso o aparelho seja visualizado por terceiros.  
+- As análises originadas por P02 devem ser tratadas como dados sensíveis no painel administrativo de P01, exigindo controle de acesso e anonimização.
+
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
 ### Síntese das personas
@@ -85,23 +113,27 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| Usuários | {{...}} | {{...}} |
-| Tarefas | {{...}} | {{...}} |
-| Equipamentos | {{...}} | {{...}} |
-| Ambiente físico | {{...}} | {{...}} |
-| Ambiente social/organizacional | {{...}} | {{...}} |
-| Papéis/permissões/governança | {{...}} | {{...}} |
-| Volume de dados/histórico | {{...}} | {{...}} |
+| Usuários | Camila Rocha (P01 - Analista/Administradora) e Beatriz Mendes (P02 - Vítima) | Projetar o painel web focado na eficiência de P01, respeitando a sensibilidade das interações de P02. |
+| Tarefas | Visualizar indicadores (A03), filtrar histórico (A04), abrir detalhes e justificativa RAG (A05) e observar tendências (A06). | Arquitetura de informação clara: Dashboard -> Histórico Filtrável -> Detalhe do Registro com Explicabilidade |
+| Equipamentos | Computadores de mesa ou notebooks para P01 (Seção 5.2); smartphones via WhatsApp para P02 (Seção 5.2). | Interface web responsiva e otimizada para telas médias e grandes (1920x1080) com suporte a tabelas largas. |
+| Ambiente físico | Ambiente de trabalho ou estudo/escritório para P01 (Seção 5.1); local privado para P02 (Seção 5.1). | Layout do painel web com contraste adequado, controle de densidade e opção de mascaramento em tela (Seção 5.3). |
+| Ambiente social/organizacional | Perfis autorizados com necessidade de controle de acesso, responsabilidade sobre dados e auditoria (Seção 5.4). | Exibir indicação visual de sessão autenticada, níveis de permissão e registros de auditoria/rastreabilidade (Seção 5.5). |
+| Papéis/permissões/governança | Restrição de acesso aos dados sensíveis conforme o perfil do administrador (Seção 5.4 e 8) | Diferenciar permissão de visão geral agregada e permissão para abrir o texto completo da conversa (Seção 2.4). |
+| Volume de dados/histórico | Acompanhamento de grande volume de registros de análises gerados pelo pipeline (Seção 4.1 e 7.4). | Padrão de busca instantânea, ordenação por nível de risco/data e filtros combinados de alto desempenho (Seção 9.2). |
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** {{P01}}  
-**Objetivo da jornada:** {{...}}  
-**Início e fim da jornada:** {{...}}
+**Persona:** Camila Rocha (P01 — Analista/Administradora) 
+**Objetivo da jornada:** Consultar o histórico de análises do sistema, filtrar registros de "Risco Alto" e examinar o detalhe e a justificativa legal (RAG) de um caso específico  
+**Início e fim da jornada:** Inicia na abertura do Painel Web Administrativo e termina na conclusão da revisão do detalhe de uma conversa com registro de status.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 1 | Acessa o painel web e observa os indicadores gerais de volume, riscos e categorias | Ter um panorama imediato do estado das análises do sistema. | "Quero checar se houve aumento nos registros de risco alto nesta semana." (Alerta / Foco) | Indicadores poluídos ou dificuldade em diferenciar volume de análises da prevalência real. | Cards sintéticos no topo com contagens por risco (Alto, Médio, Baixo) e notas explicativas sobre as métricas. | F/H |
+| 2 | Navega até a seção de histórico e aplica filtros por período e nível de risco "Alto" | Isolar rapidamente os registros críticos sem examinar todos os dados | "Preciso filtrar os casos de risco alto para fazer a revisão necessária." (Eficiência) | Filtros confusos ou lentos que forçam consultas manuais pesadas (Seção 4.2). | Barra de filtros em destaque no topo da tabela com atualização imediata e tags de critérios ativos | F/H |
+| 3 | {{...}} | {{...}} | {{...}} | Perder a posição da lista ou os filtros aplicados ao abrir um item específico | Painel lateral deslizante (Drawer) ou divisão Master-Detail mantendo a lista visível à esquerda | H |
+| 4 | Analisa a conversa, o veredicto (SIM/POSSÍVEL/NÃO) e a fundamentação do Art. 147-B recuperada pelo RAG. | Compreender com clareza como o algoritmo e o RAG fundamentaram o resultado. | "Excelente, os trechos em destaque e a citação da base legal mostram o motivo da classificação." (Confiança) | Dificuldade em interpretar o resultado por falta de clareza na justificativa da IA. | Exibir caixa de explicabilidade com destaques no texto analisado e card com a citação legal do Art. 147-B. | F/H |
+| 5 | Marca o caso como "Revisado", aplica uma nota de acompanhamento e fecha o detalhe. | Finalizar a revisão do registro e avançar para o próximo item da lista | "Registro auditado com sucesso. O sistema fundamentou corretamente o resultado." (Dever cumprido) | Falta de feedback de que a revisão foi concluída ou perda da navegação. | Atualização do badge de status na linha do histórico para "Auditado" com feedback visual discreto. | H |
 
 > A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
 
