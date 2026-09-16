@@ -173,7 +173,6 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 [F/H] Administrador/analista: precisará lidar com uma quantidade maior de registros e tomar decisões de navegação e interpretação a partir de dados agregados. A interface deve favorecer leitura rápida de indicadores, filtros claros, busca eficiente ev comparação temporal. Como os dados tratados são sensíveis, também são relevantes controle de acesso, minimização da exposição de dados pessoais, rastreabilidade das consultas e diferenciação entre informação agregada e conteúdo detalhado das conversas.
 
----
 
 # 3. Entendendo objetivos e atividades
 
@@ -204,7 +203,6 @@ Administrador/analista: compreender o que está acontecendo no conjunto de anál
 
 [H] A05 — analisar o detalhe de uma conversa/resultado é uma das atividades administrativas mais críticas, porque uma interpretação incorreta pode levar a conclusões equivocadas sobre um registro. A06 também exigem cuidado: visualizações agregadas ou mapas mal apresentados podem sugerir relações que os dados não sustentam. Para a vítima, A02 continua altamente crítica, pois a comunicação do resultado não pode gerar falsa sensação de segurança nem alarme indevido.
 
----
 
 # 4. Entendendo o problema ou processo atual
 
@@ -247,7 +245,6 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 | Lumira, Be Safe Mulher, Rede Mulher e Instituto Glória | Existem soluções/análogos que atuam em necessidades próximas do domínio | A análise detalhada das interfaces ainda está em andamento |
 | Protótipo atual do TCC | Já existe entrada por texto/áudio e saída com veredicto, risco, categorias, fundamentação e recomendação | Ainda não valida compreensão ou utilidade com usuários reais |
 
----
 
 # 5. Entendendo o contexto de uso
 
@@ -286,7 +283,6 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 [F/H] Sim. Um falso negativo pode significar não alertar uma pessoa realmente em risco; um falso positivo pode gerar alarme desnecessário e reduzir a confiança na ferramenta. Dado o domínio sensível (violência psicológica), ambos os tipos de erro têm consequência potencialmente grave — não é um domínio "de baixo risco" como recomendação de produtos, por exemplo.
 
----
 
 # 6. Entendendo mercado e alternativas existentes
 
@@ -321,7 +317,6 @@ Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, 
 
 [?] Padrões a investigar na Entrega 2
 
----
 
 # 7. Derivando o escopo de IHC da disciplina
 
@@ -369,7 +364,6 @@ Complete:
 > **Para fins da disciplina de IHC, será projetada uma interface que permita a `administrador/analista autorizado` utilizar `os resultados produzidos pelo sistema de detecção de violência psicológica` para `acompanhar indicadores, consultar o histórico, analisar conversas e identificar padrões temporais, categóricos e geográficos`, no contexto de `uso administrativo com dados sensíveis e necessidade de navegação entre visão geral e detalhes.`.**
 >
 
-{{...}}
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -442,17 +436,17 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 | RAG com referências legais/acadêmicas | Fundamenta tecnicamente o resultado | {A justificativa precisa ser compreensível no detalhe da análise |
 | Interface web administrativa | {Permitir acompanhamento e exploração dos dados | Exige arquitetura de informação, filtros, visualizações e controle de acesso |
 | Dados sensíveis de conversas | O domínio envolve conteúdo potencialmente íntimo | Requer minimização de exposição, permissões e cuidado com exportações e logs |
-| {{...}} | {{...}} | {{...}} |
+| FastAPI | Disponibiliza as funcionalidades do sistema por meio de API | A interface dependerá da comunicação com os serviços |
+| Classificação automatizada | Produz os resultados apresentados ao usuário | A interface deve comunicar os limites da análise e evitar interpretações definitivas |
 
----
 
 # 10. Hipóteses e dúvidas prioritárias
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H01 | A vítima consegue compreender os resultados e as orientações apresentados pelo chatbot? | Uma classificação incorretamente compreendida pode prejudicar a interpretação da situação | Entrevistas e testes de compreensão com participantes representativos |
+| H02 | O administrador conseguirá localizar análises específicas com mais facilidade utilizando histórico, busca e filtros? | A localização de registros é uma das tarefas centrais do painel | Testes de usabilidade com protótipos e tarefas de busca |
+| H03 | Os usuários compreenderão corretamente as categorias, níveis de risco e justificativas produzidos pelo sistema? | A interpretação incorreta pode produzir conclusões equivocadas | Testes de compreensão e entrevistas |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -471,14 +465,14 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é o contexto de uso? | Celular pessoal, ambiente administrativo em computador/notebook, com dados sensíveis e necessidade de acesso controlado |
 | Que interface/recorte será explorado? | Painel web com dashboard, filtros, histórico, detalhamento de conversa |
 | Como a interface se relaciona ao TCC? | Faz parte do escopo atualizado após alinhamento com o orientador |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Quais pontos ainda são hipóteses? | Compreensão dos resultados, eficiência da busca, interpretação dos indicadores e familiaridade com dashboards. |
 
 ### Delimitação
 
 **Dentro do escopo de IHC:** painel administrativo; dashboard; indicadores; filtros; histórico; visualização de tendências; detalhe de análises/conversas; explicabilidade; navegação entre visão geral e detalhe; estados de sistema; privacidade e permissões na interação. 
 **Fora do escopo de IHC:** treinamento e ajuste do modelo, implementação interna do RAG, infraestrutura de backend e definição de políticas públicas a partir dos dados.  
 **Dentro do escopo formal do TCC:** pipeline de NLP, fundamentação via RAG, API, integração via WhatsApp e interface administrativa prevista no alinhamento atual.  
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Interface da disciplina será implementada no TCC?** A implementação do painel administrativo faz parte do escopo atualizado do TCC. Entretanto, as funcionalidades específicas exploradas na disciplina de IHC ainda deverão ser priorizadas e alinhadas com o orientador.
 
 ---
 
