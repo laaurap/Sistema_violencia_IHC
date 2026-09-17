@@ -114,12 +114,12 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
 | Usuários | Camila Rocha (P01 - Analista/Administradora) e Beatriz Mendes (P02 - Vítima) | Projetar o painel web focado na eficiência de P01, respeitando a sensibilidade das interações de P02. |
-| Tarefas | Visualizar indicadores (A03), filtrar histórico (A04), abrir detalhes e justificativa RAG (A05) e observar tendências (A06). | Arquitetura de informação clara: Dashboard -> Histórico Filtrável -> Detalhe do Registro com Explicabilidade |
-| Equipamentos | Computadores de mesa ou notebooks para P01 (Seção 5.2); smartphones via WhatsApp para P02 (Seção 5.2). | Interface web responsiva e otimizada para telas médias e grandes (1920x1080) com suporte a tabelas largas. |
-| Ambiente físico | Ambiente de trabalho ou estudo/escritório para P01 (Seção 5.1); local privado para P02 (Seção 5.1). | Layout do painel web com contraste adequado, controle de densidade e opção de mascaramento em tela (Seção 5.3). |
-| Ambiente social/organizacional | Perfis autorizados com necessidade de controle de acesso, responsabilidade sobre dados e auditoria (Seção 5.4). | Exibir indicação visual de sessão autenticada, níveis de permissão e registros de auditoria/rastreabilidade (Seção 5.5). |
-| Papéis/permissões/governança | Restrição de acesso aos dados sensíveis conforme o perfil do administrador (Seção 5.4 e 8) | Diferenciar permissão de visão geral agregada e permissão para abrir o texto completo da conversa (Seção 2.4). |
-| Volume de dados/histórico | Acompanhamento de grande volume de registros de análises gerados pelo pipeline (Seção 4.1 e 7.4). | Padrão de busca instantânea, ordenação por nível de risco/data e filtros combinados de alto desempenho (Seção 9.2). |
+| Tarefas | Visualizar indicadores, filtrar histórico, abrir detalhes e justificativa RAG e observar tendências | Arquitetura de informação clara: Dashboard -> Histórico Filtrável -> Detalhe do Registro com Explicabilidade |
+| Equipamentos | Computadores de mesa ou notebooks para P01; smartphones via WhatsApp para P02. | Interface web responsiva e otimizada para telas médias e grandes (1920x1080) com suporte a tabelas largas. |
+| Ambiente físico | Ambiente de trabalho ou estudo/escritório para P01; local privado para P02 | Layout do painel web com contraste adequado, controle de densidade e opção de mascaramento em tela. |
+| Ambiente social/organizacional | Perfis autorizados com necessidade de controle de acesso, responsabilidade sobre dados e auditoria | Exibir indicação visual de sessão autenticada, níveis de permissão e registros de auditoria/rastreabilidade. |
+| Papéis/permissões/governança | Restrição de acesso aos dados sensíveis conforme o perfil do administrador | Diferenciar permissão de visão geral agregada e permissão para abrir o texto completo da conversa |
+| Volume de dados/histórico | Acompanhamento de grande volume de registros de análises gerados pelo pipeline. | Padrão de busca instantânea, ordenação por nível de risco/data e filtros combinados de alto desempenho. |
 
 ## 4. Jornada do usuário — equipe
 
@@ -131,7 +131,7 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 |---|---|---|---|---|---|---|
 | 1 | Acessa o painel web e observa os indicadores gerais de volume, riscos e categorias | Ter um panorama imediato do estado das análises do sistema. | "Quero checar se houve aumento nos registros de risco alto nesta semana." (Alerta / Foco) | Indicadores poluídos ou dificuldade em diferenciar volume de análises da prevalência real. | Cards sintéticos no topo com contagens por risco (Alto, Médio, Baixo) e notas explicativas sobre as métricas. | F/H |
 | 2 | Navega até a seção de histórico e aplica filtros por período e nível de risco "Alto" | Isolar rapidamente os registros críticos sem examinar todos os dados | "Preciso filtrar os casos de risco alto para fazer a revisão necessária." (Eficiência) | Filtros confusos ou lentos que forçam consultas manuais pesadas (Seção 4.2). | Barra de filtros em destaque no topo da tabela com atualização imediata e tags de critérios ativos | F/H |
-| 3 | {{...}} | {{...}} | {{...}} | Perder a posição da lista ou os filtros aplicados ao abrir um item específico | Painel lateral deslizante (Drawer) ou divisão Master-Detail mantendo a lista visível à esquerda | H |
+| 3 | Recebe a resposta categorizada indicando "Indício de Violência Psicológica (Risco Médio)". | Saber o resultado direto da análise | "Então eu não estava louca, isso realmente é um padrão de manipulação." (Validação / Alívio) | Perder a posição da lista ou os filtros aplicados ao abrir um item específico | Painel lateral deslizante (Drawer) ou divisão Master-Detail mantendo a lista visível à esquerda | H |
 | 4 | Analisa a conversa, o veredicto (SIM/POSSÍVEL/NÃO) e a fundamentação do Art. 147-B recuperada pelo RAG. | Compreender com clareza como o algoritmo e o RAG fundamentaram o resultado. | "Excelente, os trechos em destaque e a citação da base legal mostram o motivo da classificação." (Confiança) | Dificuldade em interpretar o resultado por falta de clareza na justificativa da IA. | Exibir caixa de explicabilidade com destaques no texto analisado e card com a citação legal do Art. 147-B. | F/H |
 | 5 | Marca o caso como "Revisado", aplica uma nota de acompanhamento e fecha o detalhe. | Finalizar a revisão do registro e avançar para o próximo item da lista | "Registro auditado com sucesso. O sistema fundamentou corretamente o resultado." (Dever cumprido) | Falta de feedback de que a revisão foi concluída ou perda da navegação. | Atualização do badge de status na linha do histórico para "Auditado" com feedback visual discreto. | H |
 
@@ -141,15 +141,21 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 
 Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
 
+- Dualidade do Sistema: Manter extrema simplicidade e acolhimento na interação mobile da Vítima (P01) e alta eficiência, filtragem e clareza analítica no Painel da Analista (P02).
+
+- Explicabilidade Humanizada: Apresentar a justificativa do RAG (Art. 147-B) de forma simplificada no WhatsApp para a vítima e de forma estruturada/auditável no painel web para a analista.
+
+- Privacidade por Padrão (Privacy by Design): Assegurar o anonimato de P01 na listagem de dados acessada por P02, evitando a exposição desnecessária do conteúdo das conversas na visão geral.
+
 ## Checklist
 
-- [ ] Existe pelo menos uma persona por integrante.
-- [ ] As personas não são apenas diferenças demográficas superficiais.
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona.
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
-- [ ] Objetivos e dores têm consequência para o design.
-- [ ] Contexto de uso está coerente com a Entrega 1.
-- [ ] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
-- [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
-- [ ] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
-- [ ] IDs das personas foram adicionados à rastreabilidade.
+- [X] Existe pelo menos uma persona por integrante.
+- [X] As personas não são apenas diferenças demográficas superficiais.
+- [X] Está claro o que é dado real e o que é hipótese/proto-persona.
+- [X] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
+- [X] Objetivos e dores têm consequência para o design.
+- [X] Contexto de uso está coerente com a Entrega 1.
+- [X] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
+- [X] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
+- [X] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
+- [X] IDs das personas foram adicionados à rastreabilidade.
