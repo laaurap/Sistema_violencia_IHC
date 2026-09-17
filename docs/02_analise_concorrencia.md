@@ -135,9 +135,9 @@ A Lumira é uma aplicação voltada à orientação e autoavaliação de dinâmi
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Questionário de autoavaliação em etapas | A pessoa responde a 15 perguntas sequenciais utilizando uma escala de concordância de 1 a 5 | `../assets/02_concorrencia/...` | Apresentar uma pergunta por vez reduz a carga cognitiva e foca a atenção no item atual |
-| Diagnóstico visual em Radar de Relacionamento |Apresenta um gráfico de radar/teia com 5 dimensões (Comunicação, Respeito, Segurança, Clareza e Autonomia) e pontuações numéricas | `../assets/02_concorrencia/...` | A sintetização gráfica facilita a interpretação rápida do panorama geral do relacionamento. |
-| Feedback visual de processamento (Loading) | Exibe o progresso das etapas de cálculo ("Analisando suas respostas" -> "Mapeando dimensões") | `../assets/02_concorrencia/...` | Informa o estado do sistema, reduzindo a ansiedade durante o tempo de resposta |
+| Questionário de autoavaliação em etapas | A pessoa responde a 15 perguntas sequenciais utilizando uma escala de concordância de 1 a 5 | ![formulario](../assets/02_concorrencia/lumira_formulario.jpeg) | Apresentar uma pergunta por vez reduz a carga cognitiva e foca a atenção no item atual |
+| Diagnóstico visual em Radar de Relacionamento |Apresenta um gráfico de radar/teia com 5 dimensões (Comunicação, Respeito, Segurança, Clareza e Autonomia) e pontuações numéricas | ![formulario](../assets/02_concorrencia/lumira_radar.jpeg) | A sintetização gráfica facilita a interpretação rápida do panorama geral do relacionamento. |
+| Feedback visual de processamento (Loading) | Exibe o progresso das etapas de cálculo ("Analisando suas respostas" -> "Mapeando dimensões") | ![formulario](../assets/02_concorrencia/lumira_loading.jpeg) | Informa o estado do sistema, reduzindo a ansiedade durante o tempo de resposta |
 
 #### Experiência do usuário e opiniões
 
