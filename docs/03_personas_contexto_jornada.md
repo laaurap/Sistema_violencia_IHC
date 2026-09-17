@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 05/08/2026  
-**Status:** 🟨 em andamento 
+**Status:** 🟩 concluída
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -108,6 +108,37 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
 Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+
+### Consolidação em Texto
+
+* **O que pensa e sente?**
+  * Pensa: *"Preciso identificar os casos graves de violência psicológica rapidamente sem me perder em centenas de registros brutos."* `[H]`[cite: 1]
+  * Pensa: *"Não posso expor os dados nem o texto das conversas das vítimas sem necessidade."* `[H]`[cite: 1]
+  * Sente responsabilidade ao analisar métricas e receio de interpretar indicadores agregados de forma incorreta `[H]`[cite: 1].
+
+* **O que vê?**
+  * Múltiplos registros de conversas analisadas pelo pipeline de IA entrando no sistema `[F]`[cite: 1].
+  * Tabelas de dados e necessidade de gerar relatórios e acompanhar indicadores agregados `[F]`[cite: 1].
+  * Ambientes de dashboards analíticos no seu dia a dia de trabalho `[F]`[cite: 1].
+
+* **O que ouve?**
+  * Solicitações da gestão por acompanhamento de padrões e categorias mais frequentes (ex: gaslighting, ameaças) `[F/H]`[cite: 1].
+  * Cobranças por segurança da informação, privacidade dos dados sensíveis e conformidade legal `[F/H]`[cite: 1].
+
+* **O que diz e faz?**
+  * Aplica filtros por nível de risco e período para isolar casos críticos `[F]`[cite: 1].
+  * Consulta a fundamentação legal (Art. 147-B) e acadêmica recuperada pelo RAG para validar o veredicto do modelo `[F]`[cite: 1].
+  * Tenta organizar dados e identificar tendências temporais e categóricas `[F]`[cite: 1].
+
+* **Dores:**
+  * Dificuldade de consultar registros isolados ou logs sem um painel consolidado `[F]`[cite: 1].
+  * Medo de vazar conversas ou dados pessoais em ambientes compartilhados de trabalho `[H]`[cite: 1].
+  * Perda de tempo em buscas manuais e dashboards poluídos `[H]`[cite: 1].
+
+* **Ganhos:**
+  * Um painel web com visualização Mestre-Detalhe (Master-Detail) que permite filtrar o histórico e auditar casos de risco alto em poucos cliques `[F]`[cite: 1, 3].
+  * Clareza na explicabilidade da IA através da citação direta do Art. 147-B e trechos destacados `[F]`[cite: 1, 3].
+  * Garantia de privacidade com mascaramento automático de dados na listagem geral `[F]`[cite: 1, 3].
 
 ## 3. Contexto de uso — consolidação
 
