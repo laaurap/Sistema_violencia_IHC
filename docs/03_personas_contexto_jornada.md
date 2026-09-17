@@ -73,7 +73,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** Proto-persona baseada no cenário
 **Hipóteses da Entrega 1 relacionadas:** H01, H02
 
-![Persona P02](../assets/03_personas/persona_p01.svg)
+![Persona P02](../assets/03_personas/beatriz.png)
 
 | Campo | Descrição |
 |---|---|
