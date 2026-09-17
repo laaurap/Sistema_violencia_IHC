@@ -17,12 +17,12 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Sistema de Detecção de Violência Psicológica em Conversas  
+**TCC/projeto de origem:** Sistema de Detecção de Violência Psicológica em Conversas
+**Orientador(a):** Prof. Dr. Victor Perrone de Lima Varela  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Centro Universitário FEI 
+**Semestre:** 2026/2
 
 ### Equipe
 
@@ -35,20 +35,22 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Detecção e classificação automática de indícios de violência psicológica em mensagens/conversas usando NLP e RAG. |
+| Resultado técnico esperado do TCC | Pipeline de NLP (spaCy + BERT multilíngue), sistema de RAG (base legal Art. 147-B/acadêmica), API FastAPI e integração com WhatsApp (n8n/Twilio). |
+| O TCC já previa interface? | parcialmente |
+| Capacidade técnica que pode gerar valor para pessoas | Classificação automática de indícios de abuso, cálculo de risco, explicabilidade fundamentada em legislação e agregação de dados como categoria |
+| Usuário principal adotado em IHC | Administrador / Analista Autorizado do sistema |
+| Objetivo principal desse usuário | Acompanhar indicadores, consultar histórico, filtrar registros por risco/categoria e auditar a justificativa legal (RAG) sem expor dados sensíveis |
+| Interface/recorte explorado na disciplina | Painel Web Administrativo |
+| Relação com o escopo formal do TCC | Parte prevista e aprofundamento do escopo alinhado com o orientador. |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
 Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
+
+Administradores e analistas do sistema precisam acompanhar e compreender os dados gerados pelas análises de violência psicológica. Atualmente, o exame isolado de registros brutos inviabiliza a identificação de padrões e torna a consulta manual demorada e suscetível a erros de interpretação. O tema do TCC investiga um pipeline de NLP e RAG capaz de classificar conversas e fundamentar os indícios encontrados na legislação. Para fins da disciplina de IHC, será explorada uma interface web que permita ao analista visualizar indicadores no dashboard, aplicar filtros por nível de risco e categoria, pesquisar no histórico e ver os detalhes da justificativa gerada pela IA mantendo a segurança e a privacidade dos dados.
 
 Evite começar pela tecnologia.
 
