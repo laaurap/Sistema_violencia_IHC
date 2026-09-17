@@ -42,7 +42,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** proto-persona a validar
 **Hipóteses da Entrega 1 relacionadas:** H01, H03
 
-![Persona P01](../assets/03_personas/persona_p01.svg)
+![Persona P01](../assets/03_personas/camila.png)
 
 | Campo | Descrição |
 |---|---|
