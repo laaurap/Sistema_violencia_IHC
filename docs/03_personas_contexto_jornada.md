@@ -111,34 +111,34 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 
 ### Consolidação em Texto
 
-* **O que pensa e sente?**
-  * Pensa: *"Preciso identificar os casos graves de violência psicológica rapidamente sem me perder em centenas de registros brutos."* `[H]`[cite: 1]
-  * Pensa: *"Não posso expor os dados nem o texto das conversas das vítimas sem necessidade."* `[H]`[cite: 1]
-  * Sente responsabilidade ao analisar métricas e receio de interpretar indicadores agregados de forma incorreta `[H]`[cite: 1].
+* **Pensa e Sente**
+  * *"Preciso identificar os casos graves de violência psicológica rapidamente sem me perder em centenas de registros brutos."* `[H]`
+  * *"Não posso expor os dados nem o texto das conversas das vítimas sem necessidade."* `[H]`
+  * Sente responsabilidade ao analisar métricas e receio de interpretar indicadores agregados de forma incorreta `[H]
 
-* **O que vê?**
-  * Múltiplos registros de conversas analisadas pelo pipeline de IA entrando no sistema `[F]`[cite: 1].
-  * Tabelas de dados e necessidade de gerar relatórios e acompanhar indicadores agregados `[F]`[cite: 1].
-  * Ambientes de dashboards analíticos no seu dia a dia de trabalho `[F]`[cite: 1].
+* **Vê**
+  * Múltiplos registros de conversas analisadas pelo pipeline de IA entrando no sistema `[F]`
+  * Tabelas de dados e necessidade de gerar relatórios e acompanhar indicadores agregados `[F]`
+  * Interfaces de BI e dashboards analíticos no seu dia a dia de trabalho `[F]`
 
-* **O que ouve?**
-  * Solicitações da gestão por acompanhamento de padrões e categorias mais frequentes (ex: gaslighting, ameaças) `[F/H]`[cite: 1].
-  * Cobranças por segurança da informação, privacidade dos dados sensíveis e conformidade legal `[F/H]`[cite: 1].
+* **Escuta**
+  * Solicitações da gestão por acompanhamento de padrões e categorias mais frequentes (ex: gaslighting, ameaças) `[F/H]`
+  * Cobranças por segurança da informação, privacidade dos dados sensíveis e conformidade legal `[F/H]`
 
-* **O que diz e faz?**
-  * Aplica filtros por nível de risco e período para isolar casos críticos `[F]`[cite: 1].
-  * Consulta a fundamentação legal (Art. 147-B) e acadêmica recuperada pelo RAG para validar o veredicto do modelo `[F]`[cite: 1].
-  * Tenta organizar dados e identificar tendências temporais e categóricas `[F]`[cite: 1].
+* **Fala e Faz**
+  * Aplica filtros por nível de risco e período para isolar casos críticos `[F]`
+  * Consulta a fundamentação legal (Art. 147-B) e acadêmica recuperada pelo RAG para validar o veredicto do modelo `[F]`
+  * Tenta organizar dados e identificar tendências temporais e categóricas `[F]`
 
-* **Dores:**
-  * Dificuldade de consultar registros isolados ou logs sem um painel consolidado `[F]`[cite: 1].
-  * Medo de vazar conversas ou dados pessoais em ambientes compartilhados de trabalho `[H]`[cite: 1].
-  * Perda de tempo em buscas manuais e dashboards poluídos `[H]`[cite: 1].
+* **Dores**
+  * Dificuldade de consultar registros isolados ou logs sem um painel consolidado `[F]`
+  * Medo de vazar conversas ou dados pessoais em ambientes compartilhados de trabalho `[H]`
+  * Perda de tempo em buscas manuais e dashboards poluídos `[H]`
 
-* **Ganhos:**
-  * Um painel web com visualização Mestre-Detalhe (Master-Detail) que permite filtrar o histórico e auditar casos de risco alto em poucos cliques `[F]`[cite: 1, 3].
-  * Clareza na explicabilidade da IA através da citação direta do Art. 147-B e trechos destacados `[F]`[cite: 1, 3].
-  * Garantia de privacidade com mascaramento automático de dados na listagem geral `[F]`[cite: 1, 3].
+* **Ganhos**
+  * Um painel web com visualização Mestre-Detalhe (Master-Detail) que permite filtrar o histórico e auditar casos de risco alto em poucos cliques `[F]`
+  * Clareza na explicabilidade da IA através da citação direta do Art. 147-B e trechos destacados `[F]`
+  * Garantia de privacidade com mascaramento automático de dados na listagem geral `[F]`.
 
 ## 3. Contexto de uso — consolidação
 
