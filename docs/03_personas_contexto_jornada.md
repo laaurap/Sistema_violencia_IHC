@@ -105,7 +105,7 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 **Persona escolhida:** Camila Rocha
 **Justificativa:** É o perfil de usuário priorizado para o recorte do projeto de interface web em IHC.
 
-![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia](../assets/03_personas/mapa_de_empatia.png)
 
 Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
 
