@@ -37,7 +37,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 |---|---|
 | Tema central do TCC | Detecção e classificação automática de indícios de violência psicológica em mensagens/conversas usando NLP e RAG. |
 | Resultado técnico esperado do TCC | Pipeline de NLP (spaCy + BERT multilíngue), sistema de RAG (base legal Art. 147-B/acadêmica), API FastAPI e integração com WhatsApp (n8n/Twilio). |
-| O TCC já previa interface? | parcialmente |
+| O TCC já previa interface? | Parcialmente |
 | Capacidade técnica que pode gerar valor para pessoas | Classificação automática de indícios de abuso, cálculo de risco, explicabilidade fundamentada em legislação e agregação de dados como categoria |
 | Usuário principal adotado em IHC | Administrador / Analista Autorizado do sistema |
 | Objetivo principal desse usuário | Acompanhar indicadores, consultar histórico, filtrar registros por risco/categoria e auditar a justificativa legal (RAG) sem expor dados sensíveis |
