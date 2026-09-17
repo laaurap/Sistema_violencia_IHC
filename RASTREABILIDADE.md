@@ -8,11 +8,11 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
+| Tema do TCC | Sistema de Detecção de Violência Psicológica em Conversas| {{documento/TCC}} | definido |
+| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}Pipeline de NLP (spaCy + BERT) + RAG + API FastAPI + Integração WhatsApp (n8n/Twilio) + Painel Web} | {{...}} | definido |
+| O TCC previa interface? | Parcialmente | {{...}} | definido |
+| Capacidade/contribuição central | Classificar indícios e categorias de violência psicológica em texto e fundamentar com referências legais/acadêmicas | {{...}} | definido |
+| Possíveis beneficiários/stakeholders | Vítimas de violência psicológica, administradores/analistas autorizados do sistema, rede de apoio | {{fonte ou hipótese}} | F / H |
 | Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
 | Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
 | Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
