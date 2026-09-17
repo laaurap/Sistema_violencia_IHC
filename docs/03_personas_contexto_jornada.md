@@ -30,8 +30,8 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 |---|---|---|---|
 | Administrador/ | F | Alinhamento com orientador e escopo do painel web | incorporar / manter como hipótese / descartar / investigar |
 | Vítima (usuária do chatbot WhatsApp) | F/H | Interface atual via WhatsApp/Twilio | incorporar / manter como hipótese / descartar / investigar |
-| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
-| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
+| H01 — Consulta sequencial via visão geral antes do detalhamento | H | Padrões de BI e analíticos estudados | incorporar na Jornada e no Mapa de Empatia |
+| H03 — Exposição controlada de dados sensíveis na interface | H | Diretrizes de privacidade observadas no IAVP (C01) e Be Safe (C03) | incorporar em restrições e decisões de design de P01 e P02 |
 
 ## 1. Personas
 
