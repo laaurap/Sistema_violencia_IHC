@@ -129,26 +129,28 @@ Não foi identificado modelo comercial ou cobrança para utilização do instrum
 
 #### Contexto e proposta
 
-A Lumira é uma aplicação voltada ao acolhimento e orientação de mulheres em situação de vulnerabilidade ou violência doméstica. Atua principalmente por meio de uma assistente virtual/chatbot e conteúdos informativos sobre tipos de abuso.
+A Lumira é uma aplicação voltada à orientação e autoavaliação de dinâmicas relacionais. A ferramenta utiliza um mapeamento estruturado com perguntas graduadas para identificar o nível de equilíbrio em aspectos como comunicação, respeito, segurança, clareza e autonomia, entregando um diagnóstico visual e qualitativo para a usuária.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Chatbot de orientação inicial | Respostas automatizadas em fluxo guiado por texto | `../assets/02_concorrencia/...` | Simplifica a linguagem para o usuário leigo, mas limita o envio de grandes textos. |
-| Conteúdo educativo categorizado | Cartões explicativos sobre violência psicológica, moral e física | `../assets/02_concorrencia/...` | As categorias de abuso são apresentadas com ícones e exemplos simples. |
+| Questionário de autoavaliação em etapas | A pessoa responde a 15 perguntas sequenciais utilizando uma escala de concordância de 1 a 5 | `../assets/02_concorrencia/...` | Apresentar uma pergunta por vez reduz a carga cognitiva e foca a atenção no item atual |
+| Diagnóstico visual em Radar de Relacionamento |Apresenta um gráfico de radar/teia com 5 dimensões (Comunicação, Respeito, Segurança, Clareza e Autonomia) e pontuações numéricas | `../assets/02_concorrencia/...` | A sintetização gráfica facilita a interpretação rápida do panorama geral do relacionamento. |
+| Feedback visual de processamento (Loading) | Exibe o progresso das etapas de cálculo ("Analisando suas respostas" -> "Mapeando dimensões") | `../assets/02_concorrencia/...` | Informa o estado do sistema, reduzindo a ansiedade durante o tempo de resposta |
 
 #### Experiência do usuário e opiniões
 
 Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
 
-A interface prioriza tons suaves e navegação simples. No entanto, foca exclusivamente na ponta final (vítima) e não oferece transparência ou painéis de acompanhamento de dados para órgãos de apoio ou gestores.
+A interface utiliza tons neutros, navegação guiada por passos e excelente legibilidade, transmitindo acolhimento e clareza. Por focar em um questionário estático de autoavaliação da usuária, a aplicação não permite a análise direta do texto bruto de mensagens ou áudios do agressor e não oferece um painel de acompanhamento analítico para gestores ou órgãos de apoio
 
 #### Preço/modelo de negócio
 
-Gratuito para o usuário final / Parcerias institucionais.
+Modelo Freemium (com barreira de pagamento / paywall): O teste inicial de autoavaliação é gratuito, mas o acesso ao detalhamento completo por dimensão e aos relatórios aprofundados exige assinatura ou pagamento para desbloqueio.
 
 #### Padrões e tendências percebidos
+
 - Comunicação empática e direta;
 
 - Organização das formas de abuso em categorias visuais legíveis.
@@ -158,8 +160,9 @@ Gratuito para o usuário final / Parcerias institucionais.
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Categorização clara de violência | Exibição visual dos tipos de violência doméstica | Inspirar a forma como as categorias são rotuladas no detalhe da análise no nosso painel |
-| Ausência de painel analítico | A ferramenta não possui visão administrativa pública/agregada | Oportunidade para o nosso TCC preencher a lacuna de acompanhamento de dados e tendências |
+| Mapeamento em dimensões e visualização gráfica | Gráfico de radar com pontuações em 5 eixos (Comunicação, Respeito, Segurança, Clareza, Autonomia) | Inspirar a criação de cards e gráficos sintéticos de categorias no dashboard do nosso painel web. |
+| Barreira de pagamento (paywall) no detalhamento | O relatório completo de diagnóstico é bloqueado por pagamento | Diferencial e usabilidade: O nosso sistema deve entregar a fundamentação (RAG) e a explicabilidade legal de forma transparente e acessível para a tomada de decisão do analista |
+| Ausência de análise de conversa real e de painel analítico | A ferramenta depende de respostas declaratórias e não possui visão administrativa de dados agregados | Oportunidade para o nosso TCC preencher a lacuna ao analisar textos/áudios do WhatsApp e organizar os indicadores para o analista. |
 
 ### Análise C03 — Be Safe Mulher
 
