@@ -217,8 +217,10 @@ Plataforma que utiliza inteligência artificial (a atendente virtual "Glória") 
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Escuta estruturada via IA | Conversação via chat interativo para mapear a situação | `../assets/02_concorrencia/...` | Interface conversacional acolhedora e acessível. |
-| Mapeamento de dados de violência | Coleta interna de relatos para gerar estatísticas institucionais | `../assets/02_concorrencia/...` | Demonstra a importância de agregar dados para gerar conhecimento. |
+| Acolhimento e apresentação da IA | Apresentação da persona virtual ("Gloria") focada na escuta e conscientização contra a violência de gênero | ![Quem É](../assets/02_concorrencia/gloria_quem_e.png) | Humaniza o atendimento automatizado por meio de uma marca forte, empática e acessível|
+| Coleta e mineração de dados de violência | Aplicação de Inteligência Artificial e Data Analytics para transformar relatos em dados de impacto social | ![Instituto](../assets/02_concorrencia/gloria_instituto.png) | Valida a importância de processar relatos individuais para gerar estatísticas agregadas sobre padrões de violência |
+| Formulário para captação de histórias | Botão e formulário no site para envio de relatos e engajamento da comunidade |![Forms](../assets/02_concorrencia/gloria_formulario.png)| A interface de envio é simples, mas atua como coleta passiva sem um chat interativo público imediato no site |
+| Direcionamento para emergência e redes de apoio | Exibição em destaque dos canais oficiais de socorro (Disque 180 e 190) e cadastro de apoio comunitário | ![rodape](../assets/02_concorrencia/gloria_rodape.png) | Elemento essencial de segurança para garantir o encaminhamento rápido em situações de risco crítico |
 
 #### Experiência do usuário e opiniões
 
@@ -231,7 +233,10 @@ A assistente virtual é bastante reconhecida pelo acolhimento, mas as justificat
 Organização sem fins lucrativos / Parcerias governamentais e privadas.
 
 #### Padrões e tendências percebidos
-Utilização de IA para processamento de linguagem natural no acolhimento de relatos.
+
+- Utilização de IA e mineração de dados para processamento de relatos de violência;
+- Apresentação institucional pautada no acolhimento e na empatia;
+- Integração visível de canais diretos de emergência (180/190).
 
 #### Pontos positivos, limitações e lições
 
