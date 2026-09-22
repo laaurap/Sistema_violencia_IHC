@@ -166,41 +166,44 @@ Modelo Freemium (com barreira de pagamento / paywall): O teste inicial de autoav
 
 ### Análise C03 — Be Safe Mulher
 
-**Autor(a):** Laura de Souza Parente — 22.123.033-7 
-**Tipo:** concorrente indireto / análogo do domínio
-**Link oficial:** [{{Be Safe Mulher}}](https://app.defesadamulher.com.br/)  
-**Data de acesso:** 05/09/2026
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
+**Tipo:** concorrente direto / ferramenta do domínio
+**Link oficial:** https://app.defesadamulher.com.br/
+**Data de acesso:** 17/09/2026
 
 #### Contexto e proposta
 
-Plataforma com foco em segurança pessoal, acionamento de rede de emergência, geolocalização e orientações de proteção à mulher.
+O Be Safe Mulher é uma aplicação web interativa desenvolvida para auxiliar mulheres a identificar situações de abuso e violência no relacionamento por meio de um quiz de autoavaliação com 25 perguntas, oferecendo um diagnóstico final de nível de risco e encaminhamento direto para contactos de emergência e redes de apoio.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Botão de emergência / Alerta |  Acionamento rápido por toque único enviando localização | `../assets/02_concorrencia/...` | Alta eficiência para situações de risco iminente. |
-| Cadastro de rede de apoio | Inclusão de contatos de confiança para envio automático de mensagens | `../assets/02_concorrencia/...` | Requer passos prévios de configuração. |
+| Apresentação e navegação inicial | Ecrã de acolhimento com explicação sobre o objetivo do quiz e botão de arranque | ![Tela Inicial Be Safe](../assets/02_concorrencia/besfafe_home.png) | Interface simples e focada, reduzindo distrações iniciais para a utilizadora |
+| Quiz de autoavaliação de abusos | Questionário de 25 perguntas com respostas binárias (SIM/NÃO) acompanhadas de ilustrações | ![Quiz Be Safe](../assets/02_concorrencia/besafe_quiz.png) | A interface apresenta falhas de usabilidade/bugs na transição de perguntas, o que pode gerar frustração e abandono do teste |
+| Diagnóstico de nível de risco | Apresentação da pontuação, percentagem de respostas e classificação de risco (ex: Gravismo) | ![Resultado Be Safe](../assets/02_concorrencia/besafe_resultado.png) | O destaque em cores vibrantes comunica a gravidade, mas pode causar ansiedade sem um acolhimento conversacional prévio |
+| Encaminhamento direto para emergência | Lista de botões com ligação direta para linhas de apoio (Disque 180, 100, 188, 197, 190, 153) | ![Contactos Be Safe](../assets/02_concorrencia/besafe_contatos.png) | Atalho essencial de usabilidade que facilita o pedido imediato de socorro em momentos de crise |
 
 #### Experiência do usuário e opiniões
 
-Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
-
-Focada em ação rápida mobile. Possui forte apelo de privacidade no aparelho do usuário, mas não realiza análise de inteligência artificial sobre conteúdos de texto/áudio nem consolidadores de dados analíticos.
+A ferramenta possui uma proposta relevante de triagem rápida. No entanto, durante o teste de IHC, identificaram-se falhas de navegação nas transições do quiz de 25 perguntas, o que afeta a credibilidade e a usabilidade do sistema. Além disso, a aplicação atua apenas por autoavaliação declaratória, sem analisar conversas reais ou oferecer um painel administrativo para órgãos de apoio.
 
 #### Preço/modelo de negócio
 
-Modelo Free / Serviços corporativos e públicos.
+Gratuito para a utilizadora final.
 
 #### Padrões e tendências percebidos
-Priorização absoluta da privacidade e facilidade de disfarçar/fechar a aplicação.
+- Uso de perguntas binárias (SIM/NÃO) com barra de progresso visual;
+- Classificação imediata do nível de risco com cores de alerta;
+- Disponibilização centralizada dos números telefónicos de emergência pública.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Foco em privacidade extrema | Recursos para ocultaçāo rápida de tela | Reforça a necessidade do nosso painel administrativo mascarar dados pessoais sensíveis por padrão |
-| Foco exclusivo em emergência pontual | Não analisa o conteúdo de conversas suspeitas | Nosso projeto atua na etapa anterior (identificação do padrão de abuso) |
+| Lista centralizada de contactos de emergência | Atalhos diretos para Disque 180, Polícia Militar (190), etc. | Incorporar botões de ajuda rápida e emergência também na interface do nosso chatbot do WhatsApp |
+| Falhas de usabilidade na transição do quiz | Falhas no fluxo de perguntas que impedem a progressão correta | Reforça a necessidade de garantir fluxos de conversa robustos, testados e sem falhas no nosso chatbot e painel web |
+| Ausência de análise de texto real e painel para analistas | A aplicação foca apenas no quiz declaratório da vítima | O nosso TCC diferencia-se ao analisar o texto bruto de conversas via IA/RAG e organizar os dados num painel de auditoria |
 
 ### Análise C04 — Instituto Glória
 
