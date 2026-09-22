@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 27/08/2026 
-**Status:** 🟨 em andamento 
+**Status:** 🟩 concluída
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -259,10 +259,10 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| Power BI | Referência profissional para acompanhamento de indicadores e exploração de dados | dashboard, cards, gráficos, filtros, tabelas | {{link local}} | Como organizar visão geral e permitir aprofundamento sem perder contexto |
-| Looker Studio | Referência de relatórios e dashboards interativos | iltros visíveis, controles, gráficos, páginas de relatório | {{link local}} | Como permitir exploração visual do conjunto de dados |
-| Excel / planilha eletrônica | Referência comum para consulta, ordenação e filtragem de registros | linhas/colunas, busca, ordenação, filtros | {{link local}} | Como tornar o histórico eficiente para localizar registros |
-| WhatsApp | Canal usado pela vítima para enviar a conversa suspeita e receber a resposta | conversa em mensagens, histórico cronológico, feedback de envio | {{link local}} | Entender a origem do conteúdo que depois aparece no painel administrativo |
+| Power BI | Referência profissional para acompanhamento de indicadores e exploração de dados | dashboard, cards, gráficos, filtros, tabelas |  ![powerbi](../assets/02_concorrencia/powerbi.png) | Como organizar visão geral e permitir aprofundamento sem perder contexto |
+| Looker Studio | Referência de relatórios e dashboards interativos | iltros visíveis, controles, gráficos, páginas de relatório | ![looker](../assets/02_concorrencia/looker.png) | Como permitir exploração visual do conjunto de dados |
+| Excel / planilha eletrônica | Referência comum para consulta, ordenação e filtragem de registros | linhas/colunas, busca, ordenação, filtros | ![excel](../assets/02_concorrencia/excel.png) | Como tornar o histórico eficiente para localizar registros |
+| WhatsApp | Canal usado pela vítima para enviar a conversa suspeita e receber a resposta | conversa em mensagens, histórico cronológico, feedback de envio | ![twilio](../assets/02_concorrencia/twilio.png) | Entender a origem do conteúdo que depois aparece no painel administrativo |
 
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
