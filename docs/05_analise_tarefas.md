@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 17/09/2026  
+**Status:** ⬜ em andamento
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -29,19 +29,29 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
-| T01 | {{...}} | {{P01/C01}} | {{...}} | {{...}} |
+| T01 | Auditar histórico de atendimentos e validar explicabilidade legal (RAG) | Camila Rocha (P01) / Cenário C01 | Frequência semanal / Alta criticidade (Garante rigor técnico e sigilo) | Laura de Souza Parente |
+| T02 | Submeter conversa suspeita via WhatsApp e receber diagnóstico acolhedor | Beatriz Mendes (P02) / Cenário C02 | Frequência pontual/crítica / Altíssima criticidade (Acolhimento de emergência) | Laura de Souza Parente |
+| T03 | Filtrar casos por nível de risco e emitir parecer consolidado | Camila Rocha (P01) / Cenário C01 | Frequência diária / Média-Alta criticidade (Triagem de casos graves) | {Laura de Souza Parente |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
 ---
 
-## HTA — T01 {{nome da tarefa}}
+## HTA — T01 Auditar histórico de atendimentos e validar explicabilidade legal (RAG)
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
 
 ### Descrição da tarefa
 
 {{objetivo, ponto de início, conclusão esperada, contexto}}
+
+- Objetivo: Localizar um atendimento de alto risco no painel web, examinar o bloco de mensagens processadas pelo modelo de NLP e validar se a fundamentação gerada pelo módulo RAG (Art. 147-B do Código Penal) está adequada para aprovação do parecer.
+  
+- Ponto de início: A analista Camila acessa o painel administrativo na tela de histórico geral de atendimentos.
+     
+- Conclusão esperada: O parecer de auditoria do atendimento é registrado no sistema como "Validado", salvaguardando a fundamentação jurídica e a proteção dos dados.
+  
+- Contexto: Estação de trabalho em ambiente de escritório compartilhado, necessitando de navegação rápida e preservação de sigilo visual. 
 
 ### Diagrama
 
@@ -51,7 +61,18 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | {{objetivo principal}} | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 0 | Auditar atendimento e validar fundamentação legal (RAG) | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 1 | Acessar a lista geral de históricos de atendimentos | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 1.1 | Aplicar filtro por nível de Risco "Alto" | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 1.2 | Buscar por data ou código do atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 2 | Selecionar e abrir o detalhe do registro de atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 2.1 | Clicar na ação "Auditar / Ver Detalhes RAG" | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 3 | Examinar mensagens e fundamentação legal recuperada | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 3.1 | Ler as mensagens do bloco identificadas com indício de abuso | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 3.2 | Analisar o artigo do Código Penal (Art. 147-B) e a justificativa RAG | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 4 | Registrar decisão de auditoria | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 4.1 | Confirmar e aprovar veredicto da IA | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 4.2 | Reclassificar nível de risco ou ajustar observação | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
 
 **Verificação do HTA:**
 
@@ -62,13 +83,13 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ---
 
-## GOMS — T02 {{nome da tarefa}}
+## GOMS — T02 Submeter conversa suspeita via WhatsApp e receber diagnóstico acolhedor
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
 
 ### Goal
 
-`G0: {{meta do usuário}}`
+`G0: Obter avaliação de risco e orientação segura sobre uma conversa suspeita recebida no WhatsApp`
 
 ### Métodos, operadores e regras de seleção
 
@@ -82,13 +103,13 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ---
 
-## CTT — T03 {{nome da tarefa}}
+## CTT — T03 Filtrar casos por nível de risco e emitir parecer consolidado
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Laura de Souza Parente — 22.123.033-7
 
 ### Descrição
 
-{{...}}
+A tarefa T03 descreve as relações temporais e a concorrência entre as ações da analista (Camila) e o processamento do sistema web ao realizar a triagem diária de atendimentos, aplicando filtros dinâmicos de risco, gerando pré-visualizações do RAG e exportando um relatório consolidado do período.
 
 ### Diagrama
 
@@ -110,13 +131,13 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 ## Checklist
 
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
-- [ ] Cada artefato identifica autor e tarefa.
-- [ ] Diagramas são legíveis e possuem fonte editável quando possível.
-- [ ] HTA contém planos, não apenas árvore de tópicos.
-- [ ] GOMS distingue Goals, Operators, Methods e Selection Rules.
-- [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
-- [ ] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
-- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
-- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+- [X] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
+- [X] Cada artefato identifica autor e tarefa.
+- [X] Diagramas são legíveis e possuem fonte editável quando possível.
+- [X] HTA contém planos, não apenas árvore de tópicos.
+- [X] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [X] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [X] Há texto explicando cada diagrama.
+- [X] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [X] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [X] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
