@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 17/09/2026  
-**Status:** ⬜ em andamento
+**Status:** 🟨 em andamento
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -76,10 +76,10 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 **Verificação do HTA:**
 
-- O objetivo 0 representa uma meta do usuário?
-- As subtarefas são necessárias e suficientes?
-- Os **planos** indicam ordem, alternativa, repetição ou condição?
-- A decomposição parou em nível útil para projeto de interação?
+- O objetivo 0 representa uma meta do usuário? O objetivo 0 representa a meta real do utilizador (garantir auditoria rápida e fundamentada).
+- As subtarefas são necessárias e suficientes? As subtarefas cobrem desde a triagem até ao registo final.
+- Os **planos** indicam ordem, alternativa, repetição ou condição? Os planos definem sequências, condições de decisão e alternativas.
+- A decomposição parou em nível útil para projeto de interação? A decomposição foi interrompida no nível de clique/leitura, ideal para prototipagem.
 
 ---
 
@@ -122,6 +122,14 @@ A tarefa T03 descreve as relações temporais e a concorrência entre as ações
 | {{...}} | {{...}} | {{...}} |
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
+
+
+#### Tarefas identificadas no CTT:
+- Tarefa Abstrata (Retângulo simples):
+- Triar e Auditar Casos Semanais de Violência (Meta global que se decompõe).
+- Tarefa de Usuário (Ícone de pessoa): Analisar Pertinência do Artigo Penal 147-B (Processo cognitivo humano).
+- Tarefa do Sistema (Ícone de computador): Recuperar Trechos e Gerar Explicabilidade RAG* (Processamento automatizado do servidor).
+- Tarefa de Interação (Ícone de pessoa/computador): Selecionar Filtro de Risco Alto na Tabela* (Ação direta na interface).
 
 ---
 
