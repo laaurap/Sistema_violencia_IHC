@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 17/09/2026  
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluída
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -31,7 +31,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 |---|---|---|---|---|
 | T01 | Auditar histórico de atendimentos e validar explicabilidade legal (RAG) | Camila Rocha (P01) / Cenário C01 | Frequência semanal / Alta criticidade (Garante rigor técnico e sigilo) | Laura de Souza Parente |
 | T02 | Submeter conversa suspeita via WhatsApp e receber diagnóstico acolhedor | Beatriz Mendes (P02) / Cenário C02 | Frequência pontual/crítica / Altíssima criticidade (Acolhimento de emergência) | Laura de Souza Parente |
-| T03 | Filtrar casos por nível de risco e emitir parecer consolidado | Camila Rocha (P01) / Cenário C01 | Frequência diária / Média-Alta criticidade (Triagem de casos graves) | {Laura de Souza Parente |
+| T03 | Filtrar casos por nível de risco e emitir parecer consolidado | Camila Rocha (P01) / Cenário C01 | Frequência diária / Média-Alta criticidade (Triagem de casos graves) | Laura de Souza Parente |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -61,9 +61,9 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | Auditar atendimento e validar fundamentação legal (RAG) | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 1 | Acessar a lista geral de históricos de atendimentos | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 1.1 | Aplicar filtro por nível de Risco "Alto" | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 0 | Auditar atendimento e validar fundamentação legal (RAG) | Plano 0: Executar 1 -> 2 -> 3 -> 4 / 1 ou 2 etc.> | Ações encadeadas dependem da clareza da explicabilidade visual do RAG. |
+| 1 | Acessar a lista geral de históricos de atendimentos | Plano 1: Executar 1.1 depois 1.2 (ou 1.2 direto se o registro já estiver visível na tela) | Exibir indicadores de risco agregados evita a abertura desnecessária de registros. |
+| 1.1 | Aplicar filtro por nível de Risco "Alto" | Operação de seleção do botão "ALTO" ou digitação no campo de busca | {{...}} |
 | 1.2 | Buscar por data ou código do atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
 | 2 | Selecionar e abrir o detalhe do registro de atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
 | 2.1 | Clicar na ação "Auditar / Ver Detalhes RAG" | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
