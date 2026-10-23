@@ -55,7 +55,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ### Diagrama
 
-![HTA T01](../assets/05_tarefas/hta_t01.svg)
+![HTA T01](../assets/05_tarefas/hta.png)
 
 ### Decomposição e planos
 
@@ -128,7 +128,7 @@ A tarefa T03 descreve as relações temporais e a concorrência entre as ações
 
 ### Diagrama
 
-![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+![CTT T03](../assets/05_tarefas/ctt.png)
 
 ### Legenda e relações temporais usadas
 
