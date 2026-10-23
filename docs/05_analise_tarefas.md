@@ -63,16 +63,16 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 |---|---|---|---|
 | 0 | Auditar atendimento e validar fundamentação legal (RAG) | Plano 0: Executar 1 -> 2 -> 3 -> 4 / 1 ou 2 etc.> | Ações encadeadas dependem da clareza da explicabilidade visual do RAG. |
 | 1 | Acessar a lista geral de históricos de atendimentos | Plano 1: Executar 1.1 depois 1.2 (ou 1.2 direto se o registro já estiver visível na tela) | Exibir indicadores de risco agregados evita a abertura desnecessária de registros. |
-| 1.1 | Aplicar filtro por nível de Risco "Alto" | Operação de seleção do botão "ALTO" ou digitação no campo de busca | {{...}} |
-| 1.2 | Buscar por data ou código do atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 2 | Selecionar e abrir o detalhe do registro de atendimento | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 2.1 | Clicar na ação "Auditar / Ver Detalhes RAG" | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 3 | Examinar mensagens e fundamentação legal recuperada | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 3.1 | Ler as mensagens do bloco identificadas com indício de abuso | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 3.2 | Analisar o artigo do Código Penal (Art. 147-B) e a justificativa RAG | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 4 | Registrar decisão de auditoria | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 4.1 | Confirmar e aprovar veredicto da IA | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
-| 4.2 | Reclassificar nível de risco ou ajustar observação | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 1.1 | Aplicar filtro por nível de Risco "Alto" | Operação de seleção do botão "ALTO" ou digitação no campo de busca | O filtro deve estar visível no topo da tabela sem esconder outras opções |
+| 1.2 | Buscar por data ou código do atendimento | Identificar e selecionar o atendimento desejado | Preservar a privacidade usando identificadores anônimos/mascarados |
+| 2 | Selecionar e abrir o detalhe do registro de atendimento | Plano 2: Executar 2.1 | O painel deve abrir no padrão Mestre-Detalhe para não perder o contexto da busca. |
+| 2.1 | Clicar na ação "Auditar / Ver Detalhes RAG" | Clicar na ação direta na tabela | Botão de ação em destaque com feedback visual claro |
+| 3 | Examinar mensagens e fundamentação legal recuperada | Plano 3: Executar 3.1 em paralelo/concorrência com 3.2 | A visualização dividida (mensagens à esquerda, RAG à direita) facilita a comparação rápida. |
+| 3.1 | Ler as mensagens do bloco identificadas com indício de abuso | Leitura sequencial das mensagens destacadas pelo classificador | Destacar os trechos da frase que geraram o alerta |
+| 3.2 | Analisar o artigo do Código Penal (Art. 147-B) e a justificativa RAG | Leitura do card de explicabilidade legal recuperado pelo RAG | A justificativa gerada pelo RAG deve ser sucinta e citar diretamente a norma jurídica. |
+| 4 | Registrar decisão de auditoria | Plano 4: Escolher entre 4.1 (Aprovar veredicto) ou 4.2 (Reclassificar risco/ajustar) | Exigir confirmação simples para salvar a decisão no histórico. |
+| 4.1 | Confirmar e aprovar veredicto da IA | Clicar em "Aprovar Veredicto" | Atualiza o status do registro para "Auditado e Validado". |
+| 4.2 | Reclassificar nível de risco ou ajustar observação | Clicar em "Reclassificar" e selecionar novo nível | Permite a intervenção humana para ajuste do modelo |
 
 **Verificação do HTA:**
 
