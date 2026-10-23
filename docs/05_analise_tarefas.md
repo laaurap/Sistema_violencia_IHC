@@ -93,11 +93,26 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ### Métodos, operadores e regras de seleção
 
-- **Method M1:** {{...}}
+- **Method M1:** Envio por encaminhamento de texto direto
   - Operators: {{perceber, apontar, clicar, digitar, decidir... conforme o nível adotado}}
-- **Method M2:** {{...}}
+  - Operator O1: Perceber conduta abusiva na conversa de terceiros no WhatsApp.
+  - Operator O2: Selecionar e copiar/encaminhar o bloco de mensagens suspeitas.
+  - Operator O3: Abrir a conversa com a assistente virtual (Guardiã AI) no WhatsApp.
+  - Operator O4: Colar o texto no chat e clicar no botão "Enviar".
+  - Operator O5: Aguardar o processamento do pipeline (NLP + RAG).
+  - Operator O6: Ler a mensagem de resposta com o diagnóstico de risco, justificativa e números de apoio (180/188).
+  - Operator O7: Decidir se aciona um canal de emergência ou salva a orientação recebida.
+  - 
+- **Method M2:** Envio por mensagem de áudio transcrito
   - Operators: {{...}}
-- **Selection Rule SR1:** usar M1 quando {{condição}}; usar M2 quando {{condição}}.
+  - Operator O1: Receber/gravar áudio com relato ou fala suspeita do agressor.
+  - Operator O2: Encaminhar o arquivo de áudio para o chat da assistente no WhatsApp.
+  - Operator O3: Aguardar a transcrição automática (Faster-Whisper) e o processamento de análise.
+  - Operator O4: Ler a confirmação da transcrição e o diagnóstico de risco gerado.
+  - Operator O5: Decidir pela leitura dos canais de apoio disponibilizados.
+  - 
+- **Selection Rule SR1:** usar M1 quando a usuária tiver mensagens de texto digitadas ou cópias de chats de conversa; usar M2 quando a interação for proveniente de gravações de voz ou mensagens de áudio encaminhadas.
+
 
 > Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
 
@@ -119,14 +134,18 @@ A tarefa T03 descreve as relações temporais e a concorrência entre as ações
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| `>>` (Habilitação | A conclusão de uma tarefa habilita o início automático da tarefa seguinte. | Acessar lista `>>` Exibir lista* / *Definir aprovação `>>` Salvar decisão* |
+| `[]=` (Escolha | O utilizador escolhe e executa uma entre várias tarefas alternativas. | *Aprovar veredicto `[]=` Reclassificar risco* |
+| `|||` (Concorrência | As tarefas podem ser executadas de forma simultânea ou alternada sem ordem fixa. | *Ler mensagens `|||` Verificar RAG sugerido* |
+| `*` (Repetição | A tarefa é executada repetidamente até que uma condição de término seja satisfeita. | *Auditar Registro de Atendimento\** |
+| `[|]` (Desativação | Uma tarefa de interrupção cancela a tarefa principal que estava em processamento. | *Cancelar Auditoria `[|]` Processar Análise* |
+
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
 
 
 #### Tarefas identificadas no CTT:
-- Tarefa Abstrata (Retângulo simples):
-- Triar e Auditar Casos Semanais de Violência (Meta global que se decompõe).
+- Tarefa Abstrata (Retângulo simples): Auditar atendimento e validar RAG
 - Tarefa de Usuário (Ícone de pessoa): Analisar Pertinência do Artigo Penal 147-B (Processo cognitivo humano).
 - Tarefa do Sistema (Ícone de computador): Recuperar Trechos e Gerar Explicabilidade RAG* (Processamento automatizado do servidor).
 - Tarefa de Interação (Ícone de pessoa/computador): Selecionar Filtro de Risco Alto na Tabela* (Ação direta na interface).
@@ -136,6 +155,17 @@ Identifique, quando aplicável, tarefas de usuário, sistema, interação e tare
 ## Síntese da equipe
 
 Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
+
+
+A partir das modelagens HTA, GOMS e CTT, emergiram importantes requisitos de usabilidade e oportunidades de design para as próximas etapas de prototipagem:
+
+- Padrão Master-Detail para Redução de Carga Cognitiva: O HTA revelou a necessidade de manter a lista de atendimentos visível enquanto o detalhe do RAG é examinado, evitando que a analista perca o contexto de busca ao auditar múltiplos casos.
+
+- Explicabilidade RAG em Bloco: A análise GOMS e as diretrizes técnicas confirmaram que o módulo RAG não deve apenas exibir o texto da lei, mas fornecer uma frase explicativa curta vinculando o trecho do abuso à norma jurídica (ex: Art. 147-B), reduzindo o tempo de tomada de decisão do profissional.   
+
+- Padrões Acolhedores no WhatsApp: A modelagem GOMS do fluxo do WhatsApp indicou que a resposta da IA precisa manter a barreira de entrada baixa, fornecendo um diagnóstico limpo e botões diretos de emergência (180 e 188) sem sobrecarregar a vítima com jargões técnicos.  
+
+- Demandas para Protótipo: As tarefas T01 e T03 serão a base para os protótipos de papel da Entrega 6, enquanto a tarefa T02 guiará o fluxo do chatbot.
 
 ## Checklist
 
