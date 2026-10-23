@@ -136,9 +136,9 @@ A tarefa T03 descreve as relações temporais e a concorrência entre as ações
 |---|---|---|
 | `>>` (Habilitação) | A conclusão de uma tarefa habilita o início automático da tarefa seguinte. | Acessar lista `>>` Exibir lista / Definir aprovação `>>` Salvar decisão |
 | `[]=` (Escolha) | O utilizador escolhe e executa uma entre várias tarefas alternativas. | Aprovar veredicto `[]=` Reclassificar risco |
-| `||` (Concorrência) | As tarefas podem ser executadas de forma simultânea ou alternada sem ordem fixa. | Ler mensagens `|||` Verificar RAG sugerido |
+|'"||"' (Concorrência) | As tarefas podem ser executadas de forma simultânea ou alternada sem ordem fixa. | Ler mensagens "||" Verificar RAG sugerido |
 | `*` (Repetição) | A tarefa é executada repetidamente até que uma condição de término seja satisfeita. | Auditar Registro de Atendimento\ |
-| `[|]` (Desativação) | Uma tarefa de interrupção cancela a tarefa principal que estava em processamento. | Cancelar Auditoria `[|]` Processar Análise |
+| `[]` (Desativação) | Uma tarefa de interrupção cancela a tarefa principal que estava em processamento. | Cancelar Auditoria `[]` Processar Análise |
 
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
