@@ -9,15 +9,15 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
 | Tema do TCC | Sistema de Detecção de Violência Psicológica em Conversas| {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}Pipeline de NLP (spaCy + BERT) + RAG + API FastAPI + Integração WhatsApp (n8n/Twilio) + Painel Web} | {{...}} | definido |
-| O TCC previa interface? | Parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | Classificar indícios e categorias de violência psicológica em texto e fundamentar com referências legais/acadêmicas | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | Vítimas de violência psicológica, administradores/analistas autorizados do sistema, rede de apoio | {{fonte ou hipótese}} | F / H |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
-| Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
-| Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
+| Resultado técnico esperado |  Pipeline de NLP (Faster-Whisper + spaCy/BERT) + Módulo RAG (Art. 147-B) + Backend REST (FastAPI/Supabase) + Chatbot WhatsApp + Painel Web | Arquitetura técnica documentada do backend e integrações de API | definido |
+| O TCC previa interface? | Parcialmente | | **O TCC previa interface?** | Parcialmente | Chatbot no WhatsApp para acolhimento e Painel Web para gestão/auditoria de casos | definido | | definido |
+| Capacidade/contribuição central | Classificar indícios e categorias de violência psicológica em texto/audio e fundamentar com referências legais/acadêmicas | Modelo RAG contextualizado com legislação brasileira sobre violência contra a mulher | definido |
+| Possíveis beneficiários/stakeholders | Vítimas de violência psicológica, administradores/analistas autorizados do sistema, rede de apoio | Hipótese e estudo de domínio de acolhimento emergencial e auditoria técnica | F |
+| Usuário escolhido para IHC | P01: Camila Rocha (Analista/Auditora do Painel Web); P02: Beatriz Mendes (Usuária/Vítima no WhatsApp) | Perfis representativos do fluxo de acolhimento (entrada) e do fluxo de auditoria/validação (saída) | F |
+| Objetivo principal do usuário | P01: Auditar atendimentos de alto risco e validar a fundamentação jurídica do RAG.; P02: Submeter relatos/mensagens suspeitas e receber orientação/acolhimento seguro. | Cenários problema C01 e C02 definidos nas Entregas 1–4 | F |
+| Contexto de uso adotado | P01: Estação de trabalho em escritório compartilhado, exigindo preservação de sigilo.; P02: Dispositivo móvel pessoal em ambiente reservado/urgente. | Análise contextual e restrições de privacidade | F |
+| Interface/recorte de IHC | Painel Web Administrativo Mestre para P01 e Chatbot Conversacional WhatsApp para P02 | Derivado dos HTA (T01), GOMS (T02) e CTT (T03) da Entrega 5 e Protótipo P01 da Entrega 6  | revisada |
+| Relação com o TCC |Parte prevista com extensão conceitual de IHC | Integração direta entre o pipeline de IA e as interfaces de interação humana | definido |
 
 > Se o escopo de IHC mudar ao longo do semestre, preserve a decisão anterior no histórico e registre **qual evidência motivou a mudança**.
 
