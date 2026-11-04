@@ -1,6 +1,6 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** {{dd/mm/aaaa}}  
+**Data:** 02/11/2026
 **Status:** 🟩 concluída
 **Responsabilidade:** 1 solução por equipe
 
