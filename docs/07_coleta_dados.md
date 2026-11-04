@@ -97,6 +97,7 @@ Analise voluntariedade, consentimento, minimização de dados, privacidade, risc
 
 Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia textual no repositório**.
 
+```text
 Secção 1: Consentimento e Perfil Profissional
 
 1. Você concorda em participar voluntariamente desta pesquisa académica de IHC?
@@ -135,6 +136,7 @@ Secção 4: Questões Abertas
 
 1. Que informação adicional gostaria de ver no painel mestre para facilitar a sua decisão?
 - Resposta curta de texto.
+```
 
 #### Como os dados serão analisados
 
