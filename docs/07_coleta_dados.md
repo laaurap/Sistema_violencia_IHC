@@ -67,9 +67,9 @@ Analise voluntariedade, consentimento, minimização de dados, privacidade, risc
 - Voluntariedade e Consentimento: Todos os participantes assinarão um Termo de Consentimento Livre e Esclarecido (TCLE) informando a voluntariedade e a possibilidade de desistência a qualquer momento sem sanções.
 
 - Privacidade e Anonymização: A recolha não solicitará nem armazenará dados pessoais sensíveis das vítimas reais. Todos os históricos de mensagens apresentados nos testes utilizarão cenários fictícios elaborados para fins académicos com identificadores mascarados (#C001).
-- 
+  
 - Minimização de Dados: Serão recolhidos estritamente os dados de usabilidade (tempo de tarefa, cliques, respostas de utilidade) e perfil profissional sintético.
-- 
+  
 - Armazenamento e Descarte: Os dados recolhidos serão mantidos em repositório privado encriptado até à conclusão e defesa do TCC, sendo posteriormente eliminados em definitivo
 
 > Repita A02, A03...
