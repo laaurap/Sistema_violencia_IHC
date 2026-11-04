@@ -100,7 +100,7 @@ Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia te
 ```text
 Secção 1: Consentimento e Perfil Profissional
 
-1. Você concorda em participar voluntariamente desta pesquisa académica de IHC?
+1. Você concorda em participar voluntariamente dessa pesquisa academica de IHC?
 [ ] Sim, concordo com os termos.
 [ ] Não concordo.
 
