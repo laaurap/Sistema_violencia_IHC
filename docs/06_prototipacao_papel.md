@@ -59,7 +59,7 @@ Interface única em folha quadriculada contemplando:
 * **Tabela Principal:** Listagem com colunas para ID do Caso (#C001 a #C004), Data, Nível de Risco, Categoria Principal, Mensagens Processadas e Botão `AUDITAR`.
 * **Rodapé:** Indicador de paginação e total de registros exibidos ("Mostrando 4 de 130 casos").
 
-![Protótipo](../assets/06_prototipos/tela_p01.jpeg)
+![Protótipo](../assets/06_prototipos/tela_p01_lado.jpeg)
 
 ## 4. Simulação / walkthrough
 
