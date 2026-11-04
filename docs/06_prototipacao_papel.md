@@ -75,7 +75,7 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
-| Exibição isolada da categoria principal sem contexto de proporção. | {O analista não sabia quantas mensagens daquela conversa continham abusos antes de abrir o detalhe. | Adicionada a coluna MENSAGENS PROCESSADAS (ex: 28/30, 15/18) na Tabela P01. | Oferece um indicador claro da intensidade do comportamento abusivo diretamente na triagem mestre. |
+| Exibição isolada da categoria principal sem contexto de proporção. | O analista não sabia quantas mensagens daquela conversa continham abusos antes de abrir o detalhe. | Adicionada a coluna MENSAGENS PROCESSADAS (ex: 28/30, 15/18) na Tabela P01. | Oferece um indicador claro da intensidade do comportamento abusivo diretamente na triagem mestre. |
 | Nomes ou dados de contato visíveis na tabela. | Risco de exposição indevida de dados sensíveis em telas de escritório. | Adoção estrita de IDs mascarados (#C001, #C002). | Garante a conformidade com diretrizes de privacidade e proteção de dados da vítima. |
 
 ## Checklist
@@ -83,7 +83,7 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 - [X] O protótipo cobre tarefas relevantes da Entrega 5.
 - [X] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
 - [X] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [ ] Telas/estados estão numerados e navegáveis na documentação.
+- [X] Telas/estados estão numerados e navegáveis na documentação.
 - [X] Há pelo menos uma simulação/walkthrough documentado.
 - [X] Críticas não foram apenas listadas: geraram decisão de revisão.
 - [X] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
