@@ -10,7 +10,7 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 |---|---|---|---|
 | Tema do TCC | Sistema de Detecção de Violência Psicológica em Conversas| {{documento/TCC}} | definido |
 | Resultado técnico esperado |  Pipeline de NLP (Faster-Whisper + spaCy/BERT) + Módulo RAG (Art. 147-B) + Backend REST (FastAPI/Supabase) + Chatbot WhatsApp + Painel Web | Arquitetura técnica documentada do backend e integrações de API | definido |
-| O TCC previa interface? | Parcialmente | | **O TCC previa interface?** | Parcialmente | Chatbot no WhatsApp para acolhimento e Painel Web para gestão/auditoria de casos | definido | | definido |
+| O TCC previa interface? | Parcialmente | | **O TCC previa interface?** | Parcialmente | Chatbot no WhatsApp para acolhimento e Painel Web para gestão/auditoria de casos | definido |
 | Capacidade/contribuição central | Classificar indícios e categorias de violência psicológica em texto/audio e fundamentar com referências legais/acadêmicas | Modelo RAG contextualizado com legislação brasileira sobre violência contra a mulher | definido |
 | Possíveis beneficiários/stakeholders | Vítimas de violência psicológica, administradores/analistas autorizados do sistema, rede de apoio | Hipótese e estudo de domínio de acolhimento emergencial e auditoria técnica | F |
 | Usuário escolhido para IHC | P01: Camila Rocha (Analista/Auditora do Painel Web); P02: Beatriz Mendes (Usuária/Vítima no WhatsApp) | Perfis representativos do fluxo de acolhimento (entrada) e do fluxo de auditoria/validação (saída) | F |
