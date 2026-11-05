@@ -1,7 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
 **Data:** 04/11/2026
-**Status:** ⬜ não iniciada  
+**Status:** ⬜ concluída 
 **Responsabilidade:** soluções individuais, com consolidação da equipe para mapa de objetivos e esquema de signos.
 
 ## Objetivo da atividade
@@ -60,7 +60,7 @@ Na segunda-feira pela manhã, a analista Camila abre o Painel Web Administrativo
 
 Cada integrante apresenta seu mapa e a equipe cria um **mapa consolidado**, eliminando duplicidades e resolvendo conflitos de nomenclatura.
 
-![Mapa consolidado](../assets/09_modelo_conceitual/mapa_objetivos.svg)
+![Mapa consolidado](../assets/09_modelo_conceitual/mapa_objetivos.jpg)
 
 ### Dicionário de objetivos
 
