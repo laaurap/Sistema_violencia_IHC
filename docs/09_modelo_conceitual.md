@@ -48,7 +48,7 @@ Na segunda-feira pela manhã, a analista Camila abre o Painel Web Administrativo
 
 ## 2. Design centrado na comunicação
 
-**Nome do cenário:** {{CI01}}
+**Nome do cenário:** CI01 — Triagem e Auditoria de Explicabilidade Jurídica do RAG
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
