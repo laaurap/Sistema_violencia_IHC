@@ -1,6 +1,6 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
-**Data:** {{dd/mm/aaaa}}  
+**Data:** 04/11/2026
 **Status:** ⬜ não iniciada  
 **Responsabilidade:** soluções individuais, com consolidação da equipe para mapa de objetivos e esquema de signos.
 
@@ -27,18 +27,25 @@ Dashboards, relatórios, filtros e CRUDs devem aparecer no modelo conceitual por
 
 Para cada cenário de problema, produza uma versão em que a solução já pode ser descrita. **Destaque claramente o texto alterado** em relação ao cenário original.
 
-### CI01 — {{título}}
+### CI01 — Triagem e Auditoria de Explicabilidade Jurídica do RAG
 
-**Autor(a):** {{nome — matrícula}}  
-**Origem:** cenário problema {{C01}}
+**Autor(a):** Laura de Souza Parente — 22.123.033-7 
+**Origem:** Cenário Problema C01
 
 {{cenário de interação com alterações marcadas}}
+
+Na segunda-feira pela manhã, a analista Camila abre o Painel Web Administrativo em sua estação de trabalho. Ela visualiza imediatamente nos cartões de KPI no topo da tela que existem 132 casos registrados no total, sendo 28 classificados como Risco Alto. Para priorizar as emergências, Camila clica no botão de filtro rápido ALTO. A tabela é filtrada instantaneamente, apresentando apenas os atendimentos graves. Camila observa a primeira linha da listagem, identificada pelo código anônimo #C001, com data de hoje, categoria principal "Chantagem / Isolamento" e a informação "28/30 mensagens processadas". Sabendo que a quase totalidade da conversa contém indícios de abuso, ela clica no botão AUDITAR. A interface abre a visão detalhada, exibindo no painel esquerdo a transcrição do WhatsApp com as frases abusivas destacadas visualmente. No painel direito, o sistema exibe o card de Explicabilidade RAG apresentando a citação do Art. 147-B do Código Penal, a justificativa da IA e o parecer preliminar. Camila lê a fundamentação legal, confirma que a classificação está correta e clica no botão APROVAR PARECER, registrando a validação humana no sistema.
 
 ### Diferenças relevantes
 
 | Alteração | Por que foi necessária | Evidência/artefato que justifica |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Visualização prévia de KPIs e filtragem rápida por risco | Permite à analista identificar o volume de emergências e isolar casos graves em 1 clique sem abrir chamada por chamada. | Walkthrough da Entrega 6 e HTA T01. |
+| Exibição da proporção de mensagens processadas (28/30) | Comunica a densidade do comportamento abusivo diretamente na tabela mestre antes de abrir a auditoria detalhada. | Mudança de escopo registrada na Entrega 6 e RASTREABILIDADE.md. |
+
+
+
+| Apresentação direta do Card de Explicabilidade RAG (Art. 147-B) | Fundamenta a decisão da IA com embasamento jurídico transparente, garantindo o controle humano (*human-in-the-loop*). | Hipótese H01 sustentada e Metas de Usabilidade da Entrega 8. |
 
 ## 2. Design centrado na comunicação
 
