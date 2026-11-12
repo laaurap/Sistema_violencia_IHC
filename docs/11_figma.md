@@ -1,7 +1,7 @@
 # Entrega 11 — Protótipo no Figma
 
 **Data:** 12/11/2026
-**Status:** ✅ concluída 
+**Status:** 🟩 concluída 
 **Responsabilidade:** 1 protótipo integrado por equipe cobrindo os fluxos MoLIC. Se a turma exigir divisão individual, identifique o responsável por cada fluxo/tela.
 
 ## Objetivo da atividade
@@ -51,14 +51,6 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 ## Catálogo de telas/estados
 
-### F01 — {{nome da tela/estado}}
-
-![F01](../assets/11_figma/f01.svg)
-
-**Objetivo do usuário:** {{...}}  
-**Signos principais:** {{...}}  
-**Origem no MoLIC:** {{M01/cena ...}}
-
 ### F01 — Visão Geral (Dashboard Principal)
 ![F01](../assets/11_figma/visao_geral.png)
 **Objetivo do usuário:** Obter panorama imediato do volume de casos (`132`), alertas de alto risco (`28`) e categoria predominante (`Manipulação Emocional — 42%`), além de iniciar a triagem pela tabela mestre.
@@ -93,7 +85,7 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 * **Origem no MoLIC:** Fluxo de Contestação / Intervenção Humana (`M03`).
 
 ### F04 — Feedback de Sucesso e Atualização de Status
-![F04](../assets/11_figma/f04_sucesso.png)
+![F04](../assets/11_figma/tela_sucesso.png)
 * **Objetivo do usuário:** Receber confirmação inequívoca de que o parecer do caso `#C001` foi validado e gravado no banco de dados.
 * **Signos principais:** Banner flutuante verde no topo (*"Parecer do Atendimento #C001 validado e registrado com sucesso no sistema!"*), alteração do status da linha `#C001` para `AUDITADO / APROVADO` e troca do botão de ação para `VISUALIZAR`.
 * **Origem no MoLIC:** Fechamento de diálogo com sucesso (`M02` / `M03`).
@@ -140,15 +132,15 @@ Para produto Web, considere critérios pertinentes da WCAG vigente (por exemplo,
 
 ## Checklist
 
-- [ ] Link do Figma está acessível.
-- [ ] Há screenshots representativos no repositório.
-- [ ] Todos os MoLIC relevantes estão cobertos.
-- [ ] Estados de erro, feedback e recuperação foram prototipados.
-- [ ] Terminologia/signos são consistentes com Entrega 9.
-- [ ] Componentes equivalentes se comportam de forma consistente.
-- [ ] Fluxos críticos são clicáveis do início ao fim.
-- [ ] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas.
-- [ ] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável.
-- [ ] Estados de vazio, processamento, erro e recuperação foram considerados quando pertinentes.
-- [ ] Resultados técnicos são apresentados de forma interpretável para o perfil de usuário.
-- [ ] A equipe distingue no protótipo o que é interação simulada e o que é funcionalidade técnica realmente integrada, quando necessário.
+- [X] Link do Figma está acessível.
+- [X] Há screenshots representativos no repositório.
+- [X] Todos os MoLIC relevantes estão cobertos.
+- [X] Estados de erro, feedback e recuperação foram prototipados.
+- [X] Terminologia/signos são consistentes com Entrega 9.
+- [X] Componentes equivalentes se comportam de forma consistente.
+- [X] Fluxos críticos são clicáveis do início ao fim.
+- [X] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas.
+- [X] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável.
+- [X] Estados de vazio, processamento, erro e recuperação foram considerados quando pertinentes.
+- [X] Resultados técnicos são apresentados de forma interpretável para o perfil de usuário.
+- [X] A equipe distingue no protótipo o que é interação simulada e o que é funcionalidade técnica realmente integrada, quando necessário.
