@@ -52,7 +52,7 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 ## Catálogo de telas/estados
 
 ### F01 — Visão Geral (Dashboard Principal)
-![F01](../assets/11_figma/visao_geral.png)
+![F01](../assets/11_figma/tela_visao_geral.png)
 **Objetivo do usuário:** Obter panorama imediato do volume de casos (`132`), alertas de alto risco (`28`) e categoria predominante (`Manipulação Emocional — 42%`), além de iniciar a triagem pela tabela mestre.
 **Signos principais:** Cards de KPI, badges semânticos de risco (`ALTO`, `MÉDIO`, `BAIXO`), barra de filtros rápidos, campo de busca por `#ID` e botão de ação `AUDITAR`.
 **Origem no MoLIC:** Cena de abertura / Tópico Principal de Monitoramento (`M01`).
