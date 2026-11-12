@@ -34,8 +34,8 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 ## Link do Figma
 
-**Protótipo:** {{URL}}   https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=BI1G4YValaocs0rX-1
-**Arquivo editável:** {{URL}}    https://www.figma.com/proto/YVklhni7iJ08TDOFGShxkq/TCC?node-id=1-446&p=f&t=lF8826yav2mJgo74-1&scaling=contain&content-scaling=fixed&page-id=0%3A1
+**Protótipo:** https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=BI1G4YValaocs0rX-1
+**Arquivo editável:**  https://www.figma.com/proto/YVklhni7iJ08TDOFGShxkq/TCC?node-id=1-446&p=f&t=lF8826yav2mJgo74-1&scaling=contain&content-scaling=fixed&page-id=0%3A1
 **Última verificação de permissão:** 12/11/2026
 
 > Teste o link em janela anônima. O avaliador deve conseguir abrir o protótipo sem solicitar permissão.
@@ -44,16 +44,10 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 | MoLIC | Objetivo | Fluxo/telas no Figma | Estados de erro/recuperação | Responsável |
 |---|---|---|---|---|
-| M01 | O01 | `F01 → F02 → F03` | `F02E, F03R` | {{...}} |
-
-| MoLIC | Objetivo | Fluxo/telas no Figma | Estados de erro/recuperação | Responsável |
-|---|---|---|---|---|
-| **M01** | **O01 — Triagem e Filtragem de Atendimentos:** Monitorar indicadores gerais de risco e filtrar atendimentos por severidade ou código anônimo. | `F01 (Visão Geral) → F02A (Filtro Alto) / F02M (Filtro Médio) / F02B (Filtro Baixo) → F01P (Paginação 2 de 27)` | `F01E (Erro/Busca sem resultados → Limpar Filtros)` | GRUPO O |
-| **M02** | **O02 — Auditoria Individual e Explicabilidade RAG:** Confrontar transcrições de WhatsApp com o enquadramento legal sugerido pela IA (Art. 147-B) e aprovar parecer. | `F01 (Visão Geral) / F05 (Casos) → F03 (Auditar Caso #C001) → F04 (Sucesso/Aprovado)` | `Voltar ao Painel (Cancelamento/Retorno seguro)` | GRUPO O |
-| **M03** | **O03 — Reclassificação Humana (Human-in-the-Loop):** Discordar do nível de risco estimado pela IA, alterar severidade e registrar justificativa técnica obrigatória. | `F03 (Auditar) → F03R (Modal Reclassificar Risco) → F04 (Sucesso/Atualizado)` | `Botão Cancelar no Modal (Desfazer alteração e retornar a F03)` | GRUPO O |
-| **M04** | **O04 — Gestão Histórica, Métricas RAG e Exportação Jurídica:** Consultar histórico completo de casos, auditar acurácia do modelo NLP/RAG e exportar laudos em PDF/CSV. | `F01 → F05 (Casos) / F06 (Análises) / F07 (Relatórios) / F08 (Config)` | `Conformidade LGPD e anonimização de IDs (#C001)` | GRUPO O |
-
-## Catálogo de telas/estados
+| M01 | O01 — Triagem e Filtragem de Atendimentos: Monitorar indicadores gerais de risco e filtrar atendimentos por severidade ou código anônimo. | `F01 (Visão Geral) → F02A (Filtro Alto) / F02M (Filtro Médio) / F02B (Filtro Baixo) → F01P (Paginação 2 de 27)` | `F01E (Erro/Busca sem resultados → Limpar Filtros)` | Laura |
+| M02 | O02 — Auditoria Individual e Explicabilidade RAG: Confrontar transcrições de WhatsApp com o enquadramento legal sugerido pela IA (Art. 147-B) e aprovar parecer. | `F01 (Visão Geral) / F05 (Casos) → F03 (Auditar Caso #C001) → F04 (Sucesso/Aprovado)` | `Voltar ao Painel (Cancelamento/Retorno seguro)` | Laura |
+| M03 | O03 — Reclassificação Humana (Human-in-the-Loop): Discordar do nível de risco estimado pela IA, alterar severidade e registrar justificativa técnica obrigatória. | `F03 (Auditar) → F03R (Modal Reclassificar Risco) → F04 (Sucesso/Atualizado)` | `Botão Cancelar no Modal (Desfazer alteração e retornar a F03)` | Laura |
+| M04 | O04 — Gestão Histórica, Métricas RAG e Exportação Jurídica: Consultar histórico completo de casos, auditar acurácia do modelo NLP/RAG e exportar laudos em PDF/CSV. | `F01 → F05 (Casos) / F06 (Análises) / F07 (Relatórios) / F08 (Config)` | `Conformidade LGPD e anonimização de IDs (#C001)` | Laura |
 
 ## Catálogo de telas/estados
 
@@ -66,32 +60,34 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 **Origem no MoLIC:** {{M01/cena ...}}
 
 ### F01 — Visão Geral (Dashboard Principal)
-![F01](../assets/11_figma/f01_visao_geral.png)
+![F01](../assets/11_figma/visao_geral.png)
 **Objetivo do usuário:** Obter panorama imediato do volume de casos (`132`), alertas de alto risco (`28`) e categoria predominante (`Manipulação Emocional — 42%`), além de iniciar a triagem pela tabela mestre.
 **Signos principais:** Cards de KPI, badges semânticos de risco (`ALTO`, `MÉDIO`, `BAIXO`), barra de filtros rápidos, campo de busca por `#ID` e botão de ação `AUDITAR`.
 **Origem no MoLIC:** Cena de abertura / Tópico Principal de Monitoramento (`M01`).
 
 
 ### F02A / F02M / F02B — Estados de Filtragem por Risco (Alto, Médio e Baixo)
-![F02](../assets/11_figma/f02_filtros.png)
+![F02A — Filtro Risco Alto](../assets/11_figma/filtro_alto.png)
+![F02M — Filtro Risco Médio](../assets/11_figma/filtro_medio.png)
+![F02B — Filtro Risco Baixo](../assets/11_figma/filtro_baixo.png)
 * **Objetivo do usuário:** Isolar atendimentos conforme o nível de urgência para priorizar casos críticos (`ALTO`), moderados (`MÉDIO`) ou preventivos (`BAIXO`).
 * **Signos principais:** Botão de filtro ativo destacado na cor semântica correspondente (vermelho, âmbar ou verde), atualização dinâmica das linhas da tabela e contagem filtrada no rodapé (`Mostrando 4 de 90`, `4 de 13`, `4 de 19 casos`).
 * **Origem no MoLIC:** Caminhos alternativos de filtragem e consulta (`M01`).
 
 ### F01E — Estado de Ruptura: Busca sem Resultados (Erro/Vazio)
-![F01E](../assets/11_figma/f01e_erro.png)
+![F01E](../assets/11_figma/tela_erro.png)
 * **Objetivo do usuário:** Identificar que o código pesquisado (ex.: `#C999`) não possui registros e recuperar facilmente a visualização padrão da tabela.
 * **Signos principais:** Ícone de lupa com alerta, mensagem clara (*"Nenhum atendimento encontrado para os critérios selecionados"*), instrução de verificação e botão primário de recuperação `LIMPAR FILTROS / RESTAURAR BUSCA`.
 * **Origem no MoLIC:** Fala de ruptura / Recuperação de falha de consulta (`M01`).
 
 ### F03 — Auditoria Individual e Explicabilidade RAG (Split-Screen)
-![F03](../assets/11_figma/f03_auditar.png)
+![F03](../assets/11_figma/auditar.png)
 * **Objetivo do usuário:** Analisar as evidências textuais enviadas pelo agressor no WhatsApp lado a lado com a fundamentação jurídica gerada pelo pipeline RAG (Art. 147-B do Código Penal).
 * **Signos principais:** Painel esquerdo com bolhas de mensagens cronológicas e tags vermelhas `Alerta [!]`; painel direito com enquadramento legal, justificativa do algoritmo, barra de `Grau de Confiança IA (94%)`, aviso de conformidade LGPD e botões `APROVAR PARECER` e `RECLASSIFICAR RISCO`.
 * **Origem no MoLIC:** Tópico de Inspeção e Validação Jurídica (`M02`).
 
 ### F03R — Modal de Reclassificação de Risco (Human-in-the-Loop)
-![F03R](../assets/11_figma/f03r_modal_reclassificar.png)
+![F03R](../assets/11_figma/modal.png)
 * **Objetivo do usuário:** Sobrescrever a classificação preliminar da IA quando o contexto humano exigir ajuste de severidade, registrando justificativa técnica auditável.
 * **Signos principais:** Janela modal sobreposta com fundo escurecido, seletor `Novo Nível de Risco`, campo obrigatório `Justificativa da Analista` e botões `CANCELAR` e `CONFIRMAR RECLASSIFICAÇÃO`.
 * **Origem no MoLIC:** Fluxo de Contestação / Intervenção Humana (`M03`).
@@ -103,28 +99,22 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 * **Origem no MoLIC:** Fechamento de diálogo com sucesso (`M02` / `M03`).
 
 ### F05 — Gestão Geral de Casos (Histórico Completo)
-![F05](../assets/11_figma/f05_casos.png)
+![F05](../assets/11_figma/tela_casos.png)
 * **Objetivo do usuário:** Consultar todo o histórico de atendimentos registrados sem a sobrecarga dos KPIs diários, acompanhando o ciclo de vida da auditoria de cada caso.
 * **Signos principais:** Coluna dedicada `STATUS DA AUDITORIA` com badges distintos (`PENDENTE`, `APROVADO`, `RECLASSIFICADO`) e ações contextuais (`AUDITAR` para pendentes, `VER DETALHES` para concluídos).
 * **Origem no MoLIC:** Tópico de Consulta Histórica (`M04`).
 
 ### F06 — Análises Estatísticas e Desempenho do RAG
-![F06](../assets/11_figma/f06_analises.png)
+![F06](../assets/11_figma/tela_analises.png)
 * **Objetivo do usuário:** Monitorar a confiabilidade técnica do modelo de IA, a taxa de discordância humana e a distribuição das tipificações penais.
 * **Signos principais:** 4 cards métricos (`Precisão Média 94.2%`, `Taxa de Discordância 5.8%`, `Tempo Médio 3m 22s`, `Pareceres Validados 104/132`), gráfico de rosca por tipificação do Art. 147-B, gráfico combinado de volume x concordância (30 dias) e ranking de artigos legais mais citados.
 * **Origem no MoLIC:** Tópico de Monitoramento Analítico (`M04`).
 
 ### F07 — Central de Relatórios e Exportação Jurídica
-![F07](../assets/11_figma/f07_relatorios.png)
+![F07](../assets/11_figma/tela_relatorios.png)
 * **Objetivo do usuário:** Filtrar períodos, gerar laudos consolidados em PDF/CSV e pré-visualizar o documento técnico-jurídico com assinatura digital antes do download.
 * **Signos principais:** Filtros de data/risco/formato, botão `Gerar Novo Relatório`, lista de laudos disponíveis para download e painel lateral de `Preview do Relatório Selecionado` contendo sumário executivo, gráficos, fundamentação legal e selo de assinatura digital ICP-Brasil.
 * **Origem no MoLIC:** Tópico de Geração de Evidências e Exportação (`M04`).
-
-### F08 — Configurações do Sistema e Parâmetros da IA
-![F08](../assets/11_figma/f08_config.png)
-* **Objetivo do usuário:** Ajustar limiares de sensibilidade da IA e políticas de privacidade/anonimização exigidas pela LGPD.
-* **Signos principais:** Controles de parametrização do pipeline NLP/RAG e regras de governança de dados.
-* **Origem no MoLIC:** Tópico de Parametrização Administrativa (`M04`).
 
 
 > Documente também estados que muitas equipes esquecem: carregamento, vazio, confirmação, sucesso, erro, permissão negada, cancelamento, desfazer/voltar quando aplicável.
