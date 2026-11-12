@@ -34,9 +34,9 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 ## Link do Figma
 
-**Protótipo:** https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=BI1G4YValaocs0rX-1
-**Arquivo editável:**  https://www.figma.com/proto/YVklhni7iJ08TDOFGShxkq/TCC?node-id=1-446&p=f&t=lF8826yav2mJgo74-1&scaling=contain&content-scaling=fixed&page-id=0%3A1
-**Última verificação de permissão:** 12/11/2026
+**Protótipo:** https://www.figma.com/proto/YVklhni7iJ08TDOFGShxkq/TCC?node-id=1-446&p=f&t=lF8826yav2mJgo74-1&scaling=contain&content-scaling=fixed&page-id=0%3A1
+**Arquivo editável:** https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=BI1G4YValaocs0rX-1
+**Última verificação de permissão:** 12/11/202626
 
 > Teste o link em janela anônima. O avaliador deve conseguir abrir o protótipo sem solicitar permissão.
 
