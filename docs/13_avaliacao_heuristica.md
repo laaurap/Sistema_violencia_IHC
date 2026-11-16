@@ -136,16 +136,16 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - Padrões recorrentes entre telas.
 - Correções que serão feitas antes/para a avaliação com usuários.
 
-- Quantidade de problemas por heurística e severidade:
-  - **Total de violações identificadas:** 4 achados (`V01` a `V04`), distribuídos em **H1** (1 problema — severidade 2), **H5** (1 problema — severidade 2), **H7** (1 problema — severidade 1) e **H10** (1 problema — severidade 3).
-  - **Por grau de severidade:** **0 catastróficos (grau 4)**, **1 maior (grau 3)**, **2 menores (grau 2)** e **1 cosmético (grau 1)**. Seis heurísticas (`H2`, `H3`, `H4`, `H6`, `H8`, `H9`) não apresentaram violações e foram documentadas com exemplos de boas práticas.
-- Problemas críticos/graves que bloqueiam teste ou release:
-  - **Nenhum problema de severidade 4 (catastrófico)** foi encontrado; portanto, o protótipo está apto para ser submetido ao teste de usabilidade com o participante externo (`P01`) sem bloqueios de fluxo. O achado de severidade 3 (`HC01` / `V04`) não impede a navegação, mas representa o principal risco semântico de interpretação (viés de automação ou leitura estatística equivocada).
-- Padrões recorrentes entre telas:
-  - Observa-se excelente consistência estrutural e estética (`H4` e `H8`), mas há uma oportunidade recorrente de **reforço informacional contextual** entre `F01`, `F02A`, `F03` e `F06`: tornar explícitos os metadados de estado (quantos itens estão filtrados e qual é a unidade de contagem/limite jurídico do score da IA).
-- Correções que serão feitas antes/para a avaliação com usuários (e refinamentos pós-teste):
-  1. **Observação direta no teste com `P01` (Entrega 14):** Verificar empiricamente se `P01` percebe sozinho que `94%` é preliminar (`QA03` / `HC01`), se nota que os KPIs são atendimentos analisados (`QA05` / `HC01`) e se tenta clicar no card KPI vermelho para filtrar (`HC04`), validando na prática o impacto desses achados antes de alterar o protótipo congelado para o teste.
-  2. **Plano de ajuste no protótipo (ciclo de melhoria pós-avaliação):** Incorporar os rodapés informativos de limite da IA e unidade de contagem (`HC01`), adicionar o contador dinâmico `Exibindo X de Y` na tabela filtrada (`HC02`), explicitar a regra de preenchimento mínimo no modal `F03R` (`HC03`) e ligar o hotspot do card KPI ao filtro `F02A` (`HC04`).
+- **Quantidade de problemas por heurística e severidade:**
+  - **Total de violações identificadas:** 4 achados (`V01` a `V04`), distribuídos em **H1** (1 problema — severidade 2), **H4** (1 problema — severidade 2), **H7** (1 problema — severidade 1) e **H10** (1 problema — severidade 3).
+  - **Por grau de severidade:** **0 catastróficos (grau 4)**, **1 maior (grau 3)**, **2 menores (grau 2)** e **1 cosmético (grau 1)**. As 5 heurísticas sem violações (`H2`, `H3`, `H6`, `H8`, `H9`) e a prática de prevenção em `H5` foram documentadas com exemplos concretos baseados diretamente nas telas capturadas.
+- **Problemas críticos/graves que bloqueiam teste ou release:**
+  - **Nenhum problema de severidade 4 (catastrófico)** foi identificado; portanto, o protótipo está apto para ser submetido ao teste de usabilidade com o participante externo (`P01`) sem bloqueios de navegação. O achado de severidade 3 (`HC01` / `V04`) representa um risco semântico de interpretação (viés de automação ou leitura estatística equivocada) que será observado empiricamente durante o teste com `P01`.
+- **Padrões recorrentes entre telas:**
+  - Observa-se excelente coerência visual, estética minimalista e tratamento claro de estados vazios (`tela_erro.png`), mas há necessidade de revisão textual fina nos rótulos e contadores simulados (`HC02` e `HC03`) e reforço de documentação contextual sobre os limites da IA (`HC01`).
+- **Correções que serão feitas antes/para a avaliação com usuários (e refinamentos pós-teste):**
+  1. **Observação direta no teste com `P01` (Entrega 14):** Verificar na prática se `P01` percebe sozinho o caráter preliminar das métricas (`HC01`), se nota a divergência entre `28` e `90` casos no filtro (`HC02`) e se tenta clicar diretamente no card KPI vermelho (`HC04`), validando o impacto real desses achados antes de alterar o protótipo congelado para o teste.
+  2. **Plano de ajuste no protótipo (ciclo de melhoria pós-avaliação):** Adicionar notas informativas de limite da IA e unidade de contagem (`HC01`), alinhar os contadores simulados do rodapé da tabela com os cards KPI (`HC02`), corrigir os rótulos (`VER DETALHES`, `Risco Alto`, `Download CSV`) (`HC03`) e habilitar o atalho de clique no card KPI de alto risco (`HC04`).
 
 ## Checklist
 
