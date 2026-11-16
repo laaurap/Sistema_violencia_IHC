@@ -1,7 +1,7 @@
 # Entrega 12 — Planejamento da avaliação de usabilidade (DECIDE)
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 13/11/2026
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução por equipe
 
 ## Objetivo da atividade
@@ -54,7 +54,7 @@ Se o protótipo utiliza dados ou resultados simulados, documente isso no plano.
 | Nº de participantes | **1 participante externo (`P01`)** recrutado por conveniência para o teste de usabilidade moderado com observação (*Think-Aloud*) + **1 avaliadora** na inspeção heurística (totalizando duas fontes complementares de evidência). |
 | Ambiente | Sessão individual em ambiente silencioso (presencial ou remota via Google Meet com compartilhamento de tela e áudio). |
 | Dispositivo | Computador desktop ou notebook com mouse/trackpad, navegador Google Chrome/Edge atualizado e tela configurada em modo widescreen (`1440 × 1024 px` / `Fit width and height`). |
-| Protótipo/versão= | Protótipo navegável de alta fidelidade no Figma — Entrega 11 (`v1.0`, fluxos `M01` a `M04`, telas `F01` a `F08`), operando com dados fictícios anonimizados. |
+| Protótipo/versão | Protótipo navegável de alta fidelidade no Figma — Entrega 11 (`v1.0`, fluxos `M01` a `M04`, telas `F01` a `F08`), operando com dados fictícios anonimizados. |
 | Teste piloto | **Quem:** Verificação prévia estruturada pela própria autora (`P00`). **Quando:** 13/11/2026 (antes da sessão oficial com `P01`). **O que validar:** funcionamento de todos os hotspots clicáveis no Figma em aba anônima, modo `Fit width and height`, tempo total estimado e clareza/neutralidade dos enunciados das tarefas (`UT01`–`UT05`). |
 
 
