@@ -82,16 +82,16 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
-| H1 — Visibilidade do status do sistema** | `F01`, `F02A`, `F03`, `F03R`, `F04`, `F05`, `F06`, `F07`, `F08` (`M01`–`M04`) | **sim** | `V01` | *(Ver Seção 5 para o achado de melhoria em `F01`/`F02A`; como ponto positivo paralelo, em `F04` o banner verde confirma explicitamente a gravação da revisão).* |
-| H2 — Compatibilidade entre o sistema e o mundo real** | `F01`, `F03`, `F03R`, `F05`, `F06`, `F07`, `F08` (`M01`–`M04`) | **não** | — | A tela `F03` apresenta as mensagens encaminhadas em balões cronológicos familiares de conversa à esquerda e traduz o enquadramento jurídico (Art. 147-B) em linguagem clara à direita, alinhada ao vocabulário da Analista de Triagem. |
-| H3 — Controle e liberdade do usuário** | `F01`, `F02A`, `F01E`, `F03`, `F03R`, `F04`, `F05` (`M01`–`M03`) | **não** | — | O modal de reclassificação (`F03R`) oferece botão explícito de `Cancelar` sem alterar o estado do registro, e o estado vazio (`F01E`) dispõe do botão `Limpar Filtros` para sair imediatamente da busca sem resultados. |
-| H4 — Consistência e padrões** | `F01` a `F08` (`M01`–`M04`) | **não** | — | Uso consistente da barra lateral de navegação, codificação semântica uniforme de badges (`ALTO` em vermelho, `MÉDIO` em âmbar, `BAIXO` em verde) e nomenclatura padronizada dos códigos anônimos (`#C001`) em todas as tabelas e cabeçalhos. |
-| H5 — Prevenção de erros** | `F01`, `F03`, `F03R`, `F05`, `F08` (`M01`–`M03`) | **sim** | `V02` | *(Ver Seção 5 para o achado de melhoria na aprovação rápida em `F03`/`F03R`; como boa prática paralela, o modal `F03R` exige justificativa textual antes de confirmar a reclassificação).* |
-| H6 — Reconhecimento em vez de memorização** | `F01`, `F02A`, `F03`, `F03R`, `F05`, `F06`, `F07` (`M01`–`M04`) | **não** | — | Na auditoria (`F03`), as mensagens sinalizadas pela IA ficam destacadas lado a lado com o texto do Art. 147-B e os critérios de classificação, evitando que a analista precise decorar definições legais ou alternar de tela. |
-| H7 — Flexibilidade e eficiência de uso** | `F01`, `F02A`, `F05`, `F07` (`M01`, `M04`) | **sim** | `V03` | *(Ver Seção 5 para o achado sobre atalho de filtragem nos cards KPI em `F01`; como boa prática paralela, a busca direta por `#ID` e os botões de filtro rápido aceleram a triagem na tabela).* |
+| H1 — Visibilidade do status do sistema | `F01`, `F02A`, `F03`, `F03R`, `F04`, `F05`, `F06`, `F07`, `F08` (`M01`–`M04`) | **sim** | `V01` | *(Ver Seção 5 para o achado de melhoria em `F01`/`F02A`; como ponto positivo paralelo, em `F04` o banner verde confirma explicitamente a gravação da revisão).* |
+| H2 — Compatibilidade entre o sistema e o mundo real | `F01`, `F03`, `F03R`, `F05`, `F06`, `F07`, `F08` (`M01`–`M04`) | **não** | — | A tela `F03` apresenta as mensagens encaminhadas em balões cronológicos familiares de conversa à esquerda e traduz o enquadramento jurídico (Art. 147-B) em linguagem clara à direita, alinhada ao vocabulário da Analista de Triagem. |
+| H3 — Controle e liberdade do usuário | `F01`, `F02A`, `F01E`, `F03`, `F03R`, `F04`, `F05` (`M01`–`M03`) | **não** | — | O modal de reclassificação (`F03R`) oferece botão explícito de `Cancelar` sem alterar o estado do registro, e o estado vazio (`F01E`) dispõe do botão `Limpar Filtros` para sair imediatamente da busca sem resultados. |
+| H4 — Consistência e padrões | `F01` a `F08` (`M01`–`M04`) | **não** | — | Uso consistente da barra lateral de navegação, codificação semântica uniforme de badges (`ALTO` em vermelho, `MÉDIO` em âmbar, `BAIXO` em verde) e nomenclatura padronizada dos códigos anônimos (`#C001`) em todas as tabelas e cabeçalhos. |
+| H5 — Prevenção de erros | `F01`, `F03`, `F03R`, `F05`, `F08` (`M01`–`M03`) | **sim** | `V02` | *(Ver Seção 5 para o achado de melhoria na aprovação rápida em `F03`/`F03R`; como boa prática paralela, o modal `F03R` exige justificativa textual antes de confirmar a reclassificação).* |
+| H6 — Reconhecimento em vez de memorização | `F01`, `F02A`, `F03`, `F03R`, `F05`, `F06`, `F07` (`M01`–`M04`) | **não** | — | Na auditoria (`F03`), as mensagens sinalizadas pela IA ficam destacadas lado a lado com o texto do Art. 147-B e os critérios de classificação, evitando que a analista precise decorar definições legais ou alternar de tela. |
+| H7 — Flexibilidade e eficiência de uso | `F01`, `F02A`, `F05`, `F07` (`M01`, `M04`) | **sim** | `V03` | *(Ver Seção 5 para o achado sobre atalho de filtragem nos cards KPI em `F01`; como boa prática paralela, a busca direta por `#ID` e os botões de filtro rápido aceleram a triagem na tabela).* |
 | H8 — Estética e design minimalista | `F01` a `F08` (`M01`–`M04`) | **não** | — | A tela inicial (`F01`) apresenta apenas indicadores agregados e metadados anonimizados (`#ID`, data, categoria, risco e status), ocultando o teor íntegro das mensagens sensíveis até que a analista abra intencionalmente a tela de auditoria (`F03`). |
-| H9 — Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros** | `F01E`, `F03R`, `F05` (`M01`, `M03`) | **não** | — | Ao pesquisar um código inexistente (`#C999` em `F01E`), a interface exibe ícone e mensagem clara explicando que nenhum atendimento corresponde ao critério buscado e oferece ação direta (`Limpar Filtros`) para restaurar a listagem. |
-| H10 — Ajuda e documentação** | `F01`, `F03`, `F06`, `F07`, `F08` (`M01`–`M04`) | **sim** | `V04` | *(Ver Seção 5 para o achado sobre notas explicativas de unidade de contagem e limites da IA em `F01`/`F03`).* |
+| H9 — Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros | `F01E`, `F03R`, `F05` (`M01`, `M03`) | **não** | — | Ao pesquisar um código inexistente (`#C999` em `F01E`), a interface exibe ícone e mensagem clara explicando que nenhum atendimento corresponde ao critério buscado e oferece ação direta (`Limpar Filtros`) para restaurar a listagem. |
+| H10 — Ajuda e documentação | `F01`, `F03`, `F06`, `F07`, `F08` (`M01`–`M04`) | **sim** | `V04` | *(Ver Seção 5 para o achado sobre notas explicativas de unidade de contagem e limites da IA em `F01`/`F03`).* |
 
 
 ### 5. Declaração de violações
@@ -138,7 +138,7 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 - Quantidade de problemas por heurística e severidade:
   - **Total de violações identificadas:** 4 achados (`V01` a `V04`), distribuídos em **H1** (1 problema — severidade 2), **H5** (1 problema — severidade 2), **H7** (1 problema — severidade 1) e **H10** (1 problema — severidade 3).
-  - Por grau de severidade:** **0 catastróficos (grau 4)**, **1 maior (grau 3)**, **2 menores (grau 2)** e **1 cosmético (grau 1)**. Seis heurísticas (`H2`, `H3`, `H4`, `H6`, `H8`, `H9`) não apresentaram violações e foram documentadas com exemplos de boas práticas.
+  - **Por grau de severidade:** **0 catastróficos (grau 4)**, **1 maior (grau 3)**, **2 menores (grau 2)** e **1 cosmético (grau 1)**. Seis heurísticas (`H2`, `H3`, `H4`, `H6`, `H8`, `H9`) não apresentaram violações e foram documentadas com exemplos de boas práticas.
 - Problemas críticos/graves que bloqueiam teste ou release:
   - **Nenhum problema de severidade 4 (catastrófico)** foi encontrado; portanto, o protótipo está apto para ser submetido ao teste de usabilidade com o participante externo (`P01`) sem bloqueios de fluxo. O achado de severidade 3 (`HC01` / `V04`) não impede a navegação, mas representa o principal risco semântico de interpretação (viés de automação ou leitura estatística equivocada).
 - Padrões recorrentes entre telas:
@@ -146,8 +146,6 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - Correções que serão feitas antes/para a avaliação com usuários (e refinamentos pós-teste):
   1. **Observação direta no teste com `P01` (Entrega 14):** Verificar empiricamente se `P01` percebe sozinho que `94%` é preliminar (`QA03` / `HC01`), se nota que os KPIs são atendimentos analisados (`QA05` / `HC01`) e se tenta clicar no card KPI vermelho para filtrar (`HC04`), validando na prática o impacto desses achados antes de alterar o protótipo congelado para o teste.
   2. **Plano de ajuste no protótipo (ciclo de melhoria pós-avaliação):** Incorporar os rodapés informativos de limite da IA e unidade de contagem (`HC01`), adicionar o contador dinâmico `Exibindo X de Y` na tabela filtrada (`HC02`), explicitar a regra de preenchimento mínimo no modal `F03R` (`HC03`) e ligar o hotspot do card KPI ao filtro `F02A` (`HC04`).
-
-## Checklist
 
 ## Checklist
 
