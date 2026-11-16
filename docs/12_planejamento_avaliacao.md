@@ -27,14 +27,6 @@ Se o protótipo utiliza dados ou resultados simulados, documente isso no plano.
 
 | Etapa | Aplicação no projeto |
 |---|---|
-| **D — Determine the goals** | Quais objetivos da avaliação? Relacione às metas de usabilidade da Entrega 8. |
-| **E — Explore the questions** | Quais perguntas específicas a avaliação deve responder? |
-| **C — Choose the evaluation paradigm and techniques** | Quais métodos serão usados e por quê? Ex.: inspeção heurística + observação de usuários. |
-| **I — Identify the practical issues** | Participantes, recrutamento, ambiente, equipamentos, piloto, cronograma, responsáveis, riscos técnicos. |
-| **D — Decide how to deal with ethical issues** | Consentimento, privacidade, gravação, anonimização, interrupção, dados sensíveis. |
-| **E — Evaluate, interpret and present the data** | Como dados quantitativos/qualitativos serão consolidados, comparados às metas e apresentados. |
-
-|---|---|
 | **D — Determine the goals** | Avaliar se o painel web administrativo permite à **Analista de Triagem e Auditoria**: (1) compreender os indicadores gerais sem confundir volume de análises com prevalência populacional (`H04`); (2) filtrar casos por nível de risco e localizar códigos anônimos com rapidez, recuperando-se de buscas vazias (`H01` / `MU01`); (3) confrontar transcrições sinalizadas com a fundamentação legal RAG (Art. 147-B) e aprovar ou reclassificar o parecer da IA de forma segura (`H03` / `MU02`, `MU03`); e (4) navegar pelas visões de histórico, métricas do modelo e exportação de relatórios sem sobrecarga cognitiva (`MU04`). |
 | **E — Explore the questions** | Desdobradas em `QA01` a `QA06` na Seção B, cobrindo eficiência de filtragem/busca, recuperação de erro em busca sem resultados, compreensão da explicabilidade RAG (*split-screen*), segurança no fluxo de reclassificação humana (*human-in-the-loop*), interpretação não enviesada dos indicadores e conformidade heurística/acessibilidade visual. |
 | **C — Choose the evaluation paradigm and techniques** | Combinação de **dois métodos complementares** para garantir rigor analítico mesmo em equipe individual: (1) **Inspeção Heurística** conduzida pela autora (aplicando as 10 Heurísticas de Nielsen + critérios de explicabilidade de IA e contraste visual) para identificar problemas estruturais de feedback, consistência e prevenção de erros; e (2) **Teste de Usabilidade Moderado com Observação e Protocolo Pensar em Voz Alta (*Think-Aloud*)** com participante externo (`P01`), seguido de questionário pós-tarefa (SEQ) e entrevista breve, para observar dificuldades reais de navegação e compreensão dos pareceres. |
@@ -46,9 +38,6 @@ Se o protótipo utiliza dados ou resultados simulados, documente isso no plano.
 
 | ID | Pergunta | Método | Métrica/evidência | Critério esperado |
 |---|---|---|---|---|
-| QA01 | {{usuários completam T01 sem ajuda?}} | observação | sucesso, ajuda, erro | {{MU01}} |
-| QA02 | {{há problemas de feedback?}} | heurística | violações H1 | {{...}} |
-
 | QA01 | O participante consegue filtrar atendimentos por nível de risco (`ALTO`, `MÉDIO`, `BAIXO`) e localizar um caso específico (`#C001`) sem auxílio? | Observação de teste (`P01`) + Think-Aloud | Resultado da tarefa, tempo de execução, cliques fora do alvo e pedidos de ajuda | Concluir a filtragem e busca em até 45 segundos, sem ajuda do moderador (`MU01` / `H01`) |
 | QA02 | Ao pesquisar um código inexistente (`#C999`) e obter estado vazio, o participante compreende o ocorrido e consegue restaurar a listagem padrão? | Observação de teste (`P01`) + Inspeção heurística | Recuperação autônoma, tempo de reação e violações de H9 (recuperação de erros) | Reconhecer a ausência do registro e acionar a recuperação (`Limpar Filtros`) de forma autônoma em até 20 segundos (`MU01`) |
 | QA03 | Na tela de auditoria (*split-screen*), o participante compreende por que a IA classificou o caso como alto risco (mensagens sinalizadas + Art. 147-B) e distingue *indício preliminar* de *sentença definitiva*? | Observação (`P01`) + Entrevista pós-tarefa | Explicação verbal coerente sobre os trechos sinalizados, base legal e grau de confiança (`94%`) | Articular corretamente os critérios legais do RAG e os limites da classificação preliminar da IA (`MU02` / `H03`) |
@@ -87,15 +76,7 @@ Se o protótipo utiliza dados ou resultados simulados, documente isso no plano.
 - [Roteiro de teste](../instrumentos/roteiro_teste_usabilidade.md)
 - [Planilha de observação](../instrumentos/planilha_observacao_modelo.md)
 - [Formulário de avaliação heurística](../instrumentos/formulario_heuristica_modelo.md)
-- {{questionário pré/pós-teste}}
-
-- [Modelo de termo de consentimento](../instrumentos/termo_consentimento_modelo.md)
-- [Roteiro de teste](../instrumentos/roteiro_teste_usabilidade.md)
-- [Planilha de observação](../instrumentos/planilha_observacao_modelo.md)
-- [Formulário de avaliação heurística](../instrumentos/formulario_heuristica_modelo.md)
 - Questionário breve pré-teste (perfil e familiaridade com painéis/triagem) e pós-tarefa SEQ (*Single Ease Question*, escala de 1 a 7) + entrevista semiestruturada de fechamento (compreensão da explicabilidade RAG e interpretação dos KPIs).
-
-## F. Plano de análise
 
 ## F. Plano de análise
 
