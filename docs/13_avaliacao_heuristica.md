@@ -124,7 +124,6 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 | ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
 |---|---|---|---|---:|---|---|
-|---|---|---|---|---:|---|---|
 | **HC01** | `V04 (A01)` | **H10** (Ajuda e documentação) | Ausência de nota contextual permanente esclarecendo que a classificação da IA é preliminar (não sentença definitiva) e que os KPIs contabilizam atendimentos analisados (não prevalência populacional) nas telas `Análises` (`tela_analises.png`), `Visão Geral` (`tela_visao_geral.png`) e `Auditoria` | **3** (Maior) | **Alta** | Laura de Souza Parente |
 | **HC02** | `V01 (A01)` | **H1** (Visibilidade do status do sistema) | Divergência numérica entre os cards KPI superiores (`132` total / `28` alto risco) e os contadores do rodapé da tabela (`130` casos / `90` casos em `filtro_alto.png`) | **2** (Menor) | **Média** | Laura de Souza Parente |
 | **HC03** | `V02 (A01)` | **H4** (Consistência e padrões) | Inconsistências de rótulo e ortografia: botão **`VIZUALIZAR`** em `tela_sucesso.png` versus **`VER DETALHES`** em `tela_casos.png`, grafias **`Rsico Alto`** / **`Anonimizadade`** e botão **`Download PDF`** para arquivo CSV em `tela_relatorios.png` | **2** (Menor) | **Média** | Laura de Souza Parente |
