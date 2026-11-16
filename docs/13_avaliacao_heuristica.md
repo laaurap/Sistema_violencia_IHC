@@ -147,6 +147,7 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
   1. **Observação direta no teste com `P01` (Entrega 14):** Verificar na prática se `P01` percebe sozinho o caráter preliminar das métricas (`HC01`), se nota a divergência entre `28` e `90` casos no filtro (`HC02`) e se tenta clicar diretamente no card KPI vermelho (`HC04`), validando o impacto real desses achados antes de alterar o protótipo congelado para o teste.
   2. **Plano de ajuste no protótipo (ciclo de melhoria pós-avaliação):** Adicionar notas informativas de limite da IA e unidade de contagem (`HC01`), alinhar os contadores simulados do rodapé da tabela com os cards KPI (`HC02`), corrigir os rótulos (`VER DETALHES`, `Risco Alto`, `Download CSV`) (`HC03`) e habilitar o atalho de clique no card KPI de alto risco (`HC04`).
 
+
 ## Checklist
 
 - [X] Cada integrante fez uma inspeção completa e identificada.
