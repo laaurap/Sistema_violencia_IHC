@@ -1,7 +1,7 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
 **Data:** 16/11/2026  
-**Status:** ⬜ não iniciada  
+**Status:** 🟩 concluída  
 **Responsabilidade:** solução consolidada por equipe. O número de participantes finais observados deve ser igual ao número de integrantes, conforme o modelo da disciplina; recomenda-se que cada integrante seja responsável por conduzir/analisar ao menos um participante.
 
 ## Objetivo da atividade
@@ -45,7 +45,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 ### Passo 3 — Consentimento e privacidade
 
-- Termo/registro de consentimento: {{link}}
+- Termo/registro de consentimento: [Termo de Consentimento — `U01`](../instrumentos/termo_consentimento_modelo.md) — apresentado e aceito antes/no início da sessão, esclarecendo que o objeto avaliado é a interface (nunca o participante) e garantindo o direito de pausa ou desistência a qualquer momento sem ônus.
 - Gravação de tela/áudio/vídeo: Sim — gravação da sessão remota (compartilhamento de tela no protótipo do Figma + áudio *Think-Aloud*), hospedada em modo **Não listado** no YouTube com finalidade estritamente acadêmica.
 - Forma de anonimização: Identidade civil omitida nos documentos e relatórios da disciplina (referenciado exclusivamente como **`U01`** / `P01` na Entrega 12), utilizando apenas dados fictícios anonimizados (`#C001`–`#C999`) no protótipo.
 - Local e período de armazenamento: Vídeo não listado de acesso restrito via link direto exclusivamente durante o semestre letivo de 2026.2 para avaliação docente, sendo removido após o encerramento da disciplina.
@@ -66,6 +66,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 | UT04 | Revisar um caso de alto risco e alterar manualmente o nível de risco para `MÉDIO`, registrando a justificativa técnica do analista. | Abrir a reclassificação humana a partir da auditoria, selecionar o novo nível de risco (`MÉDIO`), preencher a justificativa técnica, confirmar e verificar a atualização. | Sucesso (total/parcial/falha), tempo (`mm:ss`), erros, ajudas, satisfação SEQ (1–7) | `T03` / `M03` / `F03 → F03R → F04` (`QA04`, `MU03`) |
 | UT05 | Explorar as visões gerenciais de análises estatísticas e relatórios consolidados do sistema. | Acessar as abas de `Análises` (`F06`) e `Relatórios` (`F07`), identificar os indicadores agregados e localizar a pré-visualização/exportação do laudo. | Sucesso (total/parcial/falha), tempo (`mm:ss`), erros, ajudas, satisfação SEQ (1–7) | `T04` / `M04` / `F06` & `F07` (`QA05`, `MU04`) |
 
+*Nota de condução:* Conforme registrado na gravação, o teste foi conduzido como uma missão exploratória contínua no papel de *Analista de Triagem* (`[00:11]`–`[00:50]` e `[08:23]`–`[08:38]`), sem indução de cliques pela moderadora, desdobrando-se espontaneamente nas 5 sub-tarefas planeadas (`UT01`–`UT05`).
 
 ### Passo 6 — Protocolo do moderador
 
