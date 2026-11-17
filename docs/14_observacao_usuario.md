@@ -20,7 +20,7 @@ Tarefas podem envolver, por exemplo, interpretar um dashboard, configurar uma an
 
 ## A. Fluxograma do processo — equipe
 
-![Fluxograma](../assets/14_testes/fluxograma_avaliacao.svg)
+![Fluxograma](../assets/14_testes/fluxograma.svg)
 
 O fluxograma deve representar, no mínimo: planejamento → recrutamento → consentimento → preparação → execução das tarefas/observação → pós-teste → consolidação/análise → recomendações.
 
