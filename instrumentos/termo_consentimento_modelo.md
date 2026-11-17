@@ -28,6 +28,8 @@ Em uma sessão individual remota via videoconferência (com compartilhamento de 
 - [X] Haverá gravação de áudio.
 - [X] Haverá gravação de vídeo.
 
+
+
 Explique finalidade, quem terá acesso e prazo/critério de descarte: A gravação da sessão (captura da tela do protótipo, áudio das verbalizações *Think-Aloud* e janela da chamada) tem finalidade **estritamente acadêmica**, destinando-se à cronometragem das tarefas, observação de cliques/hesitações e transcrição de comentários para elaboração da Entrega 14 da disciplina de IHC. Terão acesso ao arquivo apenas a estudante responsável (`Laura de Souza Parente`) e o docente avaliador da disciplina (por meio de link privado/não listado). O registro será mantido exclusivamente durante o semestre letivo de **2026.2**, sendo permanentemente excluído após o encerramento e avaliação da disciplina.
 
 ## Privacidade
@@ -42,7 +44,7 @@ A participação é voluntária e pode ser interrompida a qualquer momento, sem 
 
 Declaro que recebi informações suficientes sobre a atividade e concordo em participar nos termos acima.
 
-**Participante:** `U01` (`P01`) — Aceite verbal registrado no início da gravação da sessão de teste (e concordância prévia com os termos deste documento)  
+**Participante:** `U01` (`P01`) — Aceito verbal registrado no início da gravação da sessão de teste (e concordância prévia com os termos deste documento)  
 **Data:** 16/11/2026
 
 > Ajuste este modelo às exigências do docente/instituição antes de aplicar.
