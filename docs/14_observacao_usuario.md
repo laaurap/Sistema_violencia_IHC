@@ -28,7 +28,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 ### Passo 1 — Objetivos e versão avaliada
 
-**Versão/commit/Figma:** Protótipo no Figma — Entrega 11 — [Link do Protótipo no Figma](https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=2fcaddAI2MqV1c7P-1)   
+**Versão/commit/Figma:** Protótipo no Figma — Entrega 11 — [Link do Protótipo no Figma](https://www.figma.com/design/YVklhni7iJ08TDOFGShxkq/TCC?node-id=0-1&t=2fcaddAI2MqV1c7P-1) ; Teste do Protótipo: [Link para Teste](https://www.figma.com/proto/YVklhni7iJ08TDOFGShxkq/TCC?node-id=1-2&t=ASWaO7pvpobXpCLl-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2) 
 **Metas de usabilidade relacionadas:** 
 - **`MU01` (Eficácia e recuperação de erros):** Filtrar atendimentos por nível de risco (`ALTO`, `MÉDIO`, `BAIXO`), localizar códigos anônimos e recuperar-se autonomamente de buscas sem resultados (`QA01`, `QA02`).
 - **`MU02` (Compreensão da explicabilidade RAG):** Confrontar transcrições sinalizadas com a fundamentação legal (Art. 147-B) na visão *split-screen* (`F03`), distinguindo *indício preliminar de triagem* de *sentença definitiva* (`QA03`).
